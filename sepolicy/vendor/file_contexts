@@ -31,6 +31,9 @@
 /vendor/bin/hardware_revisions\.sh                                                     u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.modprobe\.sh                                                         u:object_r:vendor_modinstall-sh_exec:s0
 
+# Lights
+/vendor/bin/hw/android\.hardware\.lights-service\.cancunf                              u:object_r:hal_light_default_exec:s0
+
 # Mobicore TEE
 /mnt/vendor/tzapp(/.*)?                                                                u:object_r:mnt_vendor_trustlet_file:s0
 

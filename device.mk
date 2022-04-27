@@ -229,6 +229,10 @@ PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.cancunf
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
