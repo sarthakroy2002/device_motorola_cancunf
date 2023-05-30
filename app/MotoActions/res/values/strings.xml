@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 ArrowOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <string name="model_number_title">Model number</string>
+    <string name="model_number_pref_title">Model number (SKU)</string>
+    <string name="carrier_title">Software channel (carrier)</string>
+
+</resources>

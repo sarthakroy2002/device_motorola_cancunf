@@ -61,6 +61,27 @@
                 android:resource="@string/device_gestures_panel_summary" />
         </activity>
 
+        <activity
+            android:name=".ModelNumberActivity"
+            android:exported="false"
+            android:label="@string/model_number_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.my_device_info" />
+            <meta-data
+                android:name="com.android.settings.summary_uri"
+                android:value="content://org.lineageos.settings.device.summary/model_number" />
+        </activity>
+
+        <provider
+            android:name=".SummaryProvider"
+            android:authorities="org.lineageos.settings.device.summary">
+        </provider>
+
     </application>
 
 </manifest>

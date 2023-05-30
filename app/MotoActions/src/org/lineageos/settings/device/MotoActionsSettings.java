@@ -23,6 +23,7 @@ import static android.provider.Settings.Secure.DOZE_ENABLED;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.hardware.display.AmbientDisplayConfiguration;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 
@@ -43,6 +44,11 @@ public class MotoActionsSettings {
 
     static final String DOZE_ENABLE = "doze_enable";
     static final String ALWAYS_ON_DISPLAY = "always_on_display";
+
+    static final String MODEL_NUMBER_KEY = "model_number";
+    static final String MODEL_NUMBER_PROP = "ro.boot.hardware.sku";
+    static final String CARRIER_KEY = "carrier";
+    static final String CARRIER_PROP = "ro.boot.carrier";
 
     private final Context mContext;
     private final UpdatedStateNotifier mUpdatedStateNotifier;
@@ -125,6 +131,18 @@ public class MotoActionsSettings {
 
     public void chopChopAction() {
         new TorchAction(mContext).action();
+    }
+
+    private static String getStringProperty(Context context, String key) {
+        return SystemProperties.get(key, context.getString(R.string.unknown));
+    }
+
+    public static String getModelNumberString(Context context) {
+        return getStringProperty(context, MODEL_NUMBER_PROP);
+    }
+
+    public static String getCarrierString(Context context) {
+        return getStringProperty(context, CARRIER_PROP);
     }
 
     private void loadPreferences(SharedPreferences sharedPreferences) {
