@@ -6,6 +6,7 @@ android_app {
     srcs: ["src/**/*.java"],
 
     certificate: "platform",
+    privileged: true,
     platform_apis: true,
     system_ext_specific: true,
 
@@ -18,4 +19,24 @@ android_app {
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
+    required: [
+        "org.lineageos.settings.device.xml",
+        "hidden-api-whitelist-org.lineageos.settings.device.xml",
+    ],
+}
+
+prebuilt_etc {
+    sub_dir: "permissions",
+    name: "org.lineageos.settings.device.xml",
+    filename: "org.lineageos.settings.device.xml",
+    src: "org.lineageos.settings.device.xml",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    sub_dir: "sysconfig",
+    name: "hidden-api-whitelist-org.lineageos.settings.device.xml",
+    filename: "hidden-api-whitelist-org.lineageos.settings.device.xml",
+    src: "hidden-api-whitelist-org.lineageos.settings.device.xml",
+    system_ext_specific: true,
 }
