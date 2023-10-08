@@ -189,7 +189,7 @@ on post-fs
     chown root system /proc/ccci_dump
 
 on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
-    swapon_all /vendor/etc/fstab.enableswap
+    swapon_all /vendor/etc/fstab.mt6855
 
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"

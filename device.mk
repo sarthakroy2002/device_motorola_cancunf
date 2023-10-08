@@ -24,7 +24,6 @@ PRODUCT_PACKAGES += \
     vendor.mmi.cxp.sh
 
 PRODUCT_PACKAGES += \
-    fstab.enableswap \
     fstab.mt6855 \
     fstab.mt6855.ramdisk \
     init_connectivity.rc \

@@ -83,13 +83,6 @@ sh_binary {
 }
 
 prebuilt_etc {
-    name: "fstab.enableswap",
-    src: "etc/fstab.enableswap",
-    vendor: true,
-    ramdisk_available: true,
-}
-
-prebuilt_etc {
     name: "fstab.mt6855",
     src: "etc/fstab.mt6855",
     vendor: true,
