@@ -1,0 +1,14 @@
+on post-fs
+    chown system system /mnt/vendor/tzapp
+    chmod 0770 /mnt/vendor/tzapp
+    restorecon_recursive /mnt/vendor/tzapp
+
+service trustlet_backup /vendor/bin/init.mmi.backup.trustlet.sh
+    class main
+    user system
+    group system
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start trustlet_backup

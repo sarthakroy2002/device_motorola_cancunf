@@ -1,0 +1,247 @@
+service vendor.tcmd /vendor/bin/tcmd
+    class core
+#  Total number of supplementary groups below is 14 now. Limit defined in service.h is 32.
+#  Please update the current number if you add more groups.
+    group vendor_tcmd vendor_pwric system radio input log sdcard_rw inet graphics audio mount media shell media_rw bluetooth camera
+    socket local_tcmd stream 0660 vendor_tcmd vendor_tcmd
+    socket batch_socket stream 0600 vendor_tcmd vendor_tcmd
+    oneshot
+    disabled
+
+service vendor.tcmdhelp /vendor/bin/tcmdhelp
+    class main
+    user root
+    group system oem_2901 root vendor_pwric
+    socket tcmdhelp stream 0600 vendor_tcmd vendor_tcmd
+    oneshot
+    disabled
+
+service tcmd_system /system_ext/bin/tcmd_system
+    class main
+    user root
+    group vendor_prod_persist
+    oneshot
+    disabled
+
+
+# Power up to suspend
+on property:vendor.tcmd.suspend=1
+    stop zygote
+    stop surfaceflinger
+    stop sensors
+
+# Normal to suspend
+on property:vendor.tcmd.suspend=2
+    stop vendor.hwcomposer-2-1
+    stop vendor.hwcomposer-2-2
+    stop aee_aed
+    stop aee_aedv
+    stop surfaceflinger
+    stop sensors
+    stop cameraserver
+    stop zygote
+    write /proc/monitor_hang 0
+
+on property:vendor.tcmd.suspend=3
+    write /proc/monitor_hang 1
+    start zygote
+    start cameraserver
+    start sensors
+    start surfaceflinger
+    start aee_aedv
+    start aee_aed
+    start vendor.hwcomposer-2-2
+    start vendor.hwcomposer-2-1
+
+on property:vendor.tcmd.start_tcmdhelp=1
+    start vendor.tcmdhelp
+
+on property:vendor.tcmd.start_tcmd=0
+    stop vendor.tcmd
+
+on property:vendor.tcmd.start_tcmd=1
+    start vendor.tcmd
+
+on property:vendor.tcmd_system.action=*
+    setprop sys.tcmd_system.action ${vendor.tcmd_system.action}
+    start tcmd_system
+
+on property:vendor.tcmd.update_keyperm=1
+    chown vendor_tcmd system /mnt/vendor/persist/wv.keys
+    chmod 0640 /mnt/vendor/persist/wv.keys
+    chown vendor_tcmd system /mnt/vendor/persist/attest_keybox.so
+    chmod 0640 /mnt/vendor/persist/attest_keybox.so
+    chown vendor_tcmd system /mnt/vendor/persist/attestation_ids.so
+    chmod 0640 /mnt/vendor/persist/attestation_ids.so
+
+on early-boot && property:ro.vendor.build.motfactory=1
+    write /proc/sys/kernel/poweroff_cmd "/system/bin/reboot -p"
+
+on post-fs
+
+    mkdir /mnt/vendor/persist/factory 0755 vendor_tcmd vendor_tcmd
+
+    chown vendor_tcmd vendor_tcmd /mnt/vendor/persist/factory/fti
+    chmod 0664 /mnt/vendor/persist/factory/fti
+    mkdir /mnt/vendor/persist/camera 0775 vendor_tcmd vendor_tcmd
+
+    mkdir /mnt/vendor/persist/camera/dualcal 0775 camera vendor_tcmd
+    mkdir /mnt/vendor/persist/camera/focus 0775 camera vendor_tcmd
+    restorecon /mnt/vendor/persist/camera
+    restorecon /mnt/vendor/persist/camera/focus
+    restorecon /mnt/vendor/persist/camera/focus/offset_cal
+    restorecon /mnt/vendor/persist/camera/focus/xtalk_cal
+    mkdir /mnt/vendor/persist/camera/ledcal 0775 camera vendor_tcmd
+    mkdir /mnt/vendor/persist/camera/ois 0775 cameraserver vendor_tcmd
+    mkdir /mnt/vendor/persist/camera/iqtuning 0775 vendor_tcmd vendor_tcmd
+
+    mkdir /mnt/vendor/persist/factory/audio 0755 vendor_tcmd system
+    mkdir /mnt/vendor/persist/factory/wlan 0755 vendor_tcmd vendor_tcmd
+    mkdir /mnt/vendor/persist/factory/regulatory 0755 vendor_tcmd system
+    mkdir /mnt/vendor/persist/public 0755 vendor_tcmd vendor_tcmd
+
+    mkdir /mnt/vendor/persist/public/att_dm 0775 radio vendor_tcmd
+    mkdir /mnt/vendor/persist/public/hiddenmenu 0775 radio vendor_tcmd
+    mkdir /mnt/vendor/persist/public/hiddenmenu/data 0775 system vendor_tcmd
+
+    mkdir /mnt/vendor/persist/wifi 0755 vendor_tcmd vendor_tcmd
+    mkdir /mnt/vendor/persist/bt 0755 vendor_tcmd bluetooth
+
+    # This dir is used to store any OMA(both DM and CP) files in persist partition
+    # Any app with radio UID or vendor_tcmd GID can read/write/execute files in this dir.
+    mkdir /mnt/vendor/persist/public/oma 0775 radio vendor_tcmd
+
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/dual_cal_data.bin
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/dual_cal_data_depth.bin
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/dual_cal_data_wide.bin
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/module_id_aux.bin
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/module_id_main.bin
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/module_id_depth.bin
+    chown camera vendor_tcmd /mnt/vendor/persist/camera/dualcal/module_id_wide.bin
+
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/dual_cal_data.bin
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/dual_cal_data_depth.bin
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/dual_cal_data_wide.bin
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/module_id_aux.bin
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/module_id_main.bin
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/module_id_depth.bin
+    chmod 0664  /mnt/vendor/persist/camera/dualcal/module_id_wide.bin
+
+    chown vendor_tcmd vendor_tcmd /mnt/vendor/persist/factory/byte
+    chmod 0660 /mnt/vendor/persist/factory/byte
+    chmod 0660 /mnt/vendor/persist/wifi/wlan_mac.bin
+    chown vendor_tcmd vendor_tcmd /mnt/vendor/persist/bt/bt_bdaddr
+    chmod 0664 /mnt/vendor/persist/bt/bt_bdaddr
+
+    # Set life_calls and life_timer file permissions
+    chown radio vendor_tcmd /mnt/vendor/persist/public/hiddenmenu/life_calls
+    chmod 0775 /mnt/vendor/persist/public/hiddenmenu/life_calls
+    chown radio vendor_tcmd /mnt/vendor/persist/public/hiddenmenu/life_timer
+    chmod 0775 /mnt/vendor/persist/public/hiddenmenu/life_timer
+
+    # change permission of utag for tcmd daemon
+    chown root system /proc/config
+    chown root system /proc/config/all
+    chown root system /proc/config/all/new
+    chown root system /proc/config/all/lock
+    chown root system /proc/config/all/.delete
+    chown root system /proc/config/barcode/ascii
+    chown root system /proc/config/battid/ascii
+    chown root system /proc/config/bootmode/ascii
+    chown root system /proc/config/bt_mac/ascii
+    chown root system /proc/config/carrier_sku/ascii
+    chown root system /proc/config/date/ascii
+    chown root system /proc/config/fti/ascii
+    chown root system /proc/config/imei/ascii
+    chown root system /proc/config/sku/ascii
+    chown root system /proc/config/reload
+    chown root system /proc/config/wifi_mac/ascii
+    chown root system /proc/hw
+    chown root system /proc/hw/all
+    chown root system /proc/hw/all/new
+    chown root system /proc/hw/all/lock
+    chown root system /proc/hw/all/.delete
+    chown root system /proc/hw/dualsim/ascii
+    chown root system /proc/hw/frontcolor/ascii
+    chown root system /proc/hw/reload
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/address
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/address
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/data
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/data
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/bat_voltage
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/bat_voltage
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/bat_id
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/bat_id
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/bat_ocv
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/bat_ocv
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/bat_temp
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/bat_temp
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/bat_cycle
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/bat_cycle
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/usb_voltage
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/usb_voltage
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/force_chg_auto_enable
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/force_chg_auto_enable
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/force_chg_iusb
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/force_chg_iusb
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/force_chg_usb_suspend
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/force_chg_usb_suspend
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/force_chg_ibatt
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/force_chg_ibatt
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/force_chg_fail_clear
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/force_chg_fail_clear
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/factory_kill_disable
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/factory_kill_disable
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/wireless_en
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/wireless_en
+    chown vendor_tcmd vendor_tcmd /sys/devices/platform/moto_chg_tcmd/wireless_chip_id
+    chmod 660 /sys/devices/platform/moto_chg_tcmd/wireless_chip_id
+
+on post-fs-data
+
+    # Setup folders for security
+    mkdir /mnt/vendor/persist/security 02770 drmrpc drmrpc
+    mkdir /data/vendor/dbvc 0750 vendor_tcmd shell
+    chown drmrpc vendor_tcmd /mnt/vendor/persist/security
+
+    # Setup DAC for WFD HDCP sfs file
+    chown vendor_tcmd system /mnt/vendor/persist/data
+    chmod 0750 /mnt/vendor/persist/data
+    chown vendor_tcmd system /mnt/vendor/persist/data/dxhdcp2
+    chmod 0750 /mnt/vendor/persist/data/dxhdcp2
+    chown vendor_tcmd system /mnt/vendor/persist/data/dxhdcp2/dxhdcp2
+    chmod 0750 /mnt/vendor/persist/data/dxhdcp2/dxhdcp2
+    chown vendor_tcmd system /mnt/vendor/persist/data/dxhdcp2/dxhdcp2/dxhdcp2.sfs
+    chmod 0640 /mnt/vendor/persist/data/dxhdcp2/dxhdcp2/dxhdcp2.sfs
+
+    # Setup folder for Pre-Activation Kill Switch app (PAKS)
+    mkdir /mnt/vendor/persist/paks 02770 vendor_tcmd vendor_tcmd
+
+on property:ro.bootmode=mot-factory
+    mkdir /mnt/vendor/mot_factory
+    mount tmpfs tmpfs /mnt/vendor/mot_factory
+    chown vendor_tcmd vendor_tcmd /mnt/vendor/mot_factory
+    chmod 0770 /mnt/vendor/mot_factory
+
+on post-fs-data && property:ro.bootmode=mot-factory
+    restorecon /mnt/vendor/mot_factory
+
+on property:sys.bootbroadcast_completed=*
+    setprop vendor.sys.bootbroadcast_completed ${sys.bootbroadcast_completed}
+
+on property:ro.vendor.build.motfactory=1
+    # Change ownership and permission for current_cmd factory testing
+    chown system system /proc/mtk_battery_cmd/current_cmd
+    chmod 0664 /proc/mtk_battery_cmd/current_cmd
+
+on property:vendor.boot_completed=1
+    setprop ro.vendor.boot.hwrev                ${ro.boot.hwrev}
+    setprop ro.vendor.carrier                   ${ro.carrier}
+    setprop ro.vendor.build.version.sdk         ${ro.build.version.sdk}
+    setprop ro.vendor.sys.adb_reset_protected   ${ro.sys.adb_reset_protected}
+    setprop ro.vendor.telephony.default_network ${ro.telephony.default_network}
+    setprop ro.vendor.boot.radio                ${ro.boot.radio}
+    setprop ro.vendor.build.description         ${ro.build.description}
+    setprop vendor.init.svc.adbd                ${init.svc.adbd}
+    setprop ro.vendor.boot.secure_hardware      ${ro.boot.secure_hardware}
+    setprop ro.vendor.sys.adb_reset_protected   ${ro.sys.adb_reset_protected}

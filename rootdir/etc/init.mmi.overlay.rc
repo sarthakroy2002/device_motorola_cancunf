@@ -1,0 +1,204 @@
+on early-init
+    insmod /vendor/lib/modules/sensors_class.ko
+    insmod /vendor/lib/modules/sx937x_sar.ko
+    insmod /vendor/lib/modules/bq25980_mmi.ko
+    insmod /vendor/lib/modules/mmi_decrete_charger_cp_qc3p.ko
+    insmod /vendor/lib/modules/moto_mmap_fault.ko
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qpnp_adaptive_charge leds-gpio pn557
+
+on post-fs-data
+    # calibration
+    mkdir /data/vendor/sensor 0774 system system
+    # Sensor
+    chmod 0660 /dev/hf_manager
+    chown system system /dev/hf_manager
+
+    # config fingerprint
+    mkdir /data/vendor/.fps 0770 system vendor_fingerp
+    mkdir /mnt/vendor/persist/fps 0770 system system
+    mkdir /data/vendor/egis 0770 system vendor_fingerp
+    mkdir /data/vendor/egis/cqa 0770 system vendor_fingerp
+    mkdir /mnt/vendor/persist/egis 0770 system vendor_fingerp
+
+    # Required by touchRec for write the touch data
+    mkdir /data/vendor/touchrec 0770 input input
+    chown input input /data/vendor/touchrec/bootindex
+    chown input input /data/vendor/touchrec/lastbootuuid
+    chown input input /data/vendor/touchrec/touch_data.txt
+    chmod 0664 /data/vendor/touchrec/touch_data.txt
+
+service vendor.modem-rfs-sh /vendor/bin/init.mmi.modem-rfs.sh loop 600
+    class late_start
+    user root
+    group log system radio
+    oneshot
+
+on late-init
+    #moto algo params
+    chmod 0660 /sys/bus/platform/drivers/mtk_nanohub/algo_params
+    chown system system /sys/bus/platform/drivers/mtk_nanohub/algo_params
+
+    chown system system /sys/class/sensors/capsense_bottom_left/enable
+    chown system system /sys/class/sensors/capsense_bottom_left/poll_delay
+    chown system system /sys/class/sensors/capsense_bottom_right/enable
+    chown system system /sys/class/sensors/capsense_bottom_right/poll_delay
+    chown system system /sys/class/sensors/capsense_top_left/enable
+    chown system system /sys/class/sensors/capsense_top_left/poll_delay
+    chown system system /sys/class/sensors/capsense_top_mid/enable
+    chown system system /sys/class/sensors/capsense_top_mid/poll_delay
+    chown system system /sys/class/sensors/capsense_top_right/enable
+    chown system system /sys/class/sensors/capsense_top_right/poll_delay
+
+service capsense_reset /vendor/bin/capsense_reset
+    class core
+    user system
+    group system input
+    disabled
+
+on property:sys.boot_completed=1
+  start capsense_reset
+
+# Turn on led to indicate device on in factory mode
+on property:ro.bootmode=mot-factory
+    write /sys/class/leds/charging/brightness 255
+
+on early-boot
+    # Permission for Health Storage HAL
+    chown system system /sys/devices/platform/soc/112b0000.ufshci/manual_gc
+    chown system system /sys/devices/platform/soc/112b0000.ufshci/ufshid/trigger
+
+service nxpnfcinfo /system/vendor/bin/nxpnfcinfo
+    class late_start
+    group nfc
+    user system
+    oneshot
+
+on property:ro.vendor.hw.nfc=ese_nq
+   insmod /vendor/lib/modules/nxp_i2c.ko
+   insmod /vendor/lib/modules/nxp_ese.ko
+   wait /dev/nq-nci
+   chown nfc nfc /dev/nq-nci
+   chmod 0666 /dev/nq-nci
+   wait /dev/p73
+   chown secure_element secure_element /dev/p73
+   chmod 0666 /dev/p73
+
+on property:ro.vendor.hw.nfc=samsung
+   insmod /vendor/lib/modules/sec_nfc.ko
+   wait /dev/sec-nfc
+   chown nfc nfc /dev/sec-nfc
+   chmod 0770 /dev/sec-nfc
+
+on boot
+   write /sys/class/i2c-dev/i2c-9/device/9-0030/wireless_fw_update 1
+   # Set wls perms for HAL
+   chown system system /sys/class/power_supply/wireless/device/pen_control
+   chown system system /sys/class/power_supply/wireless/device/tx_mode
+   chown system system /sys/class/power_supply/wireless/device/wls_input_current_limit
+   chown system system /sys/class/power_supply/wireless/device/folio_mode
+   chmod 0660 /sys/class/power_supply/wireless/device/pen_control
+   chmod 0660 /sys/class/power_supply/wireless/device/tx_mode
+   chmod 0660 /sys/class/power_supply/wireless/device/wls_input_current_limit
+   chmod 0660 /sys/class/power_supply/wireless/device/folio_mode
+   # change permission for capsensor
+   chown system system /sys/class/capsense/reset
+   chown system system /sys/class/capsense/int_state
+   chown radio system /sys/class/capsense/reg
+   chown radio system /sys/class/capsense/fw_download_status
+   chmod 0660 /sys/class/capsense/reset
+   chmod 0660 /sys/class/capsense/int_state
+   chmod 0660 /sys/class/capsense/reg
+   chmod 0660 /sys/class/capsense/fw_download_status
+
+   # change dir permission
+   mkdir /data/vendor/camera_dump
+   chown root camera /data/vendor/camera_dump
+   chmod 0770 /data/vendor/camera_dump
+
+  # Change ownership and permission for cp-standalone factory testing
+  chown system system /sys/class/power_supply/cp-standalone/voltage_now
+  chown system system  /sys/class/power_supply/cp-standalone/device/force_chg_auto_enable
+  chmod 0644 /sys/class/power_supply/cp-standalone/voltage_now
+# Set adaptive charging perms for HAL
+  chown system system /sys/module/qpnp_adaptive_charge/parameters/upper_limit
+  chown system system /sys/module/qpnp_adaptive_charge/parameters/lower_limit
+   # touch api
+   chown system system /sys/class/touchscreen/primary/interpolation
+   chmod 0660 /sys/class/touchscreen/primary/interpolation
+   chown system system /sys/class/touchscreen/primary/first_filter
+   chmod 0660 /sys/class/touchscreen/primary/first_filter
+   chown system system /sys/class/touchscreen/primary/edge
+   chmod 0660 /sys/class/touchscreen/primary/edge
+   chown system system /sys/class/touchscreen/primary/gesture
+   chmod 0660 /sys/class/touchscreen/primary/gesture
+   chmod 0664 /proc/cts_tool
+
+    write /sys/block/sdc/queue/scheduler bfq
+    write /sys/block/sdc/queue/iosched/slice_idle 0
+
+on fs
+   exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_relay nova_0flash_mmi_v2 focaltech_0flash_mmi_v2 ilitek_v3_mmi
+
+# camera eeprom calibration
+on property:sys.boot_completed=1
+  chmod 0644 /data/vendor/camera_dump/mot_gt24p128f_ov50d_eeprom.bin
+  chmod 0644 /data/vendor/camera_dump/serial_number_main.bin
+  chmod 0644 /data/vendor/camera_dump/mot_gt24p64ba2_hi1634q_eeprom.bin
+  chmod 0644 /data/vendor/camera_dump/serial_number_front.bin
+  chmod 0644 /data/vendor/camera_dump/mot_cancunf_s5k4h7_otp.bin
+  chmod 0644 /data/vendor/camera_dump/serial_number_wide.bin
+  chmod 0644 /data/vendor/camera_dump/mot_cancunf_sc202acs_otp.bin
+
+on moto-post-fs-data-fs-tune
+    write /sys/block/${dev.mnt.dev.system_ext}/queue/read_ahead_kb 2048
+    write /sys/block/${dev.mnt.dev.vendor}/queue/read_ahead_kb 2048
+    write /sys/block/${dev.mnt.dev.product}/queue/read_ahead_kb 2048
+    write /sys/block/${dev.mnt.dev.data}/queue/read_ahead_kb 2048
+    write /sys/block/${dev.mnt.dev.root}/queue/read_ahead_kb 2048
+    write /sys/block/${dev.mnt.dev.vendor_dlkm}/queue/read_ahead_kb 2048
+
+on moto-boot-completed-fs-tune
+    write /sys/block/dm-0/queue/read_ahead_kb 512
+    write /sys/block/dm-1/queue/read_ahead_kb 512
+    write /sys/block/dm-2/queue/read_ahead_kb 512
+    write /sys/block/dm-3/queue/read_ahead_kb 512
+    write /sys/block/dm-4/queue/read_ahead_kb 512
+    write /sys/block/dm-5/queue/read_ahead_kb 512
+    write /sys/block/${dev.mnt.dev.system_ext}/queue/read_ahead_kb 512
+    write /sys/block/${dev.mnt.dev.vendor}/queue/read_ahead_kb 512
+    write /sys/block/${dev.mnt.dev.product}/queue/read_ahead_kb 512
+    write /sys/block/${dev.mnt.dev.data}/queue/read_ahead_kb 512
+    write /sys/block/${dev.mnt.dev.root}/queue/read_ahead_kb 512
+    write /sys/block/${dev.mnt.dev.vendor_dlkm}/queue/read_ahead_kb 512
+
+# === DEBUGGING FEATURE ===
+# Redirect LOG[E|W|I] logs to uart in case system server keeps rebooting without adb connection
+# Pass logcat buffer names to androidboot.loge2uart by cmdl under fastboot.
+# For example: fastboot oem config cmdl "androidboot.loge2uart=system,main"
+# Of course, console must be enabled to make this work
+service loge2uart /system/bin/logcat -b ${ro.boot.loge2uart} -v threadtime -f /dev/ttyS0 *:E
+    user root
+    group root
+    disabled
+
+service logw2uart /system/bin/logcat -b ${ro.boot.logw2uart} -v threadtime -f /dev/ttyS0 *:W
+    user root
+    group root
+    disabled
+
+service logi2uart /system/bin/logcat -b ${ro.boot.logi2uart} -v threadtime -f /dev/ttyS0 *:I
+    user root
+    group root
+    disabled
+
+on late-init && property:ro.boot.loge2uart=*
+    setprop persist.vendor.uartconsole.enable 1
+    start loge2uart
+
+on late-init && property:ro.boot.logw2uart=*
+    setprop persist.vendor.uartconsole.enable 1
+    start logw2uart
+
+on late-init && property:ro.boot.logi2uart=*
+    setprop persist.vendor.uartconsole.enable 1
+    start logi2uart
