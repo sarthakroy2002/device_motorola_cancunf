@@ -1,0 +1,70 @@
+# Audio
+ro.audio.silent=0
+ro.audio.usb.period_us=16000
+ro.camera.sound.forced=0
+
+# Bluetooth
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.bas.client.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.sap.server.enabled=true
+
+# Display
+debug.sf.early.app.duration=20000000
+debug.sf.early.sf.duration=27600000
+debug.sf.earlyGl.app.duration=20000000
+debug.sf.earlyGl.sf.duration=27600000
+debug.sf.enable_transaction_tracing=false
+debug.sf.hwc.min.duration=23000000
+debug.sf.latch_unsignaled=true
+debug.sf.late.app.duration=20000000
+debug.sf.late.sf.duration=27600000
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.use_phase_offsets_as_durations=1
+ro.opengles.version=196610
+vendor.debug.sf.display_dejitter=0
+
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
+# Low Memory Killer
+ro.config.per_app_memcg=false
+
+# Media
+debug.stagefright.c2inputsurface=-1
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Motorola
+ro.mot.product_wave=2023.3
+
+# Partition
+ro.product.property_source_order=odm,vendor,product,system
+
+# Radio
+vendor.rild.libargs=-d /dev/ttyC0
+vendor.rild.libpath=mtk-ril.so
+
+# Wifi
+mediatek.wlan.ctia=0
+persist.vendor.wfc.sys_wfc_support=1
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+
+# USB
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp

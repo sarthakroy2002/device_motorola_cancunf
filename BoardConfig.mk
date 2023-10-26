@@ -119,6 +119,10 @@ BOARD_USES_METADATA_PARTITION := true
 TARGET_BOARD_PLATFORM := mt6855
 BOARD_HAS_MTK_HARDWARE := true
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
+
 # Recovery
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6855 
