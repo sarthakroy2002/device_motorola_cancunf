@@ -102,6 +102,7 @@ PRODUCT_PACKAGES += \
     init.mt6855.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
+    init.recovery.mt6855.rc \
     init.sensor_2_0.rc \
     ueventd.mt6855.rc
 
