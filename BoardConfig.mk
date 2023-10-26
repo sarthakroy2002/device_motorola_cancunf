@@ -25,6 +25,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 TARGET_BOOTLOADER_BOARD_NAME := cancunf
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_SCREEN_DENSITY := 400
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
