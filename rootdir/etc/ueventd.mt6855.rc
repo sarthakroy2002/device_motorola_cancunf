@@ -1,4 +1,3 @@
-#change partition permission
 # eMMC only
 /dev/block/mmcblk0                               0660    root    system
 /dev/block/mmcblk0boot0                          0660    root    system
@@ -55,6 +54,7 @@
 /dev/gps2scp              0660   gps        gps
 /dev/gps_pwr              0660   gps        gps
 /dev/fw_log_gps           0660   gps        gps
+
 # ANT
 /dev/stpant               0660   system     system
 
@@ -138,11 +138,12 @@
 /dev/irtx                 0660   system     system
 /dev/lirc*                0660   root       system
 /dev/ir-learning          0660   system     system
+
 # SGX device node
 /dev/pvrsrvkm             0666   root       root
 /dev/pvr_sync             0666   root       root
 
-
+# LED
 /sys/devices/platform/leds-mt65xx/leds/green   delay_on      0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/green   delay_off      0664  system   system
 /sys/devices/platform/leds-mt65xx/leds/red   delay_on      0664  system   system

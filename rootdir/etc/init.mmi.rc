@@ -1,7 +1,6 @@
 
 # Test commands
 import /vendor/etc/init/hw/init.mmi.tcmd.rc
-import /vendor/etc/init/hw/apanic.rc
 # Chipset-specific file
 import /vendor/etc/init/hw/init.mmi.chipset.rc
 # Target-specific file

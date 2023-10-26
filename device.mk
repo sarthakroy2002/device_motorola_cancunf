@@ -90,7 +90,6 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.cgroup.rc \
     init.connectivity.common.rc \
-    init.connectivity.rc \
     init.mmi.backup.trustlet.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \

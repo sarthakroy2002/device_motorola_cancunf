@@ -112,13 +112,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.connectivity.rc",
-    src: "etc/init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.mmi.backup.trustlet.rc",
     src: "etc/init.mmi.backup.trustlet.rc",
     sub_dir: "init/hw",
