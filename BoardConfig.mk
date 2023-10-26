@@ -29,6 +29,49 @@ TARGET_NO_BOOTLOADER := true
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
+# Kernel
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_OFFSET := 0x40000000
+BOARD_KERNEL_PAGESIZE := 0x00001000
+BOARD_TAGS_OFFSET := 0x47c80000
+BOARD_RAMDISK_OFFSET := 0x66f00000
+BOARD_RAMDISK_USE_LZ4 := true
+
+BOARD_BOOTCONFIG += \
+    androidboot.selinux=permissive
+
+BOARD_KERNEL_CMDLINE += \
+    bootopt=64S3,32N2,64N2
+
+BOARD_MKBOOTIMG_ARGS += \
+    --dtb_offset $(BOARD_TAGS_OFFSET) \
+    --header_version $(BOARD_BOOT_HEADER_VERSION) \
+    --kernel_offset $(BOARD_KERNEL_OFFSET) \
+    --ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
+    --tags_offset $(BOARD_TAGS_OFFSET)
+
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
+
+TARGET_KERNEL_ADDITIONAL_FLAGS += \
+    NM=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-nm \
+    OBJCOPY=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objcopy \
+    OBJDUMP=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objdump \
+    OBJSIZE=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objsize \
+    READELF=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-readelf \
+    STRIP=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-strip
+
+TARGET_KERNEL_NULLIFY_CUDA_HIP := false
+TARGET_KERNEL_CONFIG := cancunf-gki_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/cancunf
+
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/vendor_dlkm.modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/vendor_boot.modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/recovery.modules.load))
+
 # Partitions
 AB_OTA_UPDATER := true
 BOARD_USES_RECOVERY_AS_BOOT := true
