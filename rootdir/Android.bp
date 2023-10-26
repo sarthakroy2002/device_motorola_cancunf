@@ -87,6 +87,7 @@ prebuilt_etc {
     src: "etc/fstab.mt6855",
     vendor: true,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
 }
 
 prebuilt_etc {

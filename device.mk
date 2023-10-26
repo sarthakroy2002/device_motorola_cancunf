@@ -86,6 +86,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6855 \
     fstab.mt6855.ramdisk \
+    fstab.mt6855.vendor_ramdisk \
     init_connectivity.rc \
     init.cgroup.rc \
     init.connectivity.common.rc \
