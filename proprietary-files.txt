@@ -301,8 +301,6 @@ vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib/android.hardware.bluetooth.audio@2.0.so
 vendor/lib/android.hardware.bluetooth.audio@2.1.so
-vendor/lib/android.hardware.bluetooth@1.0.so
-vendor/lib/android.hardware.bluetooth@1.1.so
 vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libbluetooth_hw_test.so
@@ -322,8 +320,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/android.hardware.bluetooth.audio@2.0.so
 vendor/lib64/android.hardware.bluetooth.audio@2.1.so
-vendor/lib64/android.hardware.bluetooth@1.0.so
-vendor/lib64/android.hardware.bluetooth@1.1.so
 vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_hw_test.so
@@ -1004,15 +1000,6 @@ vendor/lib64/mt6855/mtk000_mipi_raw_IdxMgr.so
 vendor/lib64/mt6855/mtk000_mipi_raw_tuning.so
 vendor/lib64/mtkcam/mt6855/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/android.hardware.camera.common@1.0.so
-vendor/lib64/android.hardware.camera.device@1.0.so
-vendor/lib64/android.hardware.camera.device@3.2.so
-vendor/lib64/android.hardware.camera.device@3.3.so
-vendor/lib64/android.hardware.camera.device@3.4.so
-vendor/lib64/android.hardware.camera.device@3.5.so
-vendor/lib64/android.hardware.camera.device@3.6.so
-vendor/lib64/android.hardware.camera.provider@2.4.so
-vendor/lib64/android.hardware.camera.provider@2.5.so
-vendor/lib64/android.hardware.camera.provider@2.6.so
 vendor/lib64/lib3a.ae.pipe.so
 vendor/lib64/libArcNetMtk.so
 vendor/lib64/libBasicModule.so
@@ -1550,7 +1537,6 @@ vendor/lib64/mt6855/libpq_cust_base.so
 vendor/lib64/mt6855/libpq_prot.so
 vendor/lib64/mt6855/libpqparamparser.so
 vendor/lib64/mt6855/libpqpconfig.so
-vendor/lib64/android.frameworks.displayservice@1.0.so
 vendor/lib64/android.hardware.graphics.composer@2.1-resources.so
 vendor/lib64/android.hardware.graphics.composer@2.1.so
 vendor/lib64/android.hardware.graphics.composer@2.2-resources.so
@@ -1661,11 +1647,6 @@ vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/android.hardware.drm@1.0.so
-vendor/lib/android.hardware.drm@1.1.so
-vendor/lib/android.hardware.drm@1.2.so
-vendor/lib/android.hardware.drm@1.3.so
-vendor/lib/android.hardware.drm@1.4.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libtlcWidevineModularDrm.so
 vendor/lib/liburee_meta_drmkeyinstall.so
@@ -1673,11 +1654,6 @@ vendor/lib/libwvhidl.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/android.hardware.drm@1.0.so
-vendor/lib64/android.hardware.drm@1.1.so
-vendor/lib64/android.hardware.drm@1.2.so
-vendor/lib64/android.hardware.drm@1.3.so
-vendor/lib64/android.hardware.drm@1.4.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
@@ -2027,13 +2003,6 @@ vendor/lib/libviagpsrpc.so
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
-vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so
-vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so
-vendor/lib64/android.hardware.gnss.visibility_control@1.0.so
-vendor/lib64/android.hardware.gnss@1.0.so
-vendor/lib64/android.hardware.gnss@1.1.so
-vendor/lib64/android.hardware.gnss@2.0.so
-vendor/lib64/android.hardware.gnss@2.1.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 
@@ -2179,9 +2148,6 @@ vendor/lib64/android.hardware.soundtrigger@2.3.so
 # MDDP
 vendor/bin/hw/tetheroffloadservice
 vendor/etc/init/tetheroffloadservice.rc
-vendor/lib64/android.hardware.tetheroffload.config@1.0.so
-vendor/lib64/android.hardware.tetheroffload.control@1.0.so
-vendor/lib64/android.hardware.tetheroffload.control@1.1.so
 
 # Media
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
@@ -2290,9 +2256,6 @@ vendor/lib/libvpud_vcodec.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/HEVCSecureVdecCA.so
 vendor/lib64/VP9SecureVdecCA.so
-vendor/lib64/android.hardware.media.c2@1.0.so
-vendor/lib64/android.hardware.media.c2@1.1.so
-vendor/lib64/android.hardware.media.c2@1.2.so
 vendor/lib64/libAVCSecureVencCA.so
 vendor/lib64/libJpgEncPipe.so
 vendor/lib64/libMtkOmxCore.so
@@ -2565,10 +2528,6 @@ vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/nfc_calibration.txt
 vendor/etc/sn100u_nfcon.pnscr
 vendor/etc/sn100u_pnx_ese_cplc.pnscr
-vendor/lib/android.hardware.nfc@1.0.so
-vendor/lib/android.hardware.nfc@1.1.so
-vendor/lib/android.hardware.nfc@1.2.so
-vendor/lib/android.hardware.secure_element@1.0.so
 vendor/lib/libnxp_extamp_intf.so
 vendor/lib/libpn557_fw.so
 vendor/lib/libpn560_fw.so
@@ -2578,12 +2537,6 @@ vendor/lib/nfc_nci.nqx.default.hw.so
 vendor/lib/nfc_nci_sec.so
 vendor/lib/vendor.nxp.hardware.nxpese@1.0.so
 vendor/lib/vendor.nxp.nxpnfc@2.0.so
-vendor/lib64/android.hardware.nfc@1.0.so
-vendor/lib64/android.hardware.nfc@1.1.so
-vendor/lib64/android.hardware.nfc@1.2.so
-vendor/lib64/android.hardware.secure_element@1.0.so
-vendor/lib64/android.hardware.secure_element@1.1.so
-vendor/lib64/android.hardware.secure_element@1.2.so
 vendor/lib64/ese_spi_nxp.so
 vendor/lib64/ese_spi_nxp_snxxx.so
 vendor/lib64/libnxp_extamp_intf.so
@@ -2650,7 +2603,6 @@ vendor/etc/powerscntbl.xml
 vendor/etc/xgf.cfg
 vendor/lib/hw/power.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
-vendor/lib/android.hardware.power@1.0.so
 vendor/lib/libmtkperf_client_vendor.so
 vendor/lib/libperfctl_vendor.so
 vendor/lib/libpower_timer.so
@@ -2662,9 +2614,6 @@ vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/lib64/hw/power.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
 vendor/lib64/android.hardware.power-service-mediatek.so
-vendor/lib64/android.hardware.power@1.0.so
-vendor/lib64/android.hardware.power@1.1.so
-vendor/lib64/android.hardware.power@1.2.so
 vendor/lib64/libmtkperf_client_vendor.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpower_timer.so
@@ -2722,8 +2671,6 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib/android.hardware.radio@1.0.so
-vendor/lib/android.hardware.radio@1.1.so
 vendor/lib/libMtkAinrEnh.so
 vendor/lib/libcapctrl.so
 vendor/lib/libcares_naptr.so
@@ -2753,17 +2700,6 @@ vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib64/mt6855/libmnl.so
-vendor/lib64/android.hardware.radio.config@1.0.so
-vendor/lib64/android.hardware.radio.config@1.1.so
-vendor/lib64/android.hardware.radio.config@1.2.so
-vendor/lib64/android.hardware.radio.config@1.3.so
-vendor/lib64/android.hardware.radio@1.0.so
-vendor/lib64/android.hardware.radio@1.1.so
-vendor/lib64/android.hardware.radio@1.2.so
-vendor/lib64/android.hardware.radio@1.3.so
-vendor/lib64/android.hardware.radio@1.4.so
-vendor/lib64/android.hardware.radio@1.5.so
-vendor/lib64/android.hardware.radio@1.6.so
 vendor/lib64/libMtkAinrEnh.so
 vendor/lib64/libcapctrl.so
 vendor/lib64/libcares_naptr.so
@@ -2820,21 +2756,13 @@ vendor/lib64/vendor.mediatek.hardware.radio_op@3.0.so
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
-vendor/lib/android.frameworks.sensorservice@1.0.so
-vendor/lib/android.hardware.sensors@1.0.so
 vendor/lib/android.hardware.sensors@2.0-ScopedWakelock.so
-vendor/lib/android.hardware.sensors@2.0.so
-vendor/lib/android.hardware.sensors@2.1.so
 vendor/lib/libhwm.so
 vendor/lib/libsensorndkbridge.so
 vendor/lib/sensors.moto.so
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.mediatek.V2.0.so
-vendor/lib64/android.frameworks.sensorservice@1.0.so
-vendor/lib64/android.hardware.sensors@1.0.so
 vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so
-vendor/lib64/android.hardware.sensors@2.0.so
-vendor/lib64/android.hardware.sensors@2.1.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
@@ -2870,13 +2798,9 @@ vendor/etc/mpe.conf
 vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib/hw/thermal_hal.so
-vendor/lib/android.hardware.thermal@1.0.so
-vendor/lib/android.hardware.thermal@2.0.so
 vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/thermal_hal.so
-vendor/lib64/android.hardware.thermal@1.0.so
-vendor/lib64/android.hardware.thermal@2.0.so
 
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
@@ -2936,12 +2860,6 @@ vendor/lib64/vendor.trustonic.tee@1.1.so
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 -vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
-vendor/lib64/android.hardware.usb.gadget@1.0.so
-vendor/lib64/android.hardware.usb.gadget@1.1.so
-vendor/lib64/android.hardware.usb@1.0.so
-vendor/lib64/android.hardware.usb@1.1.so
-vendor/lib64/android.hardware.usb@1.2.so
-vendor/lib64/android.hardware.usb@1.3.so
 
 # Vibrator
 vendor/bin/hw/android.hardware.vibrator-service.mediatek
@@ -2968,24 +2886,8 @@ vendor/etc/init/wlan_assistant.rc
 -vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 -vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 -vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
-vendor/lib/android.system.wifi.keystore@1.0.so
 vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib/meta_wifi_data.so
-vendor/lib64/android.hardware.wifi.hostapd@1.0.so
-vendor/lib64/android.hardware.wifi.hostapd@1.1.so
-vendor/lib64/android.hardware.wifi.hostapd@1.2.so
-vendor/lib64/android.hardware.wifi.hostapd@1.3.so
-vendor/lib64/android.hardware.wifi.supplicant@1.0.so
-vendor/lib64/android.hardware.wifi.supplicant@1.1.so
-vendor/lib64/android.hardware.wifi.supplicant@1.2.so
-vendor/lib64/android.hardware.wifi.supplicant@1.3.so
-vendor/lib64/android.hardware.wifi.supplicant@1.4.so
-vendor/lib64/android.hardware.wifi@1.0.so
-vendor/lib64/android.hardware.wifi@1.1.so
-vendor/lib64/android.hardware.wifi@1.2.so
-vendor/lib64/android.hardware.wifi@1.3.so
-vendor/lib64/android.hardware.wifi@1.4.so
-vendor/lib64/android.hardware.wifi@1.5.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libwifitest.so
