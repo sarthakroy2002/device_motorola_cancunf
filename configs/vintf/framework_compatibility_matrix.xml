@@ -144,14 +144,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.apmonitor</name>
-        <version>2.0</version>
-        <interface>
-            <name>IApmService</name>
-            <instance>apm_hidl_service</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.apuware.apusys</name>
         <version>1.0</version>
         <version>2.0</version>
@@ -289,14 +281,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.dmc</name>
-        <version>1.2</version>
-        <interface>
-            <name>IDmcService</name>
-            <instance>dmc_hidl_service</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.dplanner</name>
         <version>2.0</version>
         <interface>
@@ -397,14 +381,6 @@
             <instance>mtk_mnld2mtklogger</instance>
             <instance>mtk_mnld2nlputils</instance>
             <instance>mtk_mtklogger2mnld</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.mdmonitor</name>
-        <version>1.0</version>
-        <interface>
-            <name>IMDMonitorService</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">

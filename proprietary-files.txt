@@ -1552,38 +1552,6 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
-# DMC
-vendor/bin/dmc_core
-vendor/bin/mtk_pkm_service
-vendor/etc/init/dmc_core.rc
-vendor/etc/init/mtk_pkm_service.rc
-vendor/lib/libapmonitor_vendor.so
-vendor/lib/libasn1c_core.so
-vendor/lib/libasn1c_mapi.so
-vendor/lib/libasn1c_mdmi.so
-vendor/lib/libdecrypt.so
-vendor/lib/libicd_decoder.so
-vendor/lib/libpkm.so
-vendor/lib/libtranslator_mapi_v3.0.so
-vendor/lib/libtranslator_mdmi_v2.8.2.so
-vendor/lib/libtranslator_utils.so
-vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib64/libapmonitor_vendor.so
-vendor/lib64/libasn1c_core.so
-vendor/lib64/libasn1c_mapi.so
-vendor/lib64/libasn1c_mdmi.so
-vendor/lib64/libdecrypt.so
-vendor/lib64/libicd_decoder.so
-vendor/lib64/libpkm.so
-vendor/lib64/libtranslator_mapi_v3.0.so
-vendor/lib64/libtranslator_mdmi_v2.8.2.so
-vendor/lib64/libtranslator_utils.so
-vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
-vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so
-vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
-vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
-vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
-
 # Dolby
 system_ext/etc/permissions/com.dolby.daxservice.xml
 system_ext/priv-app/daxService/daxService.apk
