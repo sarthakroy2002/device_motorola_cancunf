@@ -54,6 +54,22 @@ PRODUCT_PACKAGES += \
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio@2.1-impl:64 \
+    android.hardware.soundtrigger@2.3-impl:64
+
+PRODUCT_PACKAGES += \
+    audio.primary.default:64 \
+    audio.r_submix.default:64 \
+    audio.bluetooth.default:64 \
+    audio.usb.default:64
+
+PRODUCT_PACKAGES += \
+    libaudiofoundation.vendor \
+    libtinycompress
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
