@@ -2270,7 +2270,6 @@ vendor/etc/vhw.xml
 vendor/lib/mt6855/libsrv_um.so
 vendor/lib/mt6855/libufwriter.so
 vendor/lib/mt6855/libusc.so
-vendor/lib/libcppbor_external.so
 vendor/lib/libcppcose_rkp.so
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdynamiclog.so
@@ -2296,7 +2295,6 @@ vendor/lib64/libBSTSWAD.so
 vendor/lib64/libBSTbase_share.so
 vendor/lib64/libVkLayer_mtk_rt_sdk.so
 vendor/lib64/libbinderdebug.so
-vendor/lib64/libcppbor_external.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libdynamiclog.so
@@ -2835,9 +2833,6 @@ vendor/etc/init/wlan_assistant.rc
 -vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 -vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 -vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
-vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib/meta_wifi_data.so
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libwifitest.so
 vendor/lib64/meta_wifi_data.so
