@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">55.48</item>
-    <item name="screen.full">270.07</item>
+    <item name="screen.on.display0">55.48</item>
+    <item name="screen.full.display0">270.07</item>
     <item name="wifi.on">1.801</item>
     <item name="wifi.active">36.126</item>
     <item name="wifi.scan">44.73</item>
