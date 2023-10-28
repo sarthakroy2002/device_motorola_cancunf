@@ -53,6 +53,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup {
+    case "$1" in
+        vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml)
+            sed -i 's/1.1/1.2/' "$2"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 

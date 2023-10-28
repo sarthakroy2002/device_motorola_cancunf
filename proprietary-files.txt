@@ -1592,7 +1592,6 @@ vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml
 -vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/media_codecs_dolby_audio.xml
 vendor/lib/libdlbpreg.so
@@ -1903,6 +1902,7 @@ vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
+-vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/etc/mtk_omx_core.cfg
