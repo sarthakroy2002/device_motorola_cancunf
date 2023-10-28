@@ -144,15 +144,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.aee</name>
-        <version>1.1</version>
-        <interface>
-            <name>IAee</name>
-            <instance>AEE</instance>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.apmonitor</name>
         <version>2.0</version>
         <interface>
@@ -313,21 +304,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.engineermode</name>
-        <version>1.3</version>
-        <interface>
-            <name>IEmd</name>
-            <instance>EmHidlServer</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.mediatek.hardware.engineermode</name>
-        <interface>
-            <name>IEmds</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.mediatek.hardware.gnss.batching</name>
         <interface>
@@ -421,18 +397,6 @@
             <instance>mtk_mnld2mtklogger</instance>
             <instance>mtk_mnld2nlputils</instance>
             <instance>mtk_mtklogger2mnld</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.mediatek.hardware.log</name>
-        <version>1.0</version>
-        <interface>
-            <name>ILog</name>
-            <instance>ATMWiFiHidlServer</instance>
-            <instance>ConnsysFWHidlServer</instance>
-            <instance>LoggerHidlServer</instance>
-            <instance>MobileLogHidlServer</instance>
-            <instance>ModemLogHidlServer</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
