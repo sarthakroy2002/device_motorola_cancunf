@@ -1970,16 +1970,10 @@ vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 
 # Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib/hw/libMcGatekeeper.so
 vendor/lib/hw/libSoftGatekeeper.so
-vendor/lib/android.hardware.gatekeeper@1.0.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib64/hw/libMcGatekeeper.so
 vendor/lib64/hw/libSoftGatekeeper.so
-vendor/lib64/android.hardware.gatekeeper@1.0.so
 
 # Graphics
 vendor/firmware/rgx.fw
