@@ -159,3 +159,8 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
 # Inherit the proprietary files
 include vendor/motorola/cancunf/BoardConfigVendor.mk
+
+# Wifi
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_HOSTAPD_DRIVER := NL80211
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
