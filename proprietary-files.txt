@@ -1429,16 +1429,10 @@ vendor/lib64/libconnfem.so
 
 # Display
 vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855
-vendor/bin/hw/android.hardware.graphics.composer@2.1-service
-vendor/bin/hw/android.hardware.graphics.composer@2.3-service
 vendor/bin/hw/com.motorola.hardware.display.panel@1.2-service
 vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.2-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -1516,11 +1510,6 @@ vendor/lib64/mt6855/libpq_cust_base.so
 vendor/lib64/mt6855/libpq_prot.so
 vendor/lib64/mt6855/libpqparamparser.so
 vendor/lib64/mt6855/libpqpconfig.so
-vendor/lib64/android.hardware.graphics.composer@2.1-resources.so
-vendor/lib64/android.hardware.graphics.composer@2.1.so
-vendor/lib64/android.hardware.graphics.composer@2.2-resources.so
-vendor/lib64/android.hardware.graphics.composer@2.2.so
-vendor/lib64/android.hardware.graphics.composer@2.3.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 vendor/lib64/com.motorola.hardware.display.panel@1.1.so
 vendor/lib64/com.motorola.hardware.display.panel@1.2.so
