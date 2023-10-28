@@ -136,6 +136,9 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2023-10-01
 
+# Sepolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ALGORITHM := SHA256_RSA2048
