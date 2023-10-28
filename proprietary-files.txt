@@ -1764,25 +1764,16 @@ vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
 
 # Health
-vendor/bin/hw/android.hardware.health@2.1-service
 vendor/bin/hw/motorola.hardware.health.storage@1.0-service
 vendor/bin/hw/motorola.hardware.health@2.0-service
 vendor/bin/batt_health
 vendor/bin/fuelgauged
-vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
 vendor/etc/init/motorola.hardware.health@2.0-service.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
-vendor/lib/android.hardware.health@1.0.so
-vendor/lib/android.hardware.health@2.0.so
-vendor/lib/android.hardware.health@2.1.so
 vendor/lib/libfgauge_gm30.so
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
-vendor/lib64/android.hardware.health@1.0.so
-vendor/lib64/android.hardware.health@2.0.so
-vendor/lib64/android.hardware.health@2.1.so
 vendor/lib64/libfgauge_gm30.so
 vendor/lib64/motorola.hardware.health.storage@1.0.so
 vendor/lib64/motorola.hardware.health@2.0.so
