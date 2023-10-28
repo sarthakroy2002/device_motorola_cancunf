@@ -258,14 +258,12 @@ vendor/etc/SwadParamList.txt
 
 # Audio (SoundFX)
 vendor/lib/soundfx/libaudiopreprocessing.so
-vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/soundfx/libdlbvol.so
 vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libmsstwrapper.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
-vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libhapticgenerator.so
 vendor/lib64/soundfx/libmsstwrapper.so
