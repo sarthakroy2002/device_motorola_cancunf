@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResOverlayCancunf \
+    SettingsOverlayCancunf \
     TetheringConfigResOverlayCancunf \
     WifiResOverlayCancunf
 
