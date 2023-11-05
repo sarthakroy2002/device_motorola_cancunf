@@ -2399,12 +2399,10 @@ vendor/lib64/vendor.mediatek.hardware.radio_op@3.0.so
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
-vendor/lib/android.hardware.sensors@2.0-ScopedWakelock.so
 vendor/lib/libhwm.so
 vendor/lib/sensors.moto.so
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.mediatek.V2.0.so
-vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
