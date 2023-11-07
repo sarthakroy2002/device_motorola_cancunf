@@ -20,8 +20,6 @@ package org.lineageos.settings.device;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -113,28 +111,20 @@ public class DozePreferenceFragment extends PreferenceFragmentCompat
         mPocketPreference.setEnabled(isChecked);
     }
 
-    public static class HelpDialogFragment extends DialogFragment {
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.doze_settings_help_title)
-                    .setMessage(R.string.doze_settings_help_text)
-                    .setNegativeButton(R.string.dialog_ok, (dialog, which) -> dialog.cancel())
-                    .create();
-        }
-
-        @Override
-        public void onCancel(DialogInterface dialog) {
-            getActivity()
-                    .getSharedPreferences("doze_panel", Activity.MODE_PRIVATE)
-                    .edit()
-                    .putBoolean("first_help_shown", true)
-                    .apply();
-        }
-    }
-
     private void showHelp() {
-        HelpDialogFragment fragment = new HelpDialogFragment();
-        fragment.show(getFragmentManager(), "help_dialog");
+        AlertDialog helpDialog = new AlertDialog.Builder(getActivity())
+                .setTitle(R.string.doze_settings_help_title)
+                .setMessage(R.string.doze_settings_help_text)
+                .setPositiveButton(R.string.dialog_ok,
+                        (dialog, which) -> {
+                            getActivity()
+                                    .getSharedPreferences("doze_panel", Activity.MODE_PRIVATE)
+                                    .edit()
+                                    .putBoolean("first_help_shown", true)
+                                    .commit();
+                            dialog.cancel();
+                        })
+                .create();
+        helpDialog.show();
     }
 }
