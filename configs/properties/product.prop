@@ -1,0 +1,8 @@
+persist.vendor.mtk_rcs_ua_support=0
+persist.vendor.mtk_uce_support=0
+persist.vendor.vt.RTPInfo=1
+persist.vendor.vt.supported=1
+ro.telephony.default_network=26,26
+ro.vendor.radio.imei.sv=05
+ro.mot.build.customerid=global
+ril.subscription.types=RUIM
