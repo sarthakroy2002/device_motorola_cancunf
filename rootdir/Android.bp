@@ -4,84 +4,6 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-sh_binary {
-    name: "hardware_revisions.sh",
-    src: "bin/hardware_revisions.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.insmod.sh",
-    src: "bin/init.insmod.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.backup.trustlet.sh",
-    src: "bin/init.mmi.backup.trustlet.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.block_perm.sh",
-    src: "bin/init.mmi.block_perm.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.boot.sh",
-    src: "bin/init.mmi.boot.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.modem-rfs.sh",
-    src: "bin/init.mmi.modem-rfs.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.modules.sh",
-    src: "bin/init.mmi.modules.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.shutdown.sh",
-    src: "bin/init.mmi.shutdown.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.touch.sh",
-    src: "bin/init.mmi.touch.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.mmi.usb.sh",
-    src: "bin/init.mmi.usb.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.oem.fingerprint2.sh",
-    src: "bin/init.oem.fingerprint2.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.oem.hw.sh",
-    src: "bin/init.oem.hw.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "vendor.mmi.cxp.sh",
-    src: "bin/vendor.mmi.cxp.sh",
-    vendor: true,
-}
-
 prebuilt_etc {
     name: "fstab.mt6855",
     src: "etc/fstab.mt6855",
@@ -107,48 +29,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.connectivity.common.rc",
     src: "etc/init.connectivity.common.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.backup.trustlet.rc",
-    src: "etc/init.mmi.backup.trustlet.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.chipset.rc",
-    src: "etc/init.mmi.chipset.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.overlay.rc",
-    src: "etc/init.mmi.overlay.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.rc",
-    src: "etc/init.mmi.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.tcmd.rc",
-    src: "etc/init.mmi.tcmd.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.usb.configfs.rc",
-    src: "etc/init.mmi.usb.configfs.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
