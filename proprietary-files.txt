@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sysq-user 13 T3TD33.16-51-1-1 879234-74307 release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sysq-user 13 T3TD33.16-66-3 2706d2-736ed release-keys, unless pinned
 
 # AEE
 vendor/lib/libaedv.so
