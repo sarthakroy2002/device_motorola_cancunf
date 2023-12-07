@@ -141,7 +141,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss-V1-ndk.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
 
@@ -170,8 +169,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0.vendor \
-    android.hardware.light-V1-ndk.vendor
+    android.hardware.light@2.0.vendor
 
 # Media
 PRODUCT_PACKAGES += \
@@ -267,7 +265,6 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-ndk.vendor \
     android.hardware.power@1.2.vendor
 
 # Radio
@@ -322,11 +319,8 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.0.vendor \
     android.hardware.usb@1.3.vendor \
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V2-ndk.vendor
-
 # VNDK
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
 PRODUCT_PACKAGES += \
     vndservicemanager
 
