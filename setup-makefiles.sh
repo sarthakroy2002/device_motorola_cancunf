@@ -32,5 +32,8 @@ write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
+write_rro_package "CarrierConfigOverlay" "com.android.carrierconfig" product
+write_single_product_packages "CarrierConfigOverlay"
+
 # Finish
 write_footers
