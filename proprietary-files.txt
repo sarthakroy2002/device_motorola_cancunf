@@ -2429,13 +2429,6 @@ vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 -vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
-# Vibrator
--vendor/bin/hw/android.hardware.vibrator-service.mediatek
-vendor/etc/init/vibrator-mtk-default.rc
--vendor/etc/vintf/manifest/vibrator-mtk-default.xml
--vendor/lib/hw/vibrator.default.so
--vendor/lib64/hw/vibrator.default.so
-
 # WiFi
 -vendor/bin/stp_dump3
 -vendor/bin/wifi_dump
