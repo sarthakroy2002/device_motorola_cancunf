@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/motorola/cancunf
+KERNEL_PATH := device/motorola/cancunf-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -60,24 +61,32 @@ BOARD_MKBOOTIMG_ARGS += \
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
+
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := device/motorola/cancunf-kernel/kernel-headers
+
+LOCAL_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
+PRODUCT_COPY_FILES += \
+	$(LOCAL_KERNEL):kernel
+
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
-TARGET_KERNEL_ADDITIONAL_FLAGS += \
-    NM=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-nm \
-    OBJCOPY=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objcopy \
-    OBJDUMP=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objdump \
-    OBJSIZE=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-objsize \
-    READELF=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-readelf \
-    STRIP=$(TARGET_KERNEL_CLANG_PATH)/bin/llvm-strip
-
-TARGET_KERNEL_NULLIFY_CUDA_HIP := false
-TARGET_KERNEL_CONFIG := cancunf-gki_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/cancunf
-
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/vendor_dlkm.modules.load))
+## vendor_boot modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/vendor_boot.modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_PATH)/modules/, $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD))
+
+## recovery modules
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/recovery.modules.load))
+RECOVERY_MODULES := $(addprefix $(KERNEL_PATH)/modules/, $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
+
+## Prevent duplicated entries (to solve duplicated build rules problem)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES) $(RECOVERY_MODULES))
+
+## vendor_dlkm modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/init/vendor_dlkm.modules.load))
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/*.ko)
 
 # Partitions
 AB_OTA_UPDATER := true
