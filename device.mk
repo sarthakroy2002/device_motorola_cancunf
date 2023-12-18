@@ -58,6 +58,7 @@ PRODUCT_PACKAGES +=\
     android.hardware.audio.common@7.0-util.vendor:64 \
     android.hardware.audio@7.0-util.vendor:64 \
     android.hardware.audio@7.0.vendor:64 \
+    android.hardware.soundtrigger@2.0.vendor
 
 PRODUCT_PACKAGES += \
     audio.primary.default:64 \
@@ -153,6 +154,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk_platform.vendor \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
@@ -182,6 +184,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V1-ndk_platform.vendor \
     libkeymaster_messages.vendor:64 \
     libkeymaster_portable.vendor:64 \
     libkeymint.vendor:64 \
@@ -282,11 +285,13 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power-V2-ndk_platform.vendor \
     android.hardware.power@1.2.vendor
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Radio
 PRODUCT_PACKAGES += \
