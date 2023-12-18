@@ -1975,7 +1975,6 @@ vendor/etc/init/hw/init.mmi.backup.trustlet.rc
 vendor/etc/init/hw/init.mmi.chipset.rc
 vendor/etc/init/hw/init.mmi.overlay.rc
 vendor/etc/init/hw/init.mmi.rc
-vendor/etc/init/hw/init.mmi.tcmd.rc
 vendor/etc/init/hw/init.mmi.usb.configfs.rc
 vendor/etc/init/motorola.hardware.fdrcontrol@1.2-service.rc
 vendor/etc/init/motorola.hardware.input@1.0-service.rc
@@ -1990,19 +1989,14 @@ vendor/etc/motorola/12m/focaltech-csot-primary-cancunf.ini
 vendor/etc/motorola/12m/focaltech-csot_ft8725-primary-cancunf.ini
 vendor/etc/motorola/12m/focaltech-csot_ft8726-primary-cancunf.ini
 vendor/etc/motorola/12m/key_code_map.txt
-vendor/etc/motorola/12m/tcmd_leds.cfg
 vendor/etc/motorola/props/sku.n.prop
 vendor/etc/motorola/props/sku.nc.prop
 vendor/etc/motorola/props/sku.nq.prop
 vendor/etc/motorola/props/sku.q.prop
 vendor/etc/motorola/sensors/mot_sensor_settings.json
-vendor/etc/motorola/tcmd/cid_template.dat
-vendor/etc/motorola/tcmd/cid_template.locked
-vendor/etc/motorola/tcmd/cid_template.unlocked
 vendor/etc/permissions/motorola-hardware-sensorscalibrate.xml
 -vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
 -vendor/etc/vintf/manifest/motorola.hardware.mtk.fm.service.xml
--vendor/lib/motorola.hardware.tcmd@1.0.so
 -vendor/lib64/libmotohid.so
 -vendor/lib64/motorola.hardware.fdrcontrol@1.0.so
 -vendor/lib64/motorola.hardware.fdrcontrol@1.1.so
