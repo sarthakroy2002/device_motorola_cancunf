@@ -315,6 +315,7 @@ PRODUCT_PACKAGES += \
     ueventd.mt6855.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6855.rc \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6855.rc
 
 # Sensors
