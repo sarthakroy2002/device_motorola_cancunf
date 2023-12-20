@@ -516,6 +516,7 @@ product/etc/CarrierSettings/s24681.pb
 product/etc/CarrierSettings/s24701.pb
 product/etc/CarrierSettings/s24702.pb
 product/etc/CarrierSettings/s24705.pb
+product/etc/CarrierSettings/s24710.pb
 product/etc/CarrierSettings/s24801.pb
 product/etc/CarrierSettings/s24801imsi_3d_248010x2.pb
 product/etc/CarrierSettings/s24801imsi_3d_248010x3.pb
@@ -1967,6 +1968,7 @@ product/etc/CarrierSettings/s314020.pb
 product/etc/CarrierSettings/s314090.pb
 product/etc/CarrierSettings/s314200.pb
 product/etc/CarrierSettings/s314240.pb
+product/etc/CarrierSettings/s315010.pb
 product/etc/CarrierSettings/s316010.pb
 product/etc/CarrierSettings/s330000.pb
 product/etc/CarrierSettings/s33011.pb

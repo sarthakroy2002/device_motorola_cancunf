@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sysq-user 13 T3TD33.16-66-3 2706d2-736ed release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sysq-user 13 T3TD33.16-78-3 5d1e6-a8500 release-keys, unless pinned
 
 # AEE
 -vendor/lib/libaedv.so
@@ -617,6 +617,8 @@ vendor/etc/dual_golden_wide.bin
 -vendor/lib/libCamera_motcancunfs5k4h7mipirawrow_Zoom_Preview_2X.so
 -vendor/lib/libCamera_motcancunfs5k4h7mipirawrow_Zoom_Preview_4X.so
 -vendor/lib/libCamera_motcancunfs5k4h7mipirawrow_Zoom_Preview_8X.so
+-vendor/lib/libCamera_motcancunfs5kjnsmipiraw_Night_Vision_FacePreview.so
+-vendor/lib/libCamera_motcancunfs5kjnsmipirawrow_Night_Vision_FacePreview.so
 -vendor/lib/libCamera_motcancunfsc202mipiraw_50_Capture.so
 -vendor/lib/libCamera_motcancunfsc202mipiraw_ArcSoft_Raw_NV_Capture.so
 -vendor/lib/libCamera_motcancunfsc202mipiraw_ArcSoft_Raw_NV_Preview.so
@@ -1217,6 +1219,8 @@ vendor/etc/dual_golden_wide.bin
 -vendor/lib64/libCamera_motcancunfs5k4h7mipirawrow_Zoom_Preview_2X.so
 -vendor/lib64/libCamera_motcancunfs5k4h7mipirawrow_Zoom_Preview_4X.so
 -vendor/lib64/libCamera_motcancunfs5k4h7mipirawrow_Zoom_Preview_8X.so
+-vendor/lib64/libCamera_motcancunfs5kjnsmipiraw_Night_Vision_FacePreview.so
+-vendor/lib64/libCamera_motcancunfs5kjnsmipirawrow_Night_Vision_FacePreview.so
 -vendor/lib64/libCamera_motcancunfsc202mipiraw_50_Capture.so
 -vendor/lib64/libCamera_motcancunfsc202mipiraw_ArcSoft_Raw_NV_Capture.so
 -vendor/lib64/libCamera_motcancunfsc202mipiraw_ArcSoft_Raw_NV_Preview.so
