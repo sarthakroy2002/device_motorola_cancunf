@@ -2393,7 +2393,7 @@ vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/sarwifi-default.rc
 vendor/etc/init/wlan_assistant.rc
--vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
+-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml:vendor/etc/vintf/manifest/android.hardware.wifi.supplicant_mtk.xml
 -vendor/lib/meta_wifi_data.so
 -vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 -vendor/lib64/libwifitest.so
