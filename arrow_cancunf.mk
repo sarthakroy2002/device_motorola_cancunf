@@ -13,6 +13,7 @@ $(call inherit-product, device/motorola/cancunf/device.mk)
 
 # Inherit some common ArrowOS stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := arrow_cancunf
 PRODUCT_DEVICE := cancunf
