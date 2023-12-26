@@ -1771,6 +1771,9 @@ vendor/etc/init/volte_clientapi_ua.rc
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 -vendor/lib/hw/kmsetkey.trustonic.so
 -vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 -vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
@@ -2357,6 +2360,7 @@ vendor/app/mcRegistry/attpre_6716af0c135559728ae9e9754da47ccd.tabin
 vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin
 -vendor/bin/hw/vendor.trustonic.alps.alps_device@1.1-service
 -vendor/bin/hw/vendor.trustonic.tee@1.1-service
+-vendor/bin/TBaseDeviceBinding
 -vendor/bin/mcDriverDaemon
 -vendor/bin/rsudaemon_proxy
 vendor/etc/init/init.alpslegacy.rc
@@ -2366,6 +2370,7 @@ vendor/etc/init/vendor.trustonic.alps.alps_device@1.1-service.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 -vendor/lib/libMcClient.so
 -vendor/lib/libMcRegistry.so
+-vendor/lib/libTBaseProvisioning.so
 -vendor/lib/libTEECommon.so
 -vendor/lib64/libMcClient.so
 -vendor/lib64/libTEECommon.so
