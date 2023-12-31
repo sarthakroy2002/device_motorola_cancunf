@@ -169,6 +169,10 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
+    
+PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
