@@ -1368,7 +1368,7 @@ vendor/lib64/arcsoft_portrait_super_night_se_raw.bin
 -vendor/lib64/libarcsoft_super_night_se_raw.so
 
 # Charger
-bin/kpoc_charger
+-bin/kpoc_charger
 etc/init/kpoc_charger.rc
 
 # Chipinfo
