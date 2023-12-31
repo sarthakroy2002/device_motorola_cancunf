@@ -1512,15 +1512,19 @@ vendor/etc/meow.cfg
 -vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
 # Dolby
-system_ext/etc/permissions/com.dolby.daxservice.xml
-system_ext/priv-app/daxService/daxService.apk
+-app/MotoDolbyDax3/MotoDolbyDax3.apk
+-etc/permissions/com.motorola.dolby.dolbyui.dax3.features.xml
+-etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
+-product/etc/default-permissions/default-permissions-com.motorola.dolby.dolbyui.xml
+-system_ext/etc/permissions/com.dolby.daxservice.xml
+-system_ext/priv-app/daxService/daxService.apk
 -vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 -vendor/bin/hw/vendor.dolby.media.c2@1.0-service
-vendor/etc/dolby/dax-default.xml
+-vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 -vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/etc/media_codecs_dolby_audio.xml
+-vendor/etc/media_codecs_dolby_audio.xml
 -vendor/lib/libdlbpreg.so
 -vendor/lib/vendor.dolby.hardware.dms@2.0.so
 -vendor/lib64/libcodec2_store_dolby.so
