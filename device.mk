@@ -208,6 +208,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0.vendor \
     android.hardware.light-V1-ndk_platform.vendor
 
 # Media
@@ -354,7 +355,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb.gadget@1.0.vendor \
+    android.hardware.usb.gadget@1.1.vendor \
     android.hardware.usb@1.3.vendor \
 
 # Vibrator
