@@ -1637,6 +1637,14 @@ vendor/firmware/txpowerctrl.cfg
 vendor/firmware/valhall-1691526.wa
 vendor/firmware/wifi.cfg
 
+# Firmware (recovery)
+vendor/firmware/ILITEK_FW:recovery/root/vendor/firmware/ILITEK_FW
+vendor/firmware/NT36xxx_MP_Setting_Criteria_606B.csv:recovery/root/vendor/firmware/NT36xxx_MP_Setting_Criteria_606B.csv
+vendor/firmware/focaltech_ts_fw_csot.bin:recovery/root/vendor/firmware/focaltech_ts_fw_csot.bin
+vendor/firmware/focaltech_ts_fw_csot_ft8725.bin:recovery/root/vendor/firmware/focaltech_ts_fw_csot_ft8725.bin
+vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin
+
 # GPS
 -vendor/bin/hw/android.hardware.gnss-service.mediatek
 -vendor/bin/mnld
