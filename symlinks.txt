@@ -88,6 +88,10 @@ lib/mot_cancunf_s5k4h7_mipi_raw_IdxMgr.so
 lib/mot_cancunf_s5k4h7_mipi_raw_row_IdxMgr.so
 lib/mot_cancunf_s5k4h7_mipi_raw_row_tuning.so
 lib/mot_cancunf_s5k4h7_mipi_raw_tuning.so
+lib/mot_cancunf_s5kjns_mipi_raw_IdxMgr.so
+lib/mot_cancunf_s5kjns_mipi_raw_row_IdxMgr.so
+lib/mot_cancunf_s5kjns_mipi_raw_row_tuning.so
+lib/mot_cancunf_s5kjns_mipi_raw_tuning.so
 lib/mot_cancunf_sc202_mipi_raw_IdxMgr.so
 lib/mot_cancunf_sc202_mipi_raw_row_IdxMgr.so
 lib/mot_cancunf_sc202_mipi_raw_row_tuning.so
@@ -336,6 +340,10 @@ lib64/mot_cancunf_s5k4h7_mipi_raw_IdxMgr.so
 lib64/mot_cancunf_s5k4h7_mipi_raw_row_IdxMgr.so
 lib64/mot_cancunf_s5k4h7_mipi_raw_row_tuning.so
 lib64/mot_cancunf_s5k4h7_mipi_raw_tuning.so
+lib64/mot_cancunf_s5kjns_mipi_raw_IdxMgr.so
+lib64/mot_cancunf_s5kjns_mipi_raw_row_IdxMgr.so
+lib64/mot_cancunf_s5kjns_mipi_raw_row_tuning.so
+lib64/mot_cancunf_s5kjns_mipi_raw_tuning.so
 lib64/mot_cancunf_sc202_mipi_raw_IdxMgr.so
 lib64/mot_cancunf_sc202_mipi_raw_row_IdxMgr.so
 lib64/mot_cancunf_sc202_mipi_raw_row_tuning.so

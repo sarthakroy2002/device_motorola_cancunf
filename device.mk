@@ -67,6 +67,10 @@ PRODUCT_PACKAGES += \
     audio.usb.default:64
 
 PRODUCT_PACKAGES += \
+    libalsautils \
+    libopus.vendor \
+    libnbaio_mono \
+    audioclient-types-aidl-cpp.vendor \
     libaudiofoundation.vendor \
     libtinycompress
 
@@ -90,6 +94,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio-impl:64 \
+    libbluetooth_audio_session:64 \
     android.hardware.bluetooth@1.1.vendor
 
 # Boot
