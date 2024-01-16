@@ -2195,7 +2195,6 @@ vendor/etc/vhw.xml
 vendor/etc/init.insmod.mt6855.cfg
 
 # Motorola
--vendor/bin/hw/motorola.hardware.fdrcontrol@1.2-service
 -vendor/bin/hw/motorola.hardware.input@1.0-service
 -vendor/bin/hw/motorola.hardware.mtk.fm-service
 -vendor/bin/hw/motorola.hardware.sarwifi-srv
@@ -2222,7 +2221,6 @@ vendor/etc/init/hw/init.mmi.chipset.rc
 vendor/etc/init/hw/init.mmi.overlay.rc
 vendor/etc/init/hw/init.mmi.rc
 vendor/etc/init/hw/init.mmi.usb.configfs.rc
-vendor/etc/init/motorola.hardware.fdrcontrol@1.2-service.rc
 vendor/etc/init/motorola.hardware.input@1.0-service.rc
 vendor/etc/init/motorola.hardware.mtk.fm.service.rc
 vendor/etc/init/motorola.hardware.sensorscalibrate@1.0-service.rc
@@ -2240,9 +2238,6 @@ vendor/etc/permissions/motorola-hardware-sensorscalibrate.xml
 -vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
 -vendor/etc/vintf/manifest/motorola.hardware.mtk.fm.service.xml
 -vendor/lib64/libmotohid.so
--vendor/lib64/motorola.hardware.fdrcontrol@1.0.so
--vendor/lib64/motorola.hardware.fdrcontrol@1.1.so
--vendor/lib64/motorola.hardware.fdrcontrol@1.2.so
 -vendor/lib64/motorola.hardware.input@1.0.so
 -vendor/lib64/motorola.hardware.mtk.fm-V1-ndk_platform.so
 -vendor/lib64/motorola.hardware.sarwifi-V1-ndk_platform.so
