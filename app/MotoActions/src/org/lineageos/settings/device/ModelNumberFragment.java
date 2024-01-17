@@ -19,13 +19,13 @@ package org.lineageos.settings.device;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 
-public class ModelNumberFragment extends PreferenceFragment {
+public class ModelNumberFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.model_number_panel);
+        setPreferencesFromResource(R.xml.model_number_panel, rootKey);
 
         findPreference(MotoActionsSettings.MODEL_NUMBER_KEY)
                 .setSummary(MotoActionsSettings.getModelNumberString(getActivity()));
