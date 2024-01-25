@@ -47,24 +47,24 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl:64 \
-    android.hardware.soundtrigger@2.3-impl:64
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES +=\
-    android.hardware.audio.common-util:64 \
-    android.hardware.audio.common@7.0.vendor:64 \
-    android.hardware.audio.common@7.0-util.vendor:64 \
-    android.hardware.audio@7.0-util.vendor:64 \
-    android.hardware.audio@7.0.vendor:64 \
+    android.hardware.audio.common-util \
+    android.hardware.audio.common@7.0.vendor \
+    android.hardware.audio.common@7.0-util.vendor \
+    android.hardware.audio@7.0-util.vendor \
+    android.hardware.audio@7.0.vendor \
     android.hardware.soundtrigger@2.0.vendor
 
 PRODUCT_PACKAGES += \
-    audio.primary.default:64 \
-    audio.r_submix.default:64 \
-    audio.bluetooth.default:64 \
-    audio.usb.default:64
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.bluetooth.default \
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
     libalsautils \
@@ -94,8 +94,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl:64 \
-    libbluetooth_audio_session:64 \
+    android.hardware.bluetooth.audio-impl \
+    libbluetooth_audio_session \
     android.hardware.bluetooth@1.1.vendor
 
 # Boot
@@ -123,9 +123,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0.vendor \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.allocator@4.0.vendor \
-    libdrm.vendor:64 \
-    libhwc2on1adapter:64 \
-    libhwc2onfbadapter:64
+    libdrm.vendor \
+    libhwc2on1adapter \
+    libhwc2onfbadapter
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service
@@ -151,7 +151,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor:64
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -198,15 +198,15 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     android.hardware.security.secureclock-V1-ndk_platform.vendor \
     android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
-    libkeymaster_messages.vendor:64 \
-    libkeymaster_portable.vendor:64 \
-    libkeymint.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor \
+    libkeymint.vendor \
+    libpuresoftkeymasterdevice.vendor
 
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
-    android.system.wifi.keystore@1.0.vendor:64 \
+    android.system.wifi.keystore@1.0.vendor \
     libcppbor_external.vendor \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
