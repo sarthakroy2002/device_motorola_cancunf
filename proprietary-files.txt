@@ -1616,7 +1616,7 @@ vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.2-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
--vendor/etc/vintf/manifest/com.motorola.hardware.display.panel@1.2-service.xml
+-vendor/etc/vintf/manifest/com.motorola.hardware.display.panel@1.2-service.xml:vendor/etc/vintf/manifest/manifest_com.motorola.hardware.display.panel@1.2-service.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/cust_color_0.xml
 vendor/etc/cust_color_1.xml
@@ -1743,7 +1743,7 @@ vendor/etc/meow.cfg
 -vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
--vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+-vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml:vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
 -vendor/etc/media_codecs_dolby_audio.xml
 -vendor/lib/libdlbpreg.so
 -vendor/lib/vendor.dolby.hardware.dms@2.0.so
@@ -2007,9 +2007,9 @@ vendor/etc/init/volte_clientapi_ua.rc
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
--vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
--vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
--vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml:vendor/etc/vintf/manifest/manifest_android.hardware.security.keymint-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml:vendor/etc/vintf/manifest/manifest_android.hardware.security.secureclock-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml:vendor/etc/vintf/manifest/manifest_android.hardware.security.sharedsecret-service.trustonic.xml
 -vendor/lib/hw/kmsetkey.trustonic.so
 -vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 -vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
@@ -2261,7 +2261,7 @@ vendor/etc/init/networksetting.rc
 # Neural networks
 -vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml:vendor/etc/vintf/manifest/manifest_android.hardware.neuralnetworks-shim-service-mtk.xml
 vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils.xml
@@ -2618,7 +2618,7 @@ vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 # USB
 -vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
--vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
+-vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml:vendor/etc/vintf/manifest/manifest_android.hardware.usb@1.2-service-mediatekv2.xml
 
 # WiFi
 -vendor/bin/stp_dump3
@@ -2632,7 +2632,7 @@ vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/sarwifi-default.rc
 vendor/etc/init/wlan_assistant.rc
--vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml:vendor/etc/vintf/manifest/android.hardware.wifi.supplicant_mtk.xml
+-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml:vendor/etc/vintf/manifest/manifest_android.hardware.wifi.supplicant.xml
 -vendor/lib/meta_wifi_data.so
 -vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 -vendor/lib64/libwifitest.so
