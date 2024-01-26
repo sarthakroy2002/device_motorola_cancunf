@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
+    android.system.keystore2-V1-ndk_platform.vendor \
     android.hardware.hardware_keystore.xml \
     android.system.wifi.keystore@1.0.vendor \
     libcppbor_external.vendor \
@@ -240,6 +241,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-V1-ndk_platform.vendor
 
 # Neural Networks
 PRODUCT_PACKAGES += \
