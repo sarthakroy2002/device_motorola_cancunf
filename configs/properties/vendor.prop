@@ -157,9 +157,6 @@ ro.hardware.vulkan=mtk
 # Incremental FS
 ro.incremental.enable=yes
 
-# Init
-init.userspace_reboot.is_supported=true
-
 # Keystore
 ro.hardware.kmsetkey=trustonic
 
