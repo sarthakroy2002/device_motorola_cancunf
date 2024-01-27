@@ -821,8 +821,6 @@ vendor/etc/dual_golden_wide.bin
 -vendor/lib/libSQLiteModule_VER_ALL.so
 -vendor/lib/lib_ainr_enh.so
 -vendor/lib/libcamalgo.utility.so
--vendor/lib/libgz_gp_client.so
--vendor/lib/libgz_uree.so
 -vendor/lib/libimgsensorca.so
 -vendor/lib/libispcameraca.so
 -vendor/lib/libportrait_repair_ppl3_ocl.so
@@ -1548,8 +1546,6 @@ vendor/etc/dual_golden_wide.bin
 -vendor/lib64/libcamalgo.vsdofUtil.so
 -vendor/lib64/libcamalgo.warp.so
 -vendor/lib64/libfeaturepolicy.so
--vendor/lib64/libgz_gp_client.so
--vendor/lib64/libgz_uree.so
 -vendor/lib64/libheichal.so
 -vendor/lib64/libimagebuffer_wrapper.so
 -vendor/lib64/libimgsensorca.so
@@ -2013,12 +2009,14 @@ vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 -vendor/lib/hw/kmsetkey.trustonic.so
 -vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 -vendor/lib/libdecrypt.so
+-vendor/lib/libthha.so
 -vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 -vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 -vendor/lib64/hw/kmsetkey.trustonic.so
 -vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 -vendor/lib64/libdecrypt.so
 -vendor/lib64/libkmsetkey.so
+-vendor/lib64/libthha.so
 -vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 -vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
@@ -2084,6 +2082,7 @@ vendor/etc/mtk_platform_codecs_config.xml
 -vendor/lib/libh264enc_sa.ca7.so
 -vendor/lib/libhdrvideo.so
 -vendor/lib/libhevce_sb.ca7.android.so
+-vendor/lib/libicd_decoder.so
 -vendor/lib/libjpeg-alpha-oal_vendor.so
 -vendor/lib/libjpeg-alpha_vendor.so
 -vendor/lib/libmp3dec_mtk.so
@@ -2116,6 +2115,7 @@ vendor/etc/mtk_platform_codecs_config.xml
 -vendor/lib64/libformatter.so
 -vendor/lib64/libhdrvideo.so
 -vendor/lib64/libhevce_sb.ca7.android.so
+-vendor/lib64/libicd_decoder.so
 -vendor/lib64/libjpeg-alpha-oal_vendor.so
 -vendor/lib64/libjpeg-alpha_vendor.so
 -vendor/lib64/libstagefrighthw.so
@@ -2167,7 +2167,6 @@ vendor/etc/vhw.xml
 -vendor/lib/liboem_specific.so
 -vendor/lib/libpkip.so
 -vendor/lib/libscltm.so
--vendor/lib/libthha.so
 -vendor/lib64/mt6855/libDR.so
 -vendor/lib64/mt6855/libacdk.so
 -vendor/lib64/mt6855/liblpcnr.so
@@ -2345,6 +2344,10 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -vendor/lib/libfile_op.so
 -vendor/lib/libnvram.so
 -vendor/lib/libnvram_sec.so
+-vendor/lib/libsimlock.so
+-vendor/lib/libsimmelock.so
+-vendor/lib/libstorage_otp.so
+-vendor/lib/libsysenv.so
 -vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 -vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 -vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
@@ -2352,7 +2355,10 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -vendor/lib64/libfile_op.so
 -vendor/lib64/libnvram.so
 -vendor/lib64/libnvram_sec.so
+-vendor/lib64/libsimlock.so
+-vendor/lib64/libsimmelock.so
 -vendor/lib64/libstorage_otp.so
+-vendor/lib64/libsysenv.so
 -vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 -vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
@@ -2441,6 +2447,7 @@ vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 -vendor/lib/libMtkAinrEnh.so
+-vendor/lib/libadropbox.so
 -vendor/lib/libcapctrl.so
 -vendor/lib/libcares_naptr.so
 -vendor/lib/libcarrierconfig.so
@@ -2468,6 +2475,7 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 -vendor/lib64/mt6855/libmnl.so
 -vendor/lib64/libMtkAinrEnh.so
+-vendor/lib64/libadropbox.so
 -vendor/lib64/libcapctrl.so
 -vendor/lib64/libcares_naptr.so
 -vendor/lib64/libcarrierconfig.so
@@ -2499,7 +2507,6 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib64/libratconfig.so
 -vendor/lib64/librilfusion.so
 -vendor/lib64/librsumodem.so
--vendor/lib64/libsysenv.so
 -vendor/lib64/libtrm.so
 -vendor/lib64/libvia-ril.so
 -vendor/lib64/libviamipc-ril.so
@@ -2608,9 +2615,13 @@ vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 -vendor/lib/libMcRegistry.so
 -vendor/lib/libTBaseProvisioning.so
 -vendor/lib/libTEECommon.so
+-vendor/lib/libgz_gp_client.so
+-vendor/lib/libgz_uree.so
 -vendor/lib64/libMcClient.so
 -vendor/lib64/libTEECommon.so
 -vendor/lib64/libalps.so
+-vendor/lib64/libgz_gp_client.so
+-vendor/lib64/libgz_uree.so
 -vendor/lib64/vendor.trustonic.alps.alps_device@1.0.so
 -vendor/lib64/vendor.trustonic.alps.alps_device@1.1.so
 -vendor/lib64/vendor.trustonic.tee.tui@1.0.so
