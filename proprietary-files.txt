@@ -239,7 +239,6 @@ vendor/etc/default_volume_tables.xml
 -vendor/bin/autobt
 -vendor/bin/bt_dump
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
-vendor/etc/init/init.bt_drv.rc
 vendor/etc/bt_stack_debug.conf
 vendor/etc/bt_stack_level6.conf
 -vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
@@ -1592,8 +1591,6 @@ vendor/etc/init/chipinfo_init.rc
 
 # Connectivity
 -vendor/bin/conninfra_loader
-vendor/etc/init/init.connfem.rc
-vendor/etc/init/init.fmradio_drv.rc
 vendor/firmware/soc2_2_ram_bt_1b_1_hdr.bin
 vendor/firmware/soc2_2_ram_bt_1c_1_hdr.bin
 vendor/firmware/soc2_2_ram_mcu_1b_1_hdr.bin
@@ -1901,8 +1898,6 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Virgin_Mobile.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_nTelos.xml
 vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
-vendor/etc/init/init.gps_drv.rc
-vendor/etc/init/init.gps_pwr.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml:vendor/etc/vintf/manifest/gnss-mtk@2.1-service.xml
@@ -2369,7 +2364,6 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/bootperf.rc
 vendor/etc/init/fpsgo.rc
 vendor/etc/init/gbe.rc
-vendor/etc/init/init.fpsgo.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 -vendor/etc/vintf/manifest/power-default.xml:vendor/etc/vintf/manifest/power-mtk-default.xml
@@ -2641,8 +2635,6 @@ vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 -vendor/bin/wmt_launcher
 -vendor/bin/wmt_loader
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/sarwifi-default.rc
 vendor/etc/init/wlan_assistant.rc
 -vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml:vendor/etc/vintf/manifest/manifest_android.hardware.wifi.supplicant.xml
