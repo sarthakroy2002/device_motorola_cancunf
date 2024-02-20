@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     android.hardware.security.secureclock-V1-ndk_platform.vendor \
     android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
+    android.hardware.security.rkp-V1-ndk.vendor \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor \
     libkeymint.vendor \
