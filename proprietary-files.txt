@@ -1602,14 +1602,9 @@ vendor/firmware/soc2_2_ram_wifi_1c_1_hdr.bin
 
 # Display
 -vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855
--vendor/bin/hw/com.motorola.hardware.display.panel@1.2-service
--vendor/bin/hw/com.motorola.hardware.display.touch@1.2-service
 -vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/com.motorola.hardware.display.panel@1.2-service.rc
-vendor/etc/init/com.motorola.hardware.display.touch@1.2-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
--vendor/etc/vintf/manifest/com.motorola.hardware.display.panel@1.2-service.xml:vendor/etc/vintf/manifest/manifest_com.motorola.hardware.display.panel@1.2-service.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/cust_color_0.xml
 vendor/etc/cust_color_1.xml
@@ -1631,7 +1626,6 @@ vendor/etc/meow.cfg
 -vendor/lib/mt6855/libpq_prot.so
 -vendor/lib/mt6855/libpqparamparser.so
 -vendor/lib/mt6855/libpqpconfig.so
--vendor/lib/com.motorola.hardware.display.panel@1.0.so
 -vendor/lib/libaal_key.so
 -vendor/lib/libappgamepq.so
 -vendor/lib/libdre.so
@@ -1681,12 +1675,6 @@ vendor/etc/meow.cfg
 -vendor/lib64/mt6855/libpq_prot.so
 -vendor/lib64/mt6855/libpqparamparser.so
 -vendor/lib64/mt6855/libpqpconfig.so
--vendor/lib64/com.motorola.hardware.display.panel@1.0.so
--vendor/lib64/com.motorola.hardware.display.panel@1.1.so
--vendor/lib64/com.motorola.hardware.display.panel@1.2.so
--vendor/lib64/com.motorola.hardware.display.touch@1.0.so
--vendor/lib64/com.motorola.hardware.display.touch@1.1.so
--vendor/lib64/com.motorola.hardware.display.touch@1.2.so
 -vendor/lib64/libaal_key.so
 -vendor/lib64/libappgamepq.so
 -vendor/lib64/libcomposer_ext.so
@@ -1948,17 +1936,11 @@ vendor/lib/egl/egl.cfg
 -vendor/lib64/libOpenCL.so
 
 # Health
--vendor/bin/hw/motorola.hardware.health.storage@1.0-service
--vendor/bin/hw/motorola.hardware.health@2.0-service
 -vendor/bin/batt_health
 -vendor/bin/fuelgauged
 vendor/etc/init/fuelgauged_init.rc
-vendor/etc/init/motorola.hardware.health.storage@1.0-service.rc
-vendor/etc/init/motorola.hardware.health@2.0-service.rc
 -vendor/lib/libfgauge_gm30.so
 -vendor/lib64/libfgauge_gm30.so
--vendor/lib64/motorola.hardware.health.storage@1.0.so
--vendor/lib64/motorola.hardware.health@2.0.so
 
 # HotwordEnrollment
 -product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk
@@ -2191,8 +2173,6 @@ vendor/etc/vhw.xml
 vendor/etc/init.insmod.mt6855.cfg
 
 # Motorola
--vendor/bin/hw/motorola.hardware.input@1.0-service
--vendor/bin/hw/motorola.hardware.mtk.fm-service
 -vendor/bin/hw/motorola.hardware.sensorscalibrate@1.0-service
 vendor/bin/hardware_revisions.sh
 vendor/bin/init.insmod.sh
@@ -2216,8 +2196,6 @@ vendor/etc/init/hw/init.mmi.chipset.rc
 vendor/etc/init/hw/init.mmi.overlay.rc
 vendor/etc/init/hw/init.mmi.rc
 vendor/etc/init/hw/init.mmi.usb.configfs.rc
-vendor/etc/init/motorola.hardware.input@1.0-service.rc
-vendor/etc/init/motorola.hardware.mtk.fm.service.rc
 vendor/etc/init/motorola.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.mmi.carrier.rc
 vendor/etc/init/vendor.mmi.cxp.rc
@@ -2230,11 +2208,6 @@ vendor/etc/motorola/12m/focaltech-csot_ft8726-primary-cancunf.ini
 vendor/etc/motorola/12m/key_code_map.txt
 vendor/etc/motorola/sensors/mot_sensor_settings.json
 vendor/etc/permissions/motorola-hardware-sensorscalibrate.xml
--vendor/etc/vintf/manifest/motorola.hardware.input@1.0-service.xml
--vendor/etc/vintf/manifest/motorola.hardware.mtk.fm.service.xml
--vendor/lib64/libmotohid.so
--vendor/lib64/motorola.hardware.input@1.0.so
--vendor/lib64/motorola.hardware.mtk.fm-V1-ndk_platform.so
 -vendor/lib64/motorola.hardware.sensorscalibrate@1.0.so
 -vendor/lib64/motorola.hardware.wifi.hostapd@1.0.so
 -vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so

@@ -186,16 +186,6 @@
         <fqname>@2.0::IThermal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>com.motorola.hardware.display.touch</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IMotTouch</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::IMotTouch/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>motorola.hardware.camera.imgtuner</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -206,26 +196,6 @@
         </interface>
         <fqname>@1.0::IImageTuning/default</fqname>
         <fqname>@2.0::IImageTuning/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IMotHealth</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IMotHealth/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.health.storage</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMotStorage</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IMotStorage/default</fqname>
     </hal>
     <hal format="hidl">
         <name>motorola.hardware.sensorscalibrate</name>
