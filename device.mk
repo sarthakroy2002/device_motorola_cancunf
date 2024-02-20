@@ -384,6 +384,9 @@ NEED_AIDL_NDK_PLATFORM_BACKEND := true
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+PRODUCT_PACKAGES += \
+    libutils-v32
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy \
