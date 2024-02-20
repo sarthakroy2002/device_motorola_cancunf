@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2023 ArrowOS
+# Copyright (C) 2024 ArrowOS
+# Copyright (C) 2024 PixelOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
