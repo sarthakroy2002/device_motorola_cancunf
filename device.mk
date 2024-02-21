@@ -353,6 +353,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
+PRODUCT_PACKAGES += \
+    libshim_sensors
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sensors/,$(TARGET_COPY_OUT_VENDOR)/etc/sensors)
 
