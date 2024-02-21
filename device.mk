@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Allow userspace reboots
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
+# Add vendor log tags
+include $(LOCAL_PATH)/configs/properties/vendor_log_tags.mk
+
 # A/B
 PRODUCT_PACKAGES += \
     update_engine \
