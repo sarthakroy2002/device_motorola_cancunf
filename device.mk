@@ -389,6 +389,7 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 PRODUCT_PACKAGES += \
+    libstagefright_foundation-v33 \
     libutils-v32
 
 # Wifi
