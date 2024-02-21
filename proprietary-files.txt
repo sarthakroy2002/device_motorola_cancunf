@@ -2487,8 +2487,6 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib64/vendor.mediatek.hardware.radio_op@3.0.so
 
 # Sensors
--vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
 vendor/etc/sensors/hals.conf
 -vendor/lib/libhwm.so
