@@ -208,26 +208,6 @@
         <fqname>@1.0::ISensorsCalibrate/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>motorola.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IHostapdMot</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IHostapdMot/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.wifi.supplicant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISupplicantMot</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISupplicantMot/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

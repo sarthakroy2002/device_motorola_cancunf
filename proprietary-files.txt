@@ -2209,8 +2209,6 @@ vendor/etc/motorola/12m/key_code_map.txt
 vendor/etc/motorola/sensors/mot_sensor_settings.json
 vendor/etc/permissions/motorola-hardware-sensorscalibrate.xml
 -vendor/lib64/motorola.hardware.sensorscalibrate@1.0.so
--vendor/lib64/motorola.hardware.wifi.hostapd@1.0.so
--vendor/lib64/motorola.hardware.wifi.supplicant@1.0_vendor.so
 
 # Native public libraries
 vendor/etc/public.libraries.txt
@@ -2605,9 +2603,7 @@ vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 -vendor/bin/wlan_assistant
 -vendor/bin/wmt_launcher
 -vendor/bin/wmt_loader
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/wlan_assistant.rc
--vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml:vendor/etc/vintf/manifest/manifest_android.hardware.wifi.supplicant.xml
 -vendor/lib/meta_wifi_data.so
 -vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 -vendor/lib64/libwifitest.so
