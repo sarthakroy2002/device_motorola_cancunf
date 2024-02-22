@@ -6,6 +6,7 @@
 #
 
 LOCAL_PATH := $(call my-dir)
+SYMLINK_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),cancunf)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
@@ -13,7 +14,7 @@ ifeq ($(TARGET_DEVICE),cancunf)
 
 include $(CLEAR_VARS)
 
-CANCUNF_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(LOCAL_PATH)/symlinks.txt)))
+CANCUNF_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(SYMLINK_PATH)/symlinks.txt)))
 $(CANCUNF_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(dir $@)
 	$(hide) ln -sf mt6855/$(notdir $@) $@
