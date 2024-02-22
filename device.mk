@@ -195,6 +195,17 @@ PRODUCT_PACKAGES += \
     libruy.vendor \
     libpcap.vendor
 
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-oem-plugin \
+    mediatek-services
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc) \
@@ -265,6 +276,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayCancunf \
     SettingsOverlayCancunf \
+    TelephonyOverlayCancunf \
     TetheringConfigResOverlayCancunf \
     WifiResOverlayCancunf
 
