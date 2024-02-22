@@ -2488,7 +2488,6 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 
 # Sensors
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
-vendor/etc/sensors/hals.conf
 -vendor/lib/libhwm.so
 -vendor/lib/sensors.moto.so
 -vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
