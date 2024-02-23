@@ -85,6 +85,17 @@ function blob_fixup {
         vendor/lib64/libwifi-hal-mtk.so)
             "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
             ;;
+        vendor/lib64/libdlbdsservice.so)
+            ;&
+        vendor/lib64/libcodec2_soft_ddpdec.so)
+            ;&
+        vendor/lib*/soundfx/libswdap.so)
+            ;&
+        vendor/lib*/soundfx/libdlbvol.so)
+            ;&
+        vendor/lib64/libcodec2_soft_ac4dec.so)
+            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
     esac
 }
 
