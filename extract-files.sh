@@ -69,9 +69,10 @@ function blob_fixup {
             "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
             ;;
         vendor/lib*/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
-            ;;
+            ;&
         vendor/lib64/mt6855/libmtkcam_stdutils.so)
+            ;&
+        vendor/lib*/hw/audio.primary.mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
         vendor/bin/mnld)
