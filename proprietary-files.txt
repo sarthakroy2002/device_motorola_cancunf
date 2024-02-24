@@ -1955,9 +1955,9 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -framework/mediatek-ims-common.jar|d044e2c44e8eb0bfa76d3b64344777c65f4d6bb6
 -framework/mediatek-ims-extension-plugin.jar|fbadb06fbf2762b181e15c88cbd7ae299a89be71
 -framework/mediatek-telecom-common.jar|b80be86b779269c7078670d573626f0f860427d4
--framework/mediatek-telephony-base.jar|357c2986f3c17adf8eb70f3b3318949a2f48f2cf
+-framework/mediatek-telephony-base.jar|357c2986f3c17adf8eb70f3b3318949a2f48f2cf|1258dff8bef4950585438119dca6365d5607df15
 -framework/mediatek-telephony-common.jar|6eddc4c33fb73c5aa9828be2dd82bf345f0d338f
--priv-app/ImsService/ImsService.apk|a7d83946238c9ac57fd289255a926cc41362bc26
+-priv-app/ImsService/ImsService.apk|a7d83946238c9ac57fd289255a926cc41362bc26|2479a8d8cc2592a327a2e888592550489b152d60
 
 # IMS (Vendor)
 -vendor/bin/lbs_hidl_service
