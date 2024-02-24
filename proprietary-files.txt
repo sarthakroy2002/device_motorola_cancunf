@@ -218,18 +218,13 @@ vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/SwadCalib.bin
 vendor/etc/SwadParamList.txt
-vendor/etc/default_volume_tables.xml
 
 # Audio (SoundFX)
--vendor/lib/soundfx/libaudiopreprocessing.so
 -vendor/lib/soundfx/libdlbvol.so
--vendor/lib/soundfx/libhapticgenerator.so
 -vendor/lib/soundfx/libmsstwrapper.so
 -vendor/lib/soundfx/libswdap.so
 -vendor/lib/soundfx/libswgamedap.so
--vendor/lib64/soundfx/libaudiopreprocessing.so
 -vendor/lib64/soundfx/libdlbvol.so
--vendor/lib64/soundfx/libhapticgenerator.so
 -vendor/lib64/soundfx/libmsstwrapper.so
 -vendor/lib64/soundfx/libswdap.so
 -vendor/lib64/soundfx/libswgamedap.so
@@ -242,9 +237,7 @@ vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/bt_stack_debug.conf
 vendor/etc/bt_stack_level6.conf
 -vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
--vendor/lib/hw/audio.bluetooth.default.so
 -vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
--vendor/lib/libbluetooth_audio_session.so
 -vendor/lib/libbluetooth_audio_session_mediatek.so
 -vendor/lib/libbluetooth_hw_test.so
 -vendor/lib/libbluetooth_mtk.so
@@ -256,9 +249,7 @@ vendor/etc/bt_stack_level6.conf
 -vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 -vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 -vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
--vendor/lib64/hw/audio.bluetooth.default.so
 -vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
--vendor/lib64/libbluetooth_audio_session.so
 -vendor/lib64/libbluetooth_audio_session_mediatek.so
 -vendor/lib64/libbluetooth_hw_test.so
 -vendor/lib64/libbluetooth_mtk.so
