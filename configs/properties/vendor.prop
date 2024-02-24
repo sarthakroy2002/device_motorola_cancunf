@@ -31,9 +31,6 @@ bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 ro.vendor.mtk.bt_sap_enable=true
 ro.vendor.bt.platform=connac1x
-persist.bluetooth.a2dp_offload.cap=sbc-aac
-persist.bluetooth.a2dp_offload.disabled=true
-ro.bluetooth.a2dp_offload.supported=false
 vendor.bluetooth.ldac.abr=true
 
 # Bootloader
