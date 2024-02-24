@@ -279,6 +279,7 @@ PRODUCT_PACKAGES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureOverlayCancunf \
     FrameworksResOverlayCancunf \
     SettingsOverlayCancunf \
     TelephonyOverlayCancunf \
