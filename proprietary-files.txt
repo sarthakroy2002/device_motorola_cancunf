@@ -1948,13 +1948,16 @@ vendor/etc/init/fuelgauged_init.rc
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IMS (System)
--framework/mediatek-common.jar
--framework/mediatek-framework.jar
--framework/mediatek-ims-base.jar
--framework/mediatek-ims-oem-plugin.jar
--framework/mediatek-services.jar
--priv-app/ImsService/ImsService.apk
+# IMS (System) - from ruby_global V14.0.6.0.TMOMIXM
+-framework/mediatek-common.jar|65cb5b86acb0eb42bb3ec2987e1d80a88ea0756a
+-framework/mediatek-framework.jar|37f3a324333413eb6eb505e4c3d945132cede443
+-framework/mediatek-ims-base.jar|8e58bc3840adef5c23322267520d677b492eebc2
+-framework/mediatek-ims-common.jar|d044e2c44e8eb0bfa76d3b64344777c65f4d6bb6
+-framework/mediatek-ims-extension-plugin.jar|fbadb06fbf2762b181e15c88cbd7ae299a89be71
+-framework/mediatek-telecom-common.jar|b80be86b779269c7078670d573626f0f860427d4
+-framework/mediatek-telephony-base.jar|357c2986f3c17adf8eb70f3b3318949a2f48f2cf
+-framework/mediatek-telephony-common.jar|6eddc4c33fb73c5aa9828be2dd82bf345f0d338f
+-priv-app/ImsService/ImsService.apk|a7d83946238c9ac57fd289255a926cc41362bc26
 
 # IMS (Vendor)
 -vendor/bin/lbs_hidl_service
