@@ -26,29 +26,25 @@
             android:key="gesture_chop_chop"
             android:defaultValue="true"
             android:title="@string/chop_chop_gesture_title"
-            android:summary="@string/chop_chop_gesture_summary"
-            android:icon="@drawable/ic_settings_chop" />
+            android:summary="@string/chop_chop_gesture_summary" />
 
         <SwitchPreference
             android:key="gesture_ir_silencer"
             android:defaultValue="false"
             android:title="@string/hand_wave_silencer_title"
-            android:summary="@string/hand_wave_silencer_summary"
-            android:icon="@drawable/ic_settings_wave" />
+            android:summary="@string/hand_wave_silencer_summary" />
 
         <SwitchPreference
             android:key="gesture_flip_to_mute"
             android:defaultValue="false"
             android:title="@string/flip_to_mute_title"
-            android:summary="@string/flip_to_mute_summary"
-            android:icon="@drawable/ic_settings_flip" />
+            android:summary="@string/flip_to_mute_summary" />
 
         <SwitchPreference
             android:key="gesture_lift_to_silence"
             android:defaultValue="false"
             android:title="@string/lift_to_silence_title"
-            android:summary="@string/lift_to_silence_summary"
-            android:icon="@drawable/ic_settings_pick" />
+            android:summary="@string/lift_to_silence_summary" />
 
     </PreferenceCategory>
 
