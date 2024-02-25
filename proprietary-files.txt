@@ -1572,10 +1572,6 @@ vendor/lib64/arcsoft_portrait_super_night_se_raw.bin
 -vendor/lib64/libarcsoft_super_night_raw_bin.so
 -vendor/lib64/libarcsoft_super_night_se_raw.so
 
-# Charger
--bin/kpoc_charger
-etc/init/kpoc_charger.rc
-
 # Chipinfo
 -vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
