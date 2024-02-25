@@ -139,6 +139,7 @@ ro.vendor.mtk_cuva_hdr_support=1
 
 # Dolby
 ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
+persist.vendor.audio_fx.current=dolby
 
 # DRM
 drm.service.enabled=true
@@ -239,7 +240,6 @@ ro.vendor.pq.mtk_video_transition=0
 persist.radio.multisim.config=dsds
 persist.rcs.supported=1
 persist.sys.ams_ext_enabled=true
-persist.vendor.audio_fx.current=dolby
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0
 persist.vendor.connsys.patch.version=-1

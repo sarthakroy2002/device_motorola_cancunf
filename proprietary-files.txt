@@ -1700,9 +1700,13 @@ vendor/etc/meow.cfg
 -vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
 # Dolby
--app/MotoDolbyDax3/MotoDolbyDax3.apk
+-app/MotoDolbyDax3/MotoDolbyDax3.apk;OVERRIDES=MusicFX
 -etc/permissions/com.motorola.dolby.dolbyui.dax3.features.xml
+-etc/permissions/com.motorola.frameworks.core.addon.xml
+-etc/permissions/motoaudioeffectsdk.xml
 -etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
+-framework/com.motorola.frameworks.core.addon.jar;MODULE=com.motorola.frameworks.core.addon.jar.system
+-framework/motoaudioeffectsdk.jar;MODULE=motoaudioeffectsdk.jar.system
 -product/etc/default-permissions/default-permissions-com.motorola.dolby.dolbyui.xml
 -system_ext/etc/permissions/com.dolby.daxservice.xml
 -system_ext/priv-app/daxService/daxService.apk
@@ -1713,9 +1717,14 @@ vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 -vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml:vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
 -vendor/etc/media_codecs_dolby_audio.xml
+-vendor/lib/libdapparamstorage.so
 -vendor/lib/libdlbpreg.so
 -vendor/lib/vendor.dolby.hardware.dms@2.0.so
+-vendor/lib64/libcodec2_soft_ac4dec.so
+-vendor/lib64/libcodec2_soft_ddpdec.so
 -vendor/lib64/libcodec2_store_dolby.so
+-vendor/lib64/libdapparamstorage.so
+-vendor/lib64/libdeccfg.so
 -vendor/lib64/libdlbdsservice.so
 -vendor/lib64/libdlbpreg.so
 -vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
@@ -1978,13 +1987,13 @@ system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
 -system_ext/lib64/libimsma_socketwrapper.so|1f9b83322c41e5b0a7b3130f74a38ddb14f578d8
 -system_ext/lib64/libmtk_vt_service.so|302d3ab3c5b3fa0107520fe36098b32cd0a8dd96
 -system_ext/lib64/libmtk_vt_wrapper.so|af4d486c516c920ea99c362aebbf04180e96035c
+-system_ext/lib64/libmtkperf_client.so|3daebbc2569077f08fc9c27d4e9becc73faa0d1e
 -system_ext/lib64/libsignal.so|0f55bb64c660fe4cda2b695121580b054f026e73
 -system_ext/lib64/libsink.so|6bd8c55847116a9a37e223ea2a6e5ce1379e53f7
 -system_ext/lib64/libsource.so|66a481fd2e260a820899d60cf9190fb986d36768
 -system_ext/lib64/libvcodec_cap.so|6973253cb2e4ddf365451ed2ac8db9d04085bc4a
 -system_ext/lib64/libvcodec_capenc.so|5527525dfcd25169bc380ac53d8181ffa1429c6f
 -system_ext/lib64/libvt_avsync.so|632cb05532ef2e022072d91bff3c1ae47c888b7e
--system_ext/lib64/libmtkperf_client.so|3daebbc2569077f08fc9c27d4e9becc73faa0d1e
 -system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|fc3f645734d4e37fa50b77233d63c7b2eb166014
 -system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE=vendor.mediatek.hardware.videotelephony@1.0.system_ext|aee568e770a3835af2df2262c9dc8bb2911da324
 -vendor/bin/hw/vtservice_hidl|047b26f80b338b7d0869840d243eefebe82d56f5
@@ -2102,8 +2111,6 @@ vendor/etc/mtk_platform_codecs_config.xml
 -vendor/lib64/libcodec2_mtk_c2store.so
 -vendor/lib64/libcodec2_mtk_vdec.so
 -vendor/lib64/libcodec2_mtk_venc.so
--vendor/lib64/libcodec2_soft_ac4dec.so
--vendor/lib64/libcodec2_soft_ddpdec.so
 -vendor/lib64/libcodec2_vpp_qt_plugin.so
 -vendor/lib64/libcodec2_vpp_rs_plugin.so
 -vendor/lib64/libformatter.so
@@ -2153,7 +2160,6 @@ vendor/etc/vhw.xml
 -vendor/lib/mt6855/libsrv_um.so
 -vendor/lib/mt6855/libufwriter.so
 -vendor/lib/mt6855/libusc.so
--vendor/lib/libdapparamstorage.so
 -vendor/lib/libdynamiclog.so
 -vendor/lib/libiqi_bridge.so
 -vendor/lib/liblog_vendor.so
@@ -2173,8 +2179,6 @@ vendor/etc/vhw.xml
 -vendor/lib64/libBSTSWAD.so
 -vendor/lib64/libBSTbase_share.so
 -vendor/lib64/libVkLayer_mtk_rt_sdk.so
--vendor/lib64/libdapparamstorage.so
--vendor/lib64/libdeccfg.so
 -vendor/lib64/libdynamiclog.so
 -vendor/lib64/libfft_vendor.so
 -vendor/lib64/libiqi_bridge.so
