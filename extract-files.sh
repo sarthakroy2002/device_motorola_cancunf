@@ -96,6 +96,9 @@ function blob_fixup {
         vendor/lib64/libcodec2_soft_ac4dec.so)
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
+        vendor/etc/dolby/dax-default.xml)
+            sed -i 's|volume-leveler-enable value="true"|volume-leveler-enable value="false"|g' "${2}"
+            ;;
     esac
 }
 
