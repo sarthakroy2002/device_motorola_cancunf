@@ -368,7 +368,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.multihal
+    android.hardware.sensors@2.0-service.multihal
 
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0.vendor \
