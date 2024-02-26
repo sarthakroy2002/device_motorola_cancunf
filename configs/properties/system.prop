@@ -3,6 +3,10 @@ ro.audio.silent=0
 ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
 
+# Camera
+persist.vendor.camera.privapp.list=org.lineageos.aperture
+vendor.camera.aux.packagelist=org.lineageos.aperture
+
 # Display
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
