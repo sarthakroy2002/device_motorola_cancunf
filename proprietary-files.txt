@@ -1700,16 +1700,6 @@ vendor/etc/meow.cfg
 -vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
 # Dolby
--app/MotoDolbyDax3/MotoDolbyDax3.apk;OVERRIDES=MusicFX
--etc/permissions/com.motorola.dolby.dolbyui.dax3.features.xml
--etc/permissions/com.motorola.frameworks.core.addon.xml
--etc/permissions/motoaudioeffectsdk.xml
--etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
--framework/com.motorola.frameworks.core.addon.jar;MODULE=com.motorola.frameworks.core.addon.jar.system
--framework/motoaudioeffectsdk.jar;MODULE=motoaudioeffectsdk.jar.system
--product/etc/default-permissions/default-permissions-com.motorola.dolby.dolbyui.xml
--system_ext/etc/permissions/com.dolby.daxservice.xml
--system_ext/priv-app/daxService/daxService.apk
 -vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 -vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 -vendor/etc/dolby/dax-default.xml
