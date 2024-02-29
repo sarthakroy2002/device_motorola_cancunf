@@ -326,6 +326,11 @@ ro.vendor.mtk_thermal_2_0=1
 # USB
 vendor.usb.use_ffs_mtp=1
 
+# Vibrator
+ro.vendor.vibrator.hal.click.duration=70
+ro.vendor.vibrator.hal.tick.duration=47
+ro.vendor.vibrator.hal.texture_tick.duration=40
+
 # Wifi
 persist.vendor.mtk_wfc_support=1
 ro.vendor.wfd.dummy.enable=0
