@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
     libtinycompress
 
 PRODUCT_PACKAGES += \
+    BesLoudness \
     DolbyManager
 
 PRODUCT_COPY_FILES += \
