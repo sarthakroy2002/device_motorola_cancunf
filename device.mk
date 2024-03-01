@@ -340,6 +340,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk_platform.vendor \
     android.hardware.power@1.2.vendor
 
+# Power Off Alarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
