@@ -228,8 +228,8 @@
         <item>mobile_rcs,2001,0,3,60000,true</item>
         <item>mobile_bip,2002,0,3,60000,true</item>
         <item>mobile_vsim,2003,0,-1,60000,true</item>
-        <item>bluetooth,7,7,2,-1,true</item>
     </string-array>
+
 
     <!-- Boolean indicating USSD over IMS is allowed.
      If it is not supported due to modem limitations, USSD send over the CS pipe instead.-->
@@ -457,10 +457,10 @@
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M -40,0 L 40,0 L 40,117 L -45,117 Z</string>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">Android-Mms/0.1</string>
+    <string name="config_mms_user_agent" translatable="false">motog545g</string>
 
     <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
 
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">pool.ntp.org</string>
@@ -485,5 +485,8 @@
     <!-- The OEM specified sensor string type for the gesture to launch camera app, this value
          must match the value of config_cameraLaunchGestureSensorType in OEM's HAL -->
     <string translatable="false" name="config_cameraLaunchGestureSensorStringType">com.motorola.sensor.camera_activate</string>
+
+    <!-- Whether Hearing Aid profile is supported -->
+    <bool name="config_hearing_aid_profile_supported">true</bool>
 
 </resources>

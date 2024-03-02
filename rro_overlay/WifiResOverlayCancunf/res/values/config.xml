@@ -71,7 +71,7 @@
 
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
+    <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,1048576,4525824</string>
 
     <!-- Indicate the prefix of wifi p2p device name, the length should be between 1 ~ 28. -->
     <string translatable="false" name="config_wifiP2pDeviceNamePrefix">moto g54 5G_</string>

@@ -289,6 +289,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayCancunf \
     FrameworksResOverlayCancunf \
     SettingsOverlayCancunf \
+    SystemUIOverlayCancunf \
     TelephonyOverlayCancunf \
     TetheringConfigResOverlayCancunf \
     WifiResOverlayCancunf
