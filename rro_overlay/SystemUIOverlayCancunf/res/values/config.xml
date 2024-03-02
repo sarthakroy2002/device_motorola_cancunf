@@ -17,4 +17,8 @@
 
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
+
+    <!-- Set fingerprint/power button vertical position -->
+    <dimen name="physical_power_button_center_screen_location_y">860px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">860px</dimen>
 </resources>
