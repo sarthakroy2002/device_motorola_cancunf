@@ -48,7 +48,6 @@ BOARD_RAMDISK_OFFSET := 0x66f00000
 BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_CMDLINE += \
-    androidboot.selinux=permissive \
     bootopt=64S3,32N2,64N2 \
     printk.devkmsg=on
 
