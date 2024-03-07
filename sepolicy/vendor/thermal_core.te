@@ -1,0 +1,2 @@
+allow thermal_core sysfs_leds:dir r_dir_perms;
+allow thermal_core sysfs_leds:file r_file_perms;

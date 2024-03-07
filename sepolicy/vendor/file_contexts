@@ -1,3 +1,34 @@
+# Camera
+/data/vendor/misc/imager                                                               u:object_r:vendor_camera_data_file:s0
+/data/vendor/camera(/.*)?                                                              u:object_r:vendor_camera_data_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                       u:object_r:vendor_persist_camera_file:s0
+
 # Dolby
 /data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service               u:object_r:hal_dms_default_exec:s0
+/vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service                                   u:object_r:mediacodec_exec:s0
+
+# Fingerprint
+/dev/fpsensor                                                                          u:object_r:tee_device:s0
+/dev/chipone_fp                                                                        u:object_r:fingerprint_device:s0
+/data/vendor/.fps(/.*)?                                                                u:object_r:fingerprint_vendor_data_file:s0
+/mnt/vendor/persist/fps(/.*)?                                                          u:object_r:vendor_persist_fingerprint_file:s0
+/mnt/vendor/persist/goodix(/.*)?                                                       u:object_r:vendor_persist_fingerprint_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-chipone         u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-goodixservice           u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc             u:object_r:hal_fingerprint_default_exec:s0
+
+# Init Scripts
+/vendor/bin/init\.mmi\.touch\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.usb\.sh                                                         u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.oem\.fingerprint2\.sh                                                u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.oem\.hw\.sh                                                          u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.modprobe\.sh                                                         u:object_r:vendor_modinstall-sh_exec:s0
+
+# Mobicore TEE
+/mnt/vendor/tzapp(/.*)?                                                                u:object_r:mnt_vendor_trustlet_file:s0
+
+# Wakeups
+/sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
