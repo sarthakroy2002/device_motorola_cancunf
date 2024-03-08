@@ -104,6 +104,9 @@ function blob_fixup {
             printf '\x28\x02\x80\x52' | dd of="$2" bs=1 seek=$((0x3e828)) count=4 conv=notrunc
             printf '\x28\x02\x80\x52' | dd of="$2" bs=1 seek=$((0x3e8f4)) count=4 conv=notrunc
             ;;
+        vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc)
+            sed -i '/vts/Q' "$2"
+            ;;
     esac
 }
 
