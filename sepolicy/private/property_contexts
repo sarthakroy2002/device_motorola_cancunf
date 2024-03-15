@@ -1,1 +1,2 @@
 camera.mot.is.coming.cts    u:object_r:system_mot_prop:s0
+persist.vendor.log.tag.tel_dbg u:object_r:system_mtk_em_tel_log_prop:s0
