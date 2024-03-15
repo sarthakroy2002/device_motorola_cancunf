@@ -342,8 +342,15 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power-service.cancunf-libperfmgr
+
+PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk_platform.vendor \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.2.vendor \
+    libmtkperf_client_vendor \
+    libmtkperf_client \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 # Power Off Alarm
 PRODUCT_PACKAGES += \
@@ -404,6 +411,8 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/mediatek \
     $(LOCAL_PATH)
 
