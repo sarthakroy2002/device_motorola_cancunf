@@ -1,0 +1,1 @@
+get_prop(mtk_hal_power, boot_status_prop)

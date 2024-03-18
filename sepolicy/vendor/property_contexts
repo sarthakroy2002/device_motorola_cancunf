@@ -1,5 +1,7 @@
 # FPS
 vendor.hw.fingerprint.status     u:object_r:vendor_mot_prop:s0
+vendor.hw.fps.                   u:object_r:vendor_mot_prop:s0
+persist.vendor.hardware.fingerprint   u:object_r:vendor_mot_prop:s0
 
 # Motorola
 ro.vendor.hw.                    u:object_r:vendor_mot_prop:s0
