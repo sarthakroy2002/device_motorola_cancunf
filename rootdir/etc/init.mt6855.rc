@@ -23,8 +23,6 @@ on init
     # if primary storage is physical, set ro.vold.primary_physical to 1
     # setprop ro.vold.primary_physical 1
 
-    mkdir /mnt/cd-rom 0000 system system
-
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
@@ -81,7 +79,6 @@ on early-fs
 
 on fs
     write /proc/bootprof "INIT:fs"
-    start vendor.boot-hal-1-2
 
     # mount fstab
     write /proc/bootprof "INIT:Mount_START"
@@ -90,10 +87,6 @@ on fs
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
     write /sys/kernel/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
-
-on fs
-
-   mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
 
 on late-fs
     write /proc/bootprof "INIT:late-fs"
@@ -945,10 +938,3 @@ on property:persist.vendor.mediatek.fast_charging.support=*
 # FPSGO FBT Game
 on boot
     insmod /vendor/lib/modules/fpsgo.ko
-
-# VSIM service (vendor OSI)
-service osi /system/bin/osi
-    class main
-    user root
-    disabled
-    oneshot
