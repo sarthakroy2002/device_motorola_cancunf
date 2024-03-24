@@ -32,7 +32,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import java.util.Arrays;
 import java.util.List;
@@ -59,7 +59,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
 
     private MainSwitchPreference mSwitchBar;
     private ListPreference mProfilePref, mPresetPref, mVirtualizerPref, mDialoguePref;
-    private SwitchPreference mBassPref, mVolumePref;
+    private SwitchPreferenceCompat mBassPref, mVolumePref;
     private Preference mResetPref;
     private CharSequence[] mPresets, mDeValues, mSwValues;
 
@@ -116,10 +116,10 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mDialoguePref.setOnPreferenceChangeListener(this);
         mDeValues = mDialoguePref.getEntryValues();
 
-        mBassPref = (SwitchPreference) findPreference(PREF_BASS);
+        mBassPref = (SwitchPreferenceCompat) findPreference(PREF_BASS);
         mBassPref.setOnPreferenceChangeListener(this);
 
-        mVolumePref = (SwitchPreference) findPreference(PREF_VOLUME);
+        mVolumePref = (SwitchPreferenceCompat) findPreference(PREF_VOLUME);
         mVolumePref.setOnPreferenceChangeListener(this);
 
         mResetPref = (Preference) findPreference(PREF_RESET);

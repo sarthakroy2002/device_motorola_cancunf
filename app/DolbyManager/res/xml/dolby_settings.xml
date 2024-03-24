@@ -54,11 +54,11 @@
             android:entryValues="@array/dolby_dialogue_values"
             android:title="@string/dolby_dialogue_enhancer" />
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:key="dolby_bass"
             android:title="@string/dolby_bass_enhancer" />
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:key="dolby_volume"
             android:title="@string/dolby_volume_leveler" />
 
