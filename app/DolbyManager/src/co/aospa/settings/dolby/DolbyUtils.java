@@ -21,8 +21,6 @@ import static co.aospa.settings.dolby.DolbyAtmos.DsParam;
 import android.content.Context;
 import android.util.Log;
 
-import com.android.settingslib.widget.R;
-
 import java.util.Arrays;
 import java.util.List;
 

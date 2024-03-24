@@ -25,7 +25,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.android.settingslib.widget.R;
 import co.aospa.settings.dolby.DolbyUtils;
 
 /** Provide preference summary for injected items. */
