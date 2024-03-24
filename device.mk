@@ -372,10 +372,10 @@ PRODUCT_PACKAGES += \
     fstab.mt6855.ramdisk \
     fstab.mt6855.vendor_ramdisk \
     init_connectivity.rc \
-    init.cgroup.rc \
     init.connectivity.common.rc \
     init.modem.rc \
     init.mt6855.rc \
+    init.mt6855.power.rc \
     init.mt6855.usb.rc \
     init.mtkgki.rc \
     init.project.rc \

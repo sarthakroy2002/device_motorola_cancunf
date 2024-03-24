@@ -25,6 +25,13 @@ on init
     write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
+    # update cpus for cpuset cgroup
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-5
+    write /dev/cpuset/system-background/cpus 0-5
+    write /dev/cpuset/top-app/cpus 0-7
+
 on boot
     # boot perf. tune
     write /dev/cpuctl/system/cpu.uclamp.min 100
@@ -38,7 +45,7 @@ on boot
     write /dev/cpuctl/background/cpu.uclamp.min 100
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
 
-on property:sys.boot_completed=1
+on enable-low-power
     write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
@@ -56,3 +63,6 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/background/cpu.uclamp.min 0
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+
+on property:sys.boot_completed=1
+    trigger enable-low-power
