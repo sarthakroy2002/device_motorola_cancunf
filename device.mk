@@ -278,6 +278,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayCancunf \
     CarrierConfigOverlayCancunf \
     FrameworksResOverlayCancunf \
+    PowerOffAlarmOverlayCancunf \
     SettingsOverlayCancunf \
     SettingsProviderOverlayCancunf \
     SystemUIOverlayCancunf \
