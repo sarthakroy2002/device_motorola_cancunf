@@ -110,9 +110,8 @@ PRODUCT_PACKAGES += \
 
 # Boot
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-service \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery
+    android.hardware.boot-service.default \
+    android.hardware.boot-service.default_recovery
 
 # Camera
 PRODUCT_PACKAGES += \
