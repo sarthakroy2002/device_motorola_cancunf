@@ -336,6 +336,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.android.hotwordenrollment.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.android.hotwordenrollment.xml
 
+# Platform
+TARGET_BOARD_PLATFORM := mt6855
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.cancunf-libperfmgr
