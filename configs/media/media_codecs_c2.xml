@@ -65,6 +65,7 @@
             <Quirk name="wants-NAL-fragments" />
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="15" />
+            <Feature name="can-swap-width-height" value="1"/>
             <Limit name="performance-point-2560x1440" value="30" />
             <Limit name="performance-point-1920x1088" value="60" />
             <Limit name="performance-point-1280x720" value="120" />

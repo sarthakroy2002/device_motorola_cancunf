@@ -25,6 +25,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cancunf_g_sysq \
-    PRIVATE_BUILD_DESC="cancunf_g_sysq-user 13 T3TDS33.16-78-3-1 8ae0ce-3f89c release-keys"
+    PRIVATE_BUILD_DESC="cancunf_g_sysq-user 14 U1TD34.94-12-7 4cdf7-62b22 release-keys"
 
-BUILD_FINGERPRINT := motorola/cancunf_g_sysq/cancunf:13/T3TDS33.16-78-3-13/8ae0ce-3f89c:user/release-keys
+BUILD_FINGERPRINT := motorola/cancunf_g_sysq/cancunf:14/U1TD34.94-12-7/4cdf7-62b22:user/release-keys

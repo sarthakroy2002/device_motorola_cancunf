@@ -88,7 +88,9 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-12666667
 debug.sf.high_fps_early_phase_offset_ns=-12666667
 debug.sf.high_fps_late_app_phase_offset_ns=-8000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-12666667
-debug.sf.hwc.min.duration=2000000
+debug.sf.hwc.min.duration=23000000
+vendor.hw.sf.hwc.min.duration=23000000
+debug.sf.frame_rate_multiple_threshold=120
 debug.sf.latch_unsignaled=1
 debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
@@ -136,7 +138,7 @@ ro.vendor.jpeg_decode_sw_opt=1
 ro.vendor.mtk_cuva_hdr_support=1
 
 # Dolby
-ro.vendor.dolby.dax.version=DAX3_3.8.5.20_r1
+ro.vendor.dolby.dax.version=DAX3_3.9.0.13_r1
 
 # DRM
 drm.service.enabled=true
@@ -199,7 +201,7 @@ ro.vendor.pref_scale_enable_cfg=1
 ro.hardware.soc.manufacturer=mtk
 ro.vendor.mediatek.platform=MT6855
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc2sp2
-ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc2sp2-V1.335
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc2sp2-V1.531
 ro.vendor.mgk_name=mgk_64_entry_level_k510
 ro.vendor.mgvi_name=mgvi_64_ww_armv82
 
@@ -247,6 +249,7 @@ persist.vendor.lte.pco_supported=true
 persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mims_support=1
 persist.vendor.mtk.volte.enable=1
+persist.vendor.mtk.vilte.enable=1
 persist.vendor.mtk_ct_volte_support=3
 persist.vendor.mtk_dynamic_ims_switch=1
 persist.vendor.mtk_rcs_single_reg_support=0

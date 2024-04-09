@@ -46,6 +46,7 @@
             <Limit name="size" min="64x64" max="2560x1440" />
             <Quirk name="wants-NAL-fragments" />
             <Feature name="adaptive-playback"/>
+            <Feature name="can-swap-width-height" value="1"/>
             <Limit name="concurrent-instances" max="15" />
             <Limit name="performance-point-2560x1440" value="30" />
             <Limit name="performance-point-1920x1088" value="60" />
