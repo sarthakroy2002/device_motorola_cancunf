@@ -2584,7 +2584,6 @@ vendor/bin/init.mmi.backup.trustlet.sh
 vendor/bin/init.mmi.block_perm.sh
 vendor/bin/init.mmi.boot.sh
 vendor/bin/init.mmi.modem-rfs.sh
-vendor/bin/init.mmi.modules.sh
 vendor/bin/init.mmi.shutdown.sh
 vendor/bin/init.mmi.touch.sh
 vendor/bin/init.mmi.usb.sh
