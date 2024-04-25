@@ -1,1 +1,2 @@
 get_prop(nvram_daemon, vendor_mot_prop)
+get_prop(nvram_daemon, vendor_nvram_prop)

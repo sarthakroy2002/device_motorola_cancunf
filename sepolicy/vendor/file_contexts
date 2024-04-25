@@ -19,10 +19,16 @@
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc             u:object_r:hal_fingerprint_default_exec:s0
 
 # Init Scripts
+/vendor/bin/init\.mmi\.block_perm\.sh                                                  u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.boot\.sh                                                        u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.backup\.trustlet\.sh                                            u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/vendor\.mmi\.cxp\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.modem-rfs\.sh                                                   u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.touch\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.usb\.sh                                                         u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.oem\.fingerprint2\.sh                                                u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.oem\.hw\.sh                                                          u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/hardware_revisions\.sh                                                     u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.modprobe\.sh                                                         u:object_r:vendor_modinstall-sh_exec:s0
 
 # Mobicore TEE
