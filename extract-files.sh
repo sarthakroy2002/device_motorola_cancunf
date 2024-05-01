@@ -63,10 +63,10 @@ function blob_fixup {
             ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek | vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "${PATCHELF}" --replace-needed "libavservices_minijail_vendor.so" "libavservices_minijail.so" "${2}"
-            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.security.keymint-service.trustonic)
-            "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
+            grep -q "android.hardware.security.rkp-V1-ndk.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
             ;;
         vendor/lib*/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so)
             ;&
@@ -96,7 +96,7 @@ function blob_fixup {
         vendor/lib*/soundfx/libdlbvol.so)
             ;&
         vendor/lib64/libcodec2_soft_ac4dec.so)
-            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/etc/dolby/dax-default.xml)
             sed -i 's|volume-leveler-enable value="true"|volume-leveler-enable value="false"|g' "${2}"
