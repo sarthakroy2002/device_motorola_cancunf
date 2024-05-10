@@ -2129,15 +2129,6 @@ vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 -vendor/lib64/liburee_meta_drmkeyinstall.so
 -vendor/lib64/libwvhidl.so
 
-# Eara IO
--vendor/bin/eara_io_service
-vendor/etc/init/eara-io-service.rc
--vendor/lib64/lib_eara_io_scndet.so
--vendor/lib64/lib_eara_io_service.so
--vendor/lib64/lib_eara_io_systracer.so
--vendor/lib64/lib_eara_io_timer.so
--vendor/lib64/lib_eara_io_util.so
-
 # Fingerprint
 -vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
 -vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone
