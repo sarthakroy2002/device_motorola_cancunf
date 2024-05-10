@@ -2515,6 +2515,21 @@ vendor/etc/mtk_platform_codecs_config.xml
 -vendor/lib/libmvpu_runtime_pub.so
 -vendor/lib/libmvpuop_mtk_cv.so
 -vendor/lib/libmvpuop_mtk_nn.so
+-vendor/lib64/libmvpu_cic_ci_compiler.so
+-vendor/lib64/libmvpu_clc_cl_compiler.so
+-vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
+-vendor/lib64/libmvpu_clc_mvpu_elf.so
+-vendor/lib64/libmvpu_clc_mvpu_utility.so
+-vendor/lib64/libmvpu_clc_vpu_isa.so
+-vendor/lib64/libmvpu_config.so
+-vendor/lib64/libmvpu_engine.so
+-vendor/lib64/libmvpu_engine_pub.so
+-vendor/lib64/libmvpu_pattern.so
+-vendor/lib64/libmvpu_pattern_pub.so
+-vendor/lib64/libmvpu_runtime.so
+-vendor/lib64/libmvpu_runtime_pub.so
+-vendor/lib64/libmvpuop_mtk_cv.so
+-vendor/lib64/libmvpuop_mtk_nn.so
 
 # Memtrack
 -vendor/bin/hw/android.hardware.memtrack-service.mediatek
@@ -2881,8 +2896,8 @@ vendor/etc/thermal/thermal_policy_03.conf
 vendor/etc/thermal/thermal_policy_04.conf
 vendor/etc/thermal/thermal_policy_05.conf
 vendor/etc/thermal/thermal_policy_07.conf
-vendor/etc/thermal/thermal_policy_09.conf
 vendor/etc/thermal/thermal_policy_08.conf
+vendor/etc/thermal/thermal_policy_09.conf
 vendor/etc/thermal/thermal_policy_10.conf
 vendor/etc/thermal/thermal_policy_12.conf
 vendor/etc/thermal/thermal_policy_13.conf
