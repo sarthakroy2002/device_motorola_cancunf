@@ -23,6 +23,7 @@ allow vendor_moto_init_shell vendor_sysfs_touchpanel:file { write setattr };
 
 # Properties
 set_prop(vendor_moto_init_shell, vendor_mot_prop)
+set_prop(vendor_moto_init_shell, vendor_mtk_cxp_vendor_prop)
 
 # KMod
 allow vendor_moto_init_shell self:capability sys_module;
