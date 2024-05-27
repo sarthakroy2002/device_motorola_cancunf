@@ -229,11 +229,6 @@ PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
 
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0.vendor \
-    android.hardware.light-V1-ndk_platform.vendor
-
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
