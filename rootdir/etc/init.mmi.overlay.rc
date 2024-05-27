@@ -176,35 +176,3 @@ on moto-boot-completed-fs-tune
     write /sys/block/${dev.mnt.dev.data}/queue/read_ahead_kb 512
     write /sys/block/${dev.mnt.dev.root}/queue/read_ahead_kb 512
     write /sys/block/${dev.mnt.dev.vendor_dlkm}/queue/read_ahead_kb 512
-
-# === DEBUGGING FEATURE ===
-# Redirect LOG[E|W|I] logs to uart in case system server keeps rebooting without adb connection
-# Pass logcat buffer names to androidboot.loge2uart by cmdl under fastboot.
-# For example: fastboot oem config cmdl "androidboot.loge2uart=system,main"
-# Of course, console must be enabled to make this work
-service loge2uart /system/bin/logcat -b ${ro.boot.loge2uart} -v threadtime -f /dev/ttyS0 *:E
-    user root
-    group root
-    disabled
-
-service logw2uart /system/bin/logcat -b ${ro.boot.logw2uart} -v threadtime -f /dev/ttyS0 *:W
-    user root
-    group root
-    disabled
-
-service logi2uart /system/bin/logcat -b ${ro.boot.logi2uart} -v threadtime -f /dev/ttyS0 *:I
-    user root
-    group root
-    disabled
-
-on late-init && property:ro.boot.loge2uart=*
-    setprop persist.vendor.uartconsole.enable 1
-    start loge2uart
-
-on late-init && property:ro.boot.logw2uart=*
-    setprop persist.vendor.uartconsole.enable 1
-    start logw2uart
-
-on late-init && property:ro.boot.logi2uart=*
-    setprop persist.vendor.uartconsole.enable 1
-    start logi2uart
