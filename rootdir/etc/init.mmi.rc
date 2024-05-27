@@ -1,15 +1,11 @@
-
-# Test commands
-import /vendor/etc/init/hw/init.mmi.tcmd.rc
-import /vendor/etc/init/hw/apanic.rc
 # Chipset-specific file
 import /vendor/etc/init/hw/init.mmi.chipset.rc
+
 # Target-specific file
 import /vendor/etc/init/hw/init.mmi.overlay.rc
-#USB rc
+
+# USB rc
 import /vendor/etc/init/hw/init.mmi.usb.configfs.rc
-# Add debug specific - currently used for install attestation keys on userdebug builds
-import /vendor/etc/init/hw/init.mmi.debug.rc
 
 on early-init
     wait /dev/block/by-name/hw
@@ -95,12 +91,6 @@ on post-fs-data
     mkdir /data/vendor/hardware_revisions 0755 system system
 
     copy /data/vendor_de/power_supply_logger/memtest.log /data/vendor/power_supply_logger/memtest.log
-
-service vendor.bl_logs_copy /vendor/bin/apanic_copy.sh -i
-    class late_start
-    group log
-    oneshot
-    disabled
 
 on charger
     trigger early-fs
@@ -221,20 +211,6 @@ service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
 on property:ro.vendor.mot.hw.rkp_csr_uploaded=* && property:sys.boot_completed=1
     setprop ro.rkp.csr_uploaded ${ro.vendor.mot.hw.rkp_csr_uploaded}
 
-on property:ro.boot.force_aplogd_enable=1
-    setprop ro.logd.kernel true
-    stop logd
-    start logd
-
-on post-fs && property:ro.boot.force_aplogd_enable=1
-    setprop persist.vendor.log.aplogd.enable 1
-
-on property:persist.vendor.log.aplogd.enable=1
-     start vendor.aplogd
-
-on property:persist.vendor.log.aplogd.enable=0
-     stop vendor.aplogd
-
 on property:ro.vendor.hw.dualsim=true
    setprop persist.radio.multisim.config dsds
    setprop persist.vendor.radio.msimmode dsds
@@ -257,32 +233,11 @@ on property:ro.vendor.hw.dualsim=false
    setprop ro.vendor.mtk_disable_cap_switch 1
    setprop ro.vendor.mtk_data_config 0
 
-service vendor.aplogd /vendor/bin/aplogd
-     class late_start
-     #user log
-     #group log system sdcard_rw sdcard_r media_rw mount
-     # The user and group definitions above are intentionally disabled and left
-     # only as documentation. It actually starts as root and immediately drops
-     # to log plus those groups after preserving CAP_SYS_ADMIN, which is required
-     # for kernel logging.
-     disabled
-
-# from P onwards aplogd cannot read vold.post_fs_data_done so a new property
-# shall be used to allow aplogd checking if FBE has finished /data decryption
-on property:vold.post_fs_data_done=*
-      setprop vendor.vold.post_fs_data_done ${vold.post_fs_data_done}
-
-on property:ro.vendor.build.motfactory=1
-    write /sys/devices/platform/charger/factory_image_mode 1
-
 on property:sys.sysctl.swappiness=*
     write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}
 
 on property:ro.sys.force_max_chrg_temp=*
     write /sys/devices/platform/charger/force_max_chrg_temp ${ro.sys.force_max_chrg_temp}
-
-on property:ro.sys.force_demo_mode=*
-    write /sys/devices/platform/charger/force_demo_mode ${ro.sys.force_demo_mode}
 
 on shutdown
     exec_start vendor.mmi-shutdown-sh

@@ -51,19 +51,6 @@ on late-init
     chown system system /sys/class/sensors/capsense_top_right/poll_delay
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules moto_mm moto_swap
 
-service capsense_reset /vendor/bin/capsense_reset
-    class core
-    user system
-    group system input
-    disabled
-
-on property:sys.boot_completed=1
-  start capsense_reset
-
-# Turn on led to indicate device on in factory mode
-on property:ro.bootmode=mot-factory
-    write /sys/class/leds/charging/brightness 255
-
 on early-boot
     # Permission for Health Storage HAL
     chown system system /sys/devices/platform/soc/112b0000.ufshci/manual_gc
