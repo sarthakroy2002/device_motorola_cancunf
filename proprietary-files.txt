@@ -2595,9 +2595,6 @@ vendor/bin/init.oem.hw.sh
 vendor/bin/pstore_annotate.sh
 vendor/bin/vendor.mmi.cxp.sh
 vendor/etc/init/hw/init.mmi.backup.trustlet.rc
-vendor/etc/init/hw/init.mmi.chipset.rc
-vendor/etc/init/hw/init.mmi.overlay.rc
-vendor/etc/init/hw/init.mmi.rc
 vendor/etc/init/hw/init.mmi.usb.configfs.rc
 vendor/etc/init/vendor.mmi.carrier.rc
 vendor/etc/init/vendor.mmi.cxp.rc

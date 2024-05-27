@@ -1,0 +1,293 @@
+
+# Test commands
+import /vendor/etc/init/hw/init.mmi.tcmd.rc
+import /vendor/etc/init/hw/apanic.rc
+# Chipset-specific file
+import /vendor/etc/init/hw/init.mmi.chipset.rc
+# Target-specific file
+import /vendor/etc/init/hw/init.mmi.overlay.rc
+#USB rc
+import /vendor/etc/init/hw/init.mmi.usb.configfs.rc
+# Add debug specific - currently used for install attestation keys on userdebug builds
+import /vendor/etc/init/hw/init.mmi.debug.rc
+
+on early-init
+    wait /dev/block/by-name/hw
+    exec_start vendor.oem-hw-sh
+    # Make sure ro.boot.product.hardware.sku is set before hwservicemanager startup.
+    setprop ro.boot.product.hardware.sku ${ro.vendor.product.hardware.sku.variant}
+
+    # Map oem properties, this must follow
+    # execution of vendor.oem-hw-sh to set
+    # required properties.
+    setprop ro.vendor.hw.radio ${ro.boot.radio}
+    setprop ro.carrier ${ro.boot.carrier}
+    setprop ro.sf.lcd_density ${ro.boot.lcd_density}
+    setprop ro.vendor.fsg-id ${ro.boot.fsg-id}
+    setprop ro.vendor.hw.device ${ro.boot.device}
+    setprop ro.vendor.hw.hwrev ${ro.boot.hwrev}
+    setprop ro.vendor.hw.modelno ${ro.boot.modelno}
+    setprop ro.vendor.hw.revision ${ro.boot.revision}
+    setprop ro.vendor.hw.nav_keys ${ro.boot.nav_keys}
+    setprop ro.product.vendor.device ${ro.vendor.product.device}
+    setprop ro.product.vendor.name ${ro.vendor.product.name}
+    setprop ro.vendor.boot.cid ${ro.boot.cid}
+    setprop ro.vendor.boot.powerup_reason ${ro.boot.powerup_reason}
+    setprop ro.vendor.boot.bl_state ${ro.boot.bl_state}
+    setprop ro.vendor.boot.serialno ${ro.boot.serialno}
+    setprop ro.vendor.zygote ${ro.zygote}
+    setprop ro.carrier unknown
+
+on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+    swapon_all /vendor/etc/fstab.${ro.hardware.soc.manufacturer}
+    write /proc/sys/vm/swappiness 100
+    setprop sys.sysctl.swappiness 100
+
+on post-fs
+    # for batt_health server
+    mkdir /mnt/vendor/persist/batt_health 0770 vendor_pwric vendor_pwric
+    restorecon_recursive /mnt/vendor/persist
+   # Set dm-verity property for dm-verified partitions
+    verity_update_state
+
+on post-fs-data
+     setprop ro.vendor.build.fingerprint ${ro.product.vendor.brand}/${ro.product.vendor.name}/${ro.product.vendor.device}:${ro.vendor.build.version.release}/${ro.vendor.build.id}/${ro.vendor.build.version.incremental}:${ro.vendor.build.type}/${ro.vendor.build.tags}
+
+     # Setup folders for security
+     mkdir /mnt/vendor/persist/security 02770 drmrpc drmrpc
+     mkdir /data/vendor/dbvc 0750 vendor_tcmd shell
+     chown drmrpc vendor_tcmd /mnt/vendor/persist/security
+
+     # Setup folder for native to transfer data to NativeDropBoxAgent
+     mkdir /data/vendor/dropbox-add 0730 log diag
+
+     # Create panic dump dir.
+     mkdir /data/vendor/dontpanic 0750 root log
+
+     mkdir /data/vendor/misc 0771 system system
+
+     # Create directory for cutback
+     mkdir /data/vendor/misc/cutback 0770 radio wifi
+
+     # Imager tuning data for camera subsystem
+     mkdir /data/vendor/misc/imager 0771 camera system
+
+     # Imager tuning metadata for camera subsystem
+     mkdir /data/vendor/misc/imager/metadata 0771 camera camera
+
+     # Imager tuning data for rescue Feature
+     mkdir /mnt/vendor/persist/camera/iqtuning 0771 camera camera
+
+
+     # Create bug2go folder
+     mkdir /data/vendor/bug2go 0770 log log
+
+     # Setup folder for aplogd
+     mkdir /data/vendor/aplogd 0770 log log
+
+    # Create directory used by power_supply_logger
+    mkdir /data/vendor/power_supply_logger 0750 vendor_pwric log
+    # Create directory power_supply_logger used by memtest and batt_health
+    mkdir /data/vendor_de/power_supply_logger 0770 root log
+
+    mkdir /data/vendor/hardware_revisions 0755 system system
+
+    copy /data/vendor_de/power_supply_logger/memtest.log /data/vendor/power_supply_logger/memtest.log
+
+service vendor.bl_logs_copy /vendor/bin/apanic_copy.sh -i
+    class late_start
+    group log
+    oneshot
+    disabled
+
+on charger
+    trigger early-fs
+    trigger fs
+    trigger post-fs
+    trigger late-fs
+    trigger post-fs-data
+    class_stop main
+    class_stop late_start
+    chown system system /sys/class/leds/lcd-backlight/max_brightness
+
+on boot
+ # Change ownership and permission for leds backlight
+   chown system system /sys/class/leds/charging/brightness
+   chmod 0664 /sys/class/leds/charging/brightness
+
+ # Change ownership and permission for charge
+   chown system system /sys/class/power_supply/battery/charging_enabled
+   chmod 0664 /sys/class/power_supply/battery/charging_enabled
+
+ # Change ownership and permission for vibrator
+   chown system system /sys/class/leds/vibrator/state
+   chmod 0660 /sys/class/leds/vibrator/state
+   chown system system /sys/class/leds/vibrator/activate
+   chmod 0660 /sys/class/leds/vibrator/activate
+   chown system system /sys/class/leds/vibrator/duration
+   chmod 0660 /sys/class/leds/vibrator/duration
+   chown system system /sys/class/leds/vibrator/seq
+   chmod 0660 /sys/class/leds/vibrator/seq
+
+ # change permission for widevine L1
+   chmod 0664 /mnt/vendor/persist/wv.keys
+
+#change  ownership and permission for capsense
+   chown radio system /sys/class/capsense/reg
+   chown radio system /sys/class/capsense/fw_download_status
+   chmod 0660 /sys/class/capsense/reg
+   chmod 0660 /sys/class/capsense/fw_download_status
+
+ # change ownership and permission for lcd-backlight
+   chown system system /sys/class/leds/lcd-backlight/max_brightness
+
+on property:sys.boot_completed=*
+    setprop vendor.boot_completed ${sys.boot_completed}
+    setprop ro.vendor.boot.uid ${ro.boot.uid}
+    setprop ro.vendor.boot.secure_hardware ${ro.boot.secure_hardware}
+
+service vendor.mmi-block-perm /vendor/bin/init.mmi.block_perm.sh
+    class main
+    user root
+    oneshot
+
+service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
+    class core
+    user root
+    oneshot
+
+service vendor.mmi-shutdown-sh /vendor/bin/init.mmi.shutdown.sh
+    class core
+    user root
+    oneshot
+    disabled
+
+service vendor.hal-fps-sh /vendor/bin/init.oem.fingerprint2.sh
+    class late_start
+    user root
+    group system
+    oneshot
+
+service vendor.oem-hw-sh /vendor/bin/init.oem.hw.sh
+    class core
+    user root
+    oneshot
+    disabled
+
+service vendor.touch-dead-sh /vendor/bin/init.oem.hw.sh -f
+    class main
+    user root
+    oneshot
+    disabled
+
+service vendor.touch-ready-sh /vendor/bin/init.oem.hw.sh -r
+    class main
+    user root
+    oneshot
+    disabled
+
+service vendor.oem-hw-config-sh /vendor/bin/init.oem.hw.sh -p
+    class main
+    user root
+    oneshot
+    disabled
+
+on property:vendor.hw.touch.status="dead"
+    start vendor.touch-dead-sh
+
+on property:vendor.hw.touch.status="ready"
+    start vendor.touch-ready-sh
+
+service vendor.mbm_spy /vendor/bin/mbm_spy
+    class late_start
+    user system
+    group system
+    oneshot
+
+service vendor.hw_revs /vendor/bin/hardware_revisions.sh
+    class late_start
+    user system
+    group system
+    oneshot
+
+service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
+    class core
+    user root
+    oneshot
+
+# set rkp csr indicatory property
+on property:ro.vendor.mot.hw.rkp_csr_uploaded=* && property:sys.boot_completed=1
+    setprop ro.rkp.csr_uploaded ${ro.vendor.mot.hw.rkp_csr_uploaded}
+
+on property:ro.boot.force_aplogd_enable=1
+    setprop ro.logd.kernel true
+    stop logd
+    start logd
+
+on post-fs && property:ro.boot.force_aplogd_enable=1
+    setprop persist.vendor.log.aplogd.enable 1
+
+on property:persist.vendor.log.aplogd.enable=1
+     start vendor.aplogd
+
+on property:persist.vendor.log.aplogd.enable=0
+     stop vendor.aplogd
+
+on property:ro.vendor.hw.dualsim=true
+   setprop persist.radio.multisim.config dsds
+   setprop persist.vendor.radio.msimmode dsds
+   setprop telephony.active_modems.max_count 2
+   setprop ro.vendor.radio.max.multisim dsds
+   setprop ro.telephony.sim.count 2
+   setprop persist.vendor.mims_support 2
+   setprop persist.vendor.radio.smart.data.switch 1
+   setprop ro.vendor.mtk_disable_cap_switch 0
+   setprop ro.vendor.mtk_data_config 1
+
+on property:ro.vendor.hw.dualsim=false
+   setprop persist.radio.multisim.config ss
+   setprop persist.vendor.radio.msimmode ss
+   setprop telephony.active_modems.max_count 1
+   setprop ro.vendor.radio.max.multisim ss
+   setprop ro.telephony.sim.count 1
+   setprop persist.vendor.mims_support 1
+   setprop persist.vendor.radio.smart.data.switch 0
+   setprop ro.vendor.mtk_disable_cap_switch 1
+   setprop ro.vendor.mtk_data_config 0
+
+service vendor.aplogd /vendor/bin/aplogd
+     class late_start
+     #user log
+     #group log system sdcard_rw sdcard_r media_rw mount
+     # The user and group definitions above are intentionally disabled and left
+     # only as documentation. It actually starts as root and immediately drops
+     # to log plus those groups after preserving CAP_SYS_ADMIN, which is required
+     # for kernel logging.
+     disabled
+
+# from P onwards aplogd cannot read vold.post_fs_data_done so a new property
+# shall be used to allow aplogd checking if FBE has finished /data decryption
+on property:vold.post_fs_data_done=*
+      setprop vendor.vold.post_fs_data_done ${vold.post_fs_data_done}
+
+on property:ro.vendor.build.motfactory=1
+    write /sys/devices/platform/charger/factory_image_mode 1
+
+on property:sys.sysctl.swappiness=*
+    write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}
+
+on property:ro.sys.force_max_chrg_temp=*
+    write /sys/devices/platform/charger/force_max_chrg_temp ${ro.sys.force_max_chrg_temp}
+
+on property:ro.sys.force_demo_mode=*
+    write /sys/devices/platform/charger/force_demo_mode ${ro.sys.force_demo_mode}
+
+on shutdown
+    exec_start vendor.mmi-shutdown-sh
+
+# Sync the system MSI property of RKP state onto vendor
+on property:sys.rkp.enable=* && property:sys.boot_completed=1
+    setprop persist.vendor.moto.rkp.enable ${sys.rkp.enable}
+    start vendor.mbm_spy

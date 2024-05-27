@@ -1,0 +1,25 @@
+import /vendor/etc/init/hw/init.mmi.backup.trustlet.rc
+
+#insmod usbnet.ko when on factory mode
+on early-init && property:ro.boot.atm=enable && property:ro.bootmode=mot-factory
+    insmod /vendor/lib/modules/moto_f_usbnet.ko
+
+on early-init
+    insmod /vendor/lib/modules/mmi_info.ko
+
+on early-boot && property:ro.vendor.build.motfactory=1
+    wait /sys/devices/platform/moto_chg_tcmd/force_chg_usb_suspend
+    chown system system /sys/devices/platform/moto_chg_tcmd/force_chg_usb_suspend
+
+on post-fs-data
+    # for batt_health server
+    mkdir /mnt/vendor/persist/batt_health 0770 vendor_pwric vendor_pwric
+on property:sys.boot_completed=1 && property:ro.build.type=userdebug
+    start vendor.batt_health
+on charger && property:ro.build.type=userdebug
+    start vendor.batt_health
+service vendor.batt_health /vendor/bin/batt_health
+    class late_start
+    user vendor_pwric
+    group vendor_pwric cache net_admin log
+    disabled
