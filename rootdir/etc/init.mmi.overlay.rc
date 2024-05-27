@@ -154,25 +154,3 @@ on property:sys.boot_completed=1
   chmod 0644 /data/vendor/camera_dump/mot_cancunf_s5k4h7_otp.bin
   chmod 0644 /data/vendor/camera_dump/serial_number_wide.bin
   chmod 0644 /data/vendor/camera_dump/mot_cancunf_sc202acs_otp.bin
-
-on moto-post-fs-data-fs-tune
-    write /sys/block/${dev.mnt.dev.system_ext}/queue/read_ahead_kb 2048
-    write /sys/block/${dev.mnt.dev.vendor}/queue/read_ahead_kb 2048
-    write /sys/block/${dev.mnt.dev.product}/queue/read_ahead_kb 2048
-    write /sys/block/${dev.mnt.dev.data}/queue/read_ahead_kb 2048
-    write /sys/block/${dev.mnt.dev.root}/queue/read_ahead_kb 2048
-    write /sys/block/${dev.mnt.dev.vendor_dlkm}/queue/read_ahead_kb 2048
-
-on moto-boot-completed-fs-tune
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
-    write /sys/block/dm-2/queue/read_ahead_kb 512
-    write /sys/block/dm-3/queue/read_ahead_kb 512
-    write /sys/block/dm-4/queue/read_ahead_kb 512
-    write /sys/block/dm-5/queue/read_ahead_kb 512
-    write /sys/block/${dev.mnt.dev.system_ext}/queue/read_ahead_kb 512
-    write /sys/block/${dev.mnt.dev.vendor}/queue/read_ahead_kb 512
-    write /sys/block/${dev.mnt.dev.product}/queue/read_ahead_kb 512
-    write /sys/block/${dev.mnt.dev.data}/queue/read_ahead_kb 512
-    write /sys/block/${dev.mnt.dev.root}/queue/read_ahead_kb 512
-    write /sys/block/${dev.mnt.dev.vendor_dlkm}/queue/read_ahead_kb 512
