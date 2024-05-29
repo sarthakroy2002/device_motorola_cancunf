@@ -78,8 +78,7 @@ function blob_fixup {
             ;;
         vendor/lib*/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so \
         |vendor/lib64/mt6855/libmtkcam_stdutils.so \
-        |vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so \
-        |vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
+        |vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
         vendor/lib*/hw/audio.primary.mediatek.so)
@@ -151,6 +150,10 @@ function blob_fixup {
         system_ext/priv-app/ImsService/ImsService.apk)
             [ "$2" = "" ] && return 0
             apktool_patch "${2}" "$MY_DIR/ims-patches"
+            ;;
+        vendor/etc/init/init.thermal_core.rc)
+            [ "$2" = "" ] && return 0
+            sed -i 's|ro.vendor.mtk_thermal_2_0|vendor.thermal.link_ready|g' "${2}"
             ;;
         *)
             return 1
