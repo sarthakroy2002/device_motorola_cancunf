@@ -226,9 +226,6 @@ on property:ro.vendor.hw.dualsim=false
    setprop ro.vendor.mtk_disable_cap_switch 1
    setprop ro.vendor.mtk_data_config 0
 
-on property:sys.sysctl.swappiness=*
-    write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}
-
 on property:ro.sys.force_max_chrg_temp=*
     write /sys/devices/platform/charger/force_max_chrg_temp ${ro.sys.force_max_chrg_temp}
 
