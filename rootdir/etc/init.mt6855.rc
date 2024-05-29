@@ -934,6 +934,10 @@ on property:vendor.mtk.md1.status=reset
 on property:persist.vendor.mediatek.fast_charging.support=*
     write /sys/devices/platform/charger/fast_chg_indicator ${persist.vendor.mediatek.fast_charging.support}
 
+# Force enable fast charging
+on property:sys.boot_completed=1
+    write /sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max 5000000
+
 # FPSGO FBT Game
 on boot
     insmod /vendor/lib/modules/fpsgo.ko
