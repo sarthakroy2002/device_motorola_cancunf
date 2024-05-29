@@ -95,3 +95,6 @@ on enable-low-power
 
 on property:sys.boot_completed=1
     trigger enable-low-power
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
