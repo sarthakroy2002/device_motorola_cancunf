@@ -184,6 +184,8 @@ ro.hardware.kmsetkey=trustonic
 
 # Media
 debug.stagefright.c2inputsurface=-1
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=1000
 media.c2.dmabuf.padding=3072
 ro.vendor.mtk.c2.vdec.fmt.support.level=2
 ro.vendor.mtk_hdr_video_support=1
