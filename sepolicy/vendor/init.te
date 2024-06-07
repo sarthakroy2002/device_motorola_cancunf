@@ -1,1 +1,2 @@
 r_dir_file(init, sysfs_batteryinfo)
+allow init sysfs_power_supply:file { setattr };

@@ -9,4 +9,12 @@
     <string name="model_number_pref_title">Model number (SKU)</string>
     <string name="carrier_title">Software channel (carrier)</string>
 
+    <string name="turbo_charge_title">TurboPower Charging</string>
+    <string name="turbo_enable_title">Enable TurboPower Charging</string>
+    <string name="turbo_charge_summary">Enable TurboPower Charging for fast charging</string>
+    <string name="turbo_charge_current_pref_title">Charging wattage</string>
+    <string name="turbo_mode_one">15W</string>
+    <string name="turbo_mode_two">25W</string>
+    <string name="turbo_mode_three">30W</string>
+
 </resources>

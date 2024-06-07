@@ -24,7 +24,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.os.UEventObserver;
 import android.util.Log;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.device.actions.ChopChopSensor;
 import org.lineageos.settings.device.actions.FlipToMute;
@@ -36,12 +40,20 @@ import org.lineageos.settings.device.doze.FlatUpSensor;
 import org.lineageos.settings.device.doze.ScreenStateNotifier;
 import org.lineageos.settings.device.doze.StowSensor;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.LinkedList;
 import java.util.List;
 
 public class MotoActionsService extends Service implements ScreenStateNotifier,
         UpdatedStateNotifier {
     private static final String TAG = "MotoActions";
+    private static final String CHARGE_CURRENT_FILE = "/sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max";
+
+    private UEventObserver mObserver;
 
     private final List<ScreenStateNotifier> mScreenStateNotifiers = new LinkedList<>();
     private final List<UpdatedStateNotifier> mUpdatedStateNotifiers = new LinkedList<>();
@@ -51,6 +63,19 @@ public class MotoActionsService extends Service implements ScreenStateNotifier,
 
     public void onCreate() {
         Log.d(TAG, "Starting");
+
+        mObserver = new UEventObserver() {
+            @Override
+            public void onUEvent(UEvent event) {
+                String chargerStatus = event.get("POWER_SUPPLY_ONLINE");
+                if (chargerStatus != null && chargerStatus.equals("2")) {
+                    updateChargeCurrent();
+                }
+            }
+        };
+        mObserver.startObserving("DEVPATH=/sys/class/power_supply/primary_chg");
+
+        updateChargeCurrent();
 
         MotoActionsSettings actionsSettings = new MotoActionsSettings(this, this);
         SensorHelper sensorHelper = new SensorHelper(this);
@@ -77,6 +102,27 @@ public class MotoActionsService extends Service implements ScreenStateNotifier,
         registerReceiver(mScreenStateReceiver, filter);
 
         updateState();
+    }
+
+    private void updateChargeCurrent() {
+        boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("turbo_enable", false);
+        Log.i(TAG, "isTurbo="+turboEnabled);
+        String currentValue = PreferenceManager.getDefaultSharedPreferences(this).getString("turbo_current", "5000000");
+        Log.i(TAG, "currentValue="+currentValue);
+
+        if (!turboEnabled) {
+            currentValue = "2000000";
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(CHARGE_CURRENT_FILE))) {
+            Integer.parseInt(currentValue);
+            writer.write(currentValue);
+            Log.i(TAG, "Updated Charging current");
+        } catch (NumberFormatException e) {
+            Log.e(TAG, "Invalid charge current value: " + currentValue, e);
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to update charge current", e);
+        }
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {

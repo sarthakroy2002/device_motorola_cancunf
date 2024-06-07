@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 PixelOS
+
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <string-array name="turbo_modes_entries">
+        <item>@string/turbo_mode_one</item>
+        <item>@string/turbo_mode_two</item>
+        <item>@string/turbo_mode_three</item>
+    </string-array>
+
+    <string-array name="turbo_modes_values">
+        <item>3000000</item>
+        <item>5000000</item>
+        <item>6000000</item>
+    </string-array>
+
+</resources>
