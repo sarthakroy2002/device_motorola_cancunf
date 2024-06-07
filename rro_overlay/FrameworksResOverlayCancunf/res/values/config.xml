@@ -185,6 +185,7 @@
 
      <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <array name="config_availableColorModes">
+        <item>0</item>
         <item>2</item>
     </array>
 
