@@ -1,0 +1,9 @@
+# cancunf project sku
+
+on property:ro.boot.hardware.sku="XT2431-1"
+    setprop bluetooth.device.default_name "moto g64 5G"
+    setprop vendor.usb.product_string "moto g64 5G"
+
+on property:ro.boot.hardware.sku="XT2431-3"
+    setprop bluetooth.device.default_name "moto g64 5G"
+    setprop vendor.usb.product_string "moto g64 5G"

@@ -301,10 +301,14 @@ PRODUCT_PACKAGES += \
     SettingsLibOverlayCancunf \
     SettingsOverlayCancunf \
     SettingsProviderOverlayCancunf \
+    SettingsProviderOverlayCancunpXT2431-1 \
+    SettingsProviderOverlayCancunpXT2431-3 \
     SystemUIOverlayCancunf \
     TelephonyOverlayCancunf \
     TetheringConfigResOverlayCancunf \
-    WifiResOverlayCancunf
+    WifiResOverlayCancunf \
+    WifiResOverlayCancunpXT2431-1 \
+    WifiResOverlayCancunpXT2431-3
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -397,6 +401,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6855.vendor_ramdisk \
     init_connectivity.rc \
     init.connectivity.common.rc \
+    init.cancunf.sku.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 ArrowOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.providers.settings.overlay.cancunp.xt24311">
+
+    <overlay
+      android:targetPackage="com.android.providers.settings"
+      android:requiredSystemPropertyName="ro.boot.hardware.sku"
+      android:requiredSystemPropertyValue="XT2431-1"
+      android:isStatic="true"
+      android:priority="900"/>
+</manifest>
