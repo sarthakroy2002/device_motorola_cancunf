@@ -450,6 +450,9 @@ PRODUCT_PACKAGES += \
     libstagefright_foundation-v33 \
     libutils-v32
 
+PRODUCT_PACKAGES += \
+    libui_shim
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy \
