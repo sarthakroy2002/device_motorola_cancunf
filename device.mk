@@ -295,6 +295,8 @@ PRODUCT_PACKAGES += \
     ApertureOverlayCancunf \
     CarrierConfigOverlayCancunf \
     FrameworksResOverlayCancunf \
+    FrameworksResOverlayCancunfXT2343-1 \
+    FrameworksResOverlayCancunfXT2343-2 \
     PowerOffAlarmOverlayCancunf \
     SettingsLibOverlayCancunf \
     SettingsOverlayCancunf \
