@@ -45,6 +45,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
