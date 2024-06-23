@@ -26,7 +26,6 @@
         <library name="dap" path="libswdap.so"/>
         <library name="dvl" path="libdlbvol.so"/>
         <library name="gamedap" path="libswgamedap.so"/>
-        <library name="vqe" path="libswvqe.so"/>
     </libraries>
 
     <!-- list of effects to load.
@@ -75,7 +74,6 @@
         <effect name="dlb_system_listener" library="dvl" uuid="874db4d8-051d-4b7b-bd95-a3bebc837e9e"/>
         <effect name="dlb_notification_listener" library="dvl" uuid="1f0091e3-6ad8-40fe-9b09-5948f9a26e7e"/>
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
-        <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
     </effects>
     <!-- Audio pre processor configurations.
          The pre processor configuration is described in a "preprocess" element and consists in a
