@@ -75,6 +75,23 @@
         <effect name="dlb_notification_listener" library="dvl" uuid="1f0091e3-6ad8-40fe-9b09-5948f9a26e7e"/>
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
     </effects>
+    <postprocess>
+        <stream type="music">
+            <apply effect="dlb_music_listener"/>
+        </stream>
+        <stream type="ring">
+            <apply effect="dlb_ring_listener"/>
+        </stream>
+        <stream type="alarm">
+            <apply effect="dlb_alarm_listener"/>
+        </stream>
+        <stream type="system">
+            <apply effect="dlb_system_listener"/>
+        </stream>
+        <stream type="notification">
+            <apply effect="dlb_notification_listener"/>
+        </stream>
+    </postprocess>
     <!-- Audio pre processor configurations.
          The pre processor configuration is described in a "preprocess" element and consists in a
          list of elements each describing pre processor settings for a given use case or "stream".
