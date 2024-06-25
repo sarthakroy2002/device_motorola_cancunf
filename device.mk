@@ -116,6 +116,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor
 
 PRODUCT_PACKAGES += \
+    libexpat.vendor \
+    libpng.vendor
+
+PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
 
 # Cgroup
@@ -128,9 +132,13 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0.vendor \
     android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.allocator@4.0.vendor \
-    libdrm.vendor \
     libhwc2on1adapter \
     libhwc2onfbadapter
+
+PRODUCT_PACKAGES += \
+    libdrm.vendor \
+    libion.vendor \
+    libui.vendor \
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service
@@ -164,6 +172,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+PRODUCT_PACKAGES += \
+    libgatekeeper.vendor
+
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk_platform.vendor \
@@ -171,6 +182,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -185,6 +199,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
     libhidltransport.vendor \
+    libhidlmemory.vendor \
     libhwbinder.vendor
 
 PRODUCT_PACKAGES += \
@@ -219,6 +234,7 @@ PRODUCT_PACKAGES += \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor \
     libkeymint.vendor \
+    libnetutils.vendor \
     libpuresoftkeymasterdevice.vendor
 
 # Keystore
@@ -405,6 +421,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
+    libpower.vendor \
     libsensorndkbridge
 
 PRODUCT_PACKAGES += \
@@ -452,6 +469,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libui_shim
+
+PRODUCT_PACKAGES += \
+    libsqlite.vendor \
+    libunwindstack.vendor \
+    libutilscallstack.vendor
 
 # Wifi
 PRODUCT_PACKAGES += \
