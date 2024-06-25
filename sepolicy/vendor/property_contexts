@@ -9,6 +9,3 @@ vendor.hw.touch.status           u:object_r:vendor_mot_prop:s0
 ro.vendor.touch.                 u:object_r:vendor_mot_prop:s0
 ro.vendor.mot.                   u:object_r:vendor_mot_prop:s0
 ro.vendor.mtk_md_sbp_custom_value u:object_r:vendor_mot_prop:s0
-
-# NVRAM
-vendor.service.nvram_restore     u:object_r:vendor_nvram_prop:s0

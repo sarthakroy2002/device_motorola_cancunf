@@ -1,1 +1,1 @@
-get_prop(ccci_mdinit, vendor_nvram_prop)
+get_prop(ccci_mdinit, vendor_mtk_service_nvram_restore_prop)

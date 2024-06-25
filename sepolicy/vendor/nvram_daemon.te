@@ -1,3 +1,1 @@
 get_prop(nvram_daemon, vendor_mot_prop)
-get_prop(nvram_daemon, vendor_nvram_prop)
-set_prop(nvram_daemon, vendor_nvram_prop)
