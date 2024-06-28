@@ -360,8 +360,6 @@ on post-fs-data
     mkdir /config/usb_gadget/g1/functions/via_atc.gs0
 
 on boot
-    setprop sys.usb.configfs 2
-    setprop sys.usb.controller "musb-hdrc"
     write /sys/class/android_usb/android0/f_mtp/cpu_mask 0x80
     write /sys/module/usb_f_mtp/parameters/mtp_rx_cont 1
     chmod 0664 /sys/class/android_usb/android0/iSerial
@@ -401,6 +399,9 @@ on boot
     chmod 664 /sys/class/udc/${sys.usb.controller}/device/mode
     chmod 664 /sys/class/udc/${sys.usb.controller}/device/saving
 
+    setprop sys.usb.configfs 2
+    setprop sys.usb.controller "musb-hdrc"
+
 on charger
     mkdir /config/usb_gadget/g1 0770 shell shell
     write /config/usb_gadget/g1/idVendor 0x0E8D
@@ -415,8 +416,8 @@ on charger
     mkdir /config/usb_gadget/g1/configs/b.1 0770 shell shell
     mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 shell shell
     write /config/usb_gadget/g1/configs/b.1/MaxPower 500
-    setprop sys.usb.configfs 1
     setprop sys.usb.controller "musb-hdrc"
+    setprop sys.usb.configfs 1
 
 on property:ro.bootmode=charger
     setprop sys.usb.config midi
