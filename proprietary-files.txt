@@ -2584,7 +2584,6 @@ vendor/bin/init.mmi.boot.sh
 vendor/bin/init.mmi.modem-rfs.sh
 vendor/bin/init.mmi.shutdown.sh
 vendor/bin/init.mmi.touch.sh
-vendor/bin/init.mmi.usb.sh
 vendor/bin/init.oem.fingerprint2.sh
 vendor/bin/init.oem.hw.sh
 -vendor/bin/kpgather
@@ -2593,7 +2592,6 @@ vendor/bin/init.oem.hw.sh
 vendor/bin/pstore_annotate.sh
 vendor/bin/vendor.mmi.cxp.sh
 vendor/etc/init/hw/init.mmi.backup.trustlet.rc
-vendor/etc/init/hw/init.mmi.usb.configfs.rc
 vendor/etc/init/vendor.mmi.carrier.rc
 vendor/etc/init/vendor.mmi.cxp.rc
 vendor/etc/motorola/12m/Factory_SW_Logo.jpg
