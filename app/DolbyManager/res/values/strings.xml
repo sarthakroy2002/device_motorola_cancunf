@@ -24,7 +24,6 @@
     <string name="dolby_spk_virtualizer">Speaker virtualization</string>
     <string name="dolby_hp_virtualizer">Headphone virtualization</string>
     <string name="dolby_stereo_widening">Stereo widening</string>
-    <string name="dolby_volume_leveler">Volume leveler</string>
     <string name="dolby_connect_headphones">Connect headphones</string>
     <string name="dolby_reset_profile">Reset to defaults</string>
     <string name="dolby_reset_profile_toast">Succesfully reset settings for %1$s profile</string>

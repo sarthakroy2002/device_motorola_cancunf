@@ -112,6 +112,7 @@ internal class DolbyController private constructor(
 
         // Finally restore the current profile.
         setCurrentProfile()
+        disableVolumeLeveler()
     }
 
     private fun restoreSettings(profile: Int) {
@@ -147,10 +148,7 @@ internal class DolbyController private constructor(
             prefs.getBoolean(DolbyConstants.PREF_BASS, getBassEnhancerEnabled(profile)),
             profile
         )
-        setVolumeLevelerEnabled(
-            prefs.getBoolean(DolbyConstants.PREF_VOLUME, getVolumeLevelerEnabled(profile)),
-            profile
-        )
+        disableVolumeLeveler()
     }
 
     private fun checkEffect() {
@@ -165,6 +163,7 @@ internal class DolbyController private constructor(
         dlog(TAG, "setCurrentProfile")
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         profile = prefs.getString(DolbyConstants.PREF_PROFILE, "0" /*dynamic*/)!!.toInt()
+        disableVolumeLeveler()
     }
 
     fun getProfileName(): String? {
@@ -182,6 +181,12 @@ internal class DolbyController private constructor(
         checkEffect()
         dolbyEffect.resetProfileSpecificSettings()
         context.deleteSharedPreferences("profile_$profile")
+        disableVolumeLeveler()
+    }
+
+    fun disableVolumeLeveler() {
+        dlog(TAG, "disableVolumeLeveler")
+        dolbyEffect.setDapParameter(DsParam.VOLUME_LEVELER_ENABLE, false, profile)
     }
 
     fun getPreset(profile: Int = this.profile): String {
@@ -231,17 +236,6 @@ internal class DolbyController private constructor(
         dlog(TAG, "setBassEnhancerEnabled: $value")
         checkEffect()
         dolbyEffect.setDapParameter(DsParam.BASS_ENHANCER_ENABLE, value, profile)
-    }
-
-    fun getVolumeLevelerEnabled(profile: Int = this.profile) =
-        dolbyEffect.getDapParameterBool(DsParam.VOLUME_LEVELER_ENABLE, profile).also {
-            dlog(TAG, "getVolumeLevelerEnabled: $it")
-        }
-
-    fun setVolumeLevelerEnabled(value: Boolean, profile: Int = this.profile) {
-        dlog(TAG, "setVolumeLevelerEnabled: $value")
-        checkEffect()
-        dolbyEffect.setDapParameter(DsParam.VOLUME_LEVELER_ENABLE, value, profile)
     }
 
     fun getStereoWideningAmount(profile: Int = this.profile) =

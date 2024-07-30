@@ -51,9 +51,6 @@ class DolbySettingsFragment : PreferenceFragment(),
     private val spkVirtPref by lazy {
         findPreference<SwitchPreferenceCompat>(DolbyConstants.PREF_SPK_VIRTUALIZER)!!
     }
-    private val volumePref by lazy {
-        findPreference<SwitchPreferenceCompat>(DolbyConstants.PREF_VOLUME)!!
-    }
     private val resetPref by lazy {
         findPreference<Preference>(DolbyConstants.PREF_RESET)!!
     }
@@ -112,7 +109,6 @@ class DolbySettingsFragment : PreferenceFragment(),
         stereoPref.onPreferenceChangeListener = this
         dialoguePref.onPreferenceChangeListener = this
         bassPref.onPreferenceChangeListener = this
-        volumePref.onPreferenceChangeListener = this
 
         resetPref.setOnPreferenceClickListener {
             dolbyController.resetProfileSpecificSettings()
@@ -170,10 +166,6 @@ class DolbySettingsFragment : PreferenceFragment(),
                 dolbyController.setBassEnhancerEnabled(newValue as Boolean)
             }
 
-            DolbyConstants.PREF_VOLUME -> {
-                dolbyController.setVolumeLevelerEnabled(newValue as Boolean)
-            }
-
             else -> return false
         }
         return true
@@ -206,7 +198,6 @@ class DolbySettingsFragment : PreferenceFragment(),
         presetPref.setEnabled(enable)
         spkVirtPref.setEnabled(enable)
         dialoguePref.setEnabled(enable)
-        volumePref.setEnabled(enable)
         resetPref.setEnabled(enable)
         hpVirtPref.setEnabled(enable && !isOnSpeaker)
         stereoPref.setEnabled(enable && !isOnSpeaker)
@@ -235,7 +226,6 @@ class DolbySettingsFragment : PreferenceFragment(),
         }
 
         spkVirtPref.setChecked(dolbyController.getSpeakerVirtEnabled(currentProfile))
-        volumePref.setChecked(dolbyController.getVolumeLevelerEnabled(currentProfile))
 
         // below prefs are not enabled on loudspeaker
         if (isOnSpeaker) {
