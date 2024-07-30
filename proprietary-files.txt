@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sys-user 14 U1TDS34.94-12-7-5 b346d release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sys-user 14 U1TDS34.94-12-7-6 42110d release-keys, unless pinned
 
 # AEE
 -vendor/lib/libaedv.so
