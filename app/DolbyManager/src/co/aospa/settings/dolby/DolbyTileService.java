@@ -1,9 +1,17 @@
+/*
+ * Copyright (C) 2023-24 Paranoid Android
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 package co.aospa.settings.dolby;
 
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
 public class DolbyTileService extends TileService {
+
+    private static final String TAG = "DolbyTileService";
 
     @Override
     public void onStartListening() {

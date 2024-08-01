@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023-24 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -14,14 +14,16 @@ import android.util.Log;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final String TAG = "DolbyManager";
-    private static final boolean DEBUG = true;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+        Log.d(TAG, "Received intent: " + intent.getAction());
         if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             return;
         }
-        if (DEBUG) Log.d(TAG, "Received boot completed intent");
-        DolbyUtils.getInstance(context);
+
+        Log.i(TAG, "Boot completed, starting dolby");
+        DolbyUtils.getInstance(context).onBootCompleted();
     }
+
 }

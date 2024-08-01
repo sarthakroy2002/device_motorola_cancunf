@@ -1,23 +1,15 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2023-24 Paranoid Android
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 package co.aospa.settings.dolby;
 
 import android.media.audiofx.AudioEffect;
 import android.util.Log;
+
+import co.aospa.settings.dolby.DolbyConstants.DsParam;
 
 import java.util.UUID;
 
@@ -34,30 +26,6 @@ class DolbyAtmos extends AudioEffect {
         EFFECT_PARAM_SET_PROFILE_PARAMETER = 0x1000000,
         EFFECT_PARAM_GET_PROFILE_PARAMETER = 0x1000005,
         EFFECT_PARAM_RESET_PROFILE_SETTINGS = 0xC000000;
-
-    enum DsParam {
-        HEADPHONE_VIRTUALIZER(101),
-        VOLUME_LEVELER(103),
-        DIALOGUE_ENHANCER_ENABLE(105),
-        DIALOGUE_ENHANCER_AMOUNT(108),
-        GEQ(110),
-        BASS_ENHANCER(111),
-        STEREO_WIDENING(113);
-
-        public int id, length;
-
-        DsParam(int id) {
-            this.id = id;
-        }
-
-        public int getLength() {
-            return (id == GEQ.id) ? 20 : 1;
-        }
-
-        public String toString() {
-            return String.format("%s(%s)", name(), id);
-        }
-    }
 
     DolbyAtmos(int priority, int audioSession) {
         super(EFFECT_TYPE_NULL, EFFECT_TYPE_DAP, priority, audioSession);
@@ -132,12 +100,12 @@ class DolbyAtmos extends AudioEffect {
 
     void resetProfileSpecificSettings() {
         int profile = getProfile();
-        Log.d(TAG, "resetProfileSpecificSettings: profile=" + profile);
-        setIntParam(EFFECT_PARAM_RESET_PROFILE_SETTINGS, getProfile());
+        dlog("resetProfileSpecificSettings: profile=" + profile);
+        setIntParam(EFFECT_PARAM_RESET_PROFILE_SETTINGS, profile);
     }
 
     void setDapParameter(int profile, DsParam param, int values[]) {
-        Log.d(TAG, "setDapParameter: profile=" + profile + " param=" + param.toString());
+        dlog("setDapParameter: profile=" + profile + " param=" + param);
         int length = values.length;
         byte[] buf = new byte[(length + 4) * 4];
         int i = int32ToByteArray(EFFECT_PARAM_SET_PROFILE_PARAMETER, buf, 0);
@@ -160,8 +128,8 @@ class DolbyAtmos extends AudioEffect {
     }
 
     int[] getDapParameter(int profile, DsParam param) {
-        Log.d(TAG, "getDapParameter: profile=" + profile + " param=" + param.toString());
-        int length = param.getLength();
+        dlog("getDapParameter: profile=" + profile + " param=" + param);
+        int length = param.length;
         byte[] buf = new byte[(length + 2) * 4];
         int i = (param.id << 16) + EFFECT_PARAM_GET_PROFILE_PARAMETER;
         checkStatus(getParameter(i + (profile << 8), buf));
@@ -178,5 +146,11 @@ class DolbyAtmos extends AudioEffect {
 
     int getDapParameterInt(DsParam param) {
         return getDapParameter(param)[0];
+    }
+
+    private static void dlog(String msg) {
+        if (Log.isLoggable(TAG, Log.DEBUG)) {
+            Log.d(TAG, msg);
+        }
     }
 }

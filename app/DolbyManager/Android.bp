@@ -1,6 +1,6 @@
 //
 // Copyright (C) 2017-2021 The LineageOS Project
-//           (C) 2023 Paranoid Android
+//           (C) 2023-24 Paranoid Android
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -8,6 +8,7 @@
 android_app {
     name: "DolbyManager",
     srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
     privileged: true,
@@ -15,5 +16,6 @@ android_app {
     overrides: ["MusicFX"],
     static_libs: [
         "SettingsLib",
+        "androidx.preference_preference",
     ],
 }
