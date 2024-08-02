@@ -46,3 +46,6 @@ allow vendor_moto_init_shell persist_data_file:dir search;
 
 # kmesg
 allow vendor_moto_init_shell kmsg_device:chr_file rw_file_perms;
+
+# ro.boot.product.hardware.sku
+set_prop(vendor_moto_init_shell, vendor_sku_prop)

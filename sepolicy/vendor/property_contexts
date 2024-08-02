@@ -9,3 +9,10 @@ vendor.hw.touch.status           u:object_r:vendor_mot_prop:s0
 ro.vendor.touch.                 u:object_r:vendor_mot_prop:s0
 ro.vendor.mot.                   u:object_r:vendor_mot_prop:s0
 ro.vendor.mtk_md_sbp_custom_value u:object_r:vendor_mot_prop:s0
+
+# NFC
+persist.vendor.nfc. u:object_r:vendor_nfc_prop:s0
+vendor.nfc.fw_status u:object_r:vendor_nfc_prop:s0
+
+# SKU
+ro.boot.product.hardware.sku u:object_r:vendor_sku_prop:s0

@@ -2319,12 +2319,12 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS (System)
+etc/permissions/moto-telephony.xml
+-framework/moto-telephony.jar
 -system_ext/framework/mediatek-common.jar:framework/mediatek-common.jar
 -system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
 -system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
 -system_ext/framework/mediatek-ims-oem-plugin.jar:framework/mediatek-ims-oem-plugin.jar
--framework/moto-telephony.jar
-etc/permissions/moto-telephony.xml
 -system_ext/priv-app/ImsService/ImsService.apk|2722dac2880026ed9250bfe04cee250632542d9d
 
 # IMS (Vendor)
@@ -2688,6 +2688,43 @@ vendor/etc/nnapi_powerhal.json
 -vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 -vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 -vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
+
+# NFC
+-vendor/bin/hw/android.hardware.nfc@1.2-service.sec
+-vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
+-vendor/bin/pnscr
+-vendor/bin/pnscr_cal
+-vendor/bin/sec_nfc_test
+vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc
+vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
+vendor/etc/init/init.nfc.sec.rc
+vendor/etc/libese-nxp.conf
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nci_100.conf
+vendor/etc/libnfc-nci_220.conf
+vendor/etc/libnfc-nci_220e.conf
+vendor/etc/libnfc-nci_557.conf
+vendor/etc/libnfc-nci_560.conf
+vendor/etc/libnfc-nxp-pnscr.conf
+vendor/etc/libnfc-nxp_220.conf
+vendor/etc/libnfc-sec-nci.conf
+vendor/etc/libnfc-sec-vendor.conf
+vendor/etc/nfc_calibration.txt
+vendor/etc/sec_s3nrn4v_hwreg.bin
+vendor/etc/sec_s3nrn4v_swreg.bin
+vendor/etc/sn100u_nfcon.pnscr
+vendor/etc/sn100u_pnx_ese_cplc.pnscr
+-vendor/lib/libpn557_fw.so
+-vendor/lib/libpn560_fw.so
+-vendor/lib/libsn100u_fw.so
+-vendor/lib/libsn220u_fw.so
+-vendor/lib/nfc_nci_sec.so
+-vendor/lib64/libpn557_fw.so
+-vendor/lib64/libpn560_fw.so
+-vendor/lib64/libsn100u_fw.so
+-vendor/lib64/libsn220u_fw.so
+-vendor/lib64/ls_client.so
+-vendor/lib64/nfc_nci_sec.so
 
 # NVRAM
 -vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service

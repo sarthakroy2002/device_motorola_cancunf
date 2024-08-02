@@ -1,4 +1,6 @@
 set_prop(vendor_init, vendor_mot_prop)
+set_prop(vendor_init, vendor_nfc_prop)
 rw_dir_file(vendor_init, sysfs_leds)
 rw_dir_file(vendor_init, sysfs_ged)
 rw_dir_file(vendor_init, sysfs_power_supply)
+set_prop(vendor_init, vendor_sku_prop)

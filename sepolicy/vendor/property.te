@@ -3,3 +3,9 @@ vendor_restricted_prop(vendor_camera_prop);
 
 # Motorola
 vendor_internal_prop(vendor_mot_prop);
+
+# NFC
+vendor_internal_prop(vendor_nfc_prop);
+
+# SKU
+vendor_internal_prop(vendor_sku_prop);
