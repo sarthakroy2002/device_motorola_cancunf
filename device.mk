@@ -448,6 +448,7 @@ PRODUCT_PACKAGES += \
     init.mt6855.power.rc \
     init.mt6855.usb.rc \
     init.mtkgki.rc \
+    init.oem.hw.sh \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6855.rc

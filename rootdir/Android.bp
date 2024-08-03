@@ -5,6 +5,12 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+sh_binary {
+    name: "init.oem.hw.sh",
+    src: "bin/init.oem.hw.sh",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "fstab.mt6855",
     src: "etc/fstab.mt6855",

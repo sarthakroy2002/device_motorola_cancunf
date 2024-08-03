@@ -2585,7 +2585,6 @@ vendor/bin/init.mmi.modem-rfs.sh
 vendor/bin/init.mmi.shutdown.sh
 vendor/bin/init.mmi.touch.sh
 vendor/bin/init.oem.fingerprint2.sh
-vendor/bin/init.oem.hw.sh
 -vendor/bin/kpgather
 -vendor/bin/kpreadwrite
 -vendor/bin/motobox
