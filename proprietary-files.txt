@@ -2587,7 +2587,7 @@ vendor/bin/init.mmi.touch.sh
 vendor/bin/init.oem.fingerprint2.sh
 -vendor/bin/kpgather
 -vendor/bin/kpreadwrite
--vendor/bin/motobox
+-vendor/bin/motobox;SYMLINK=vendor/bin/expat
 vendor/bin/pstore_annotate.sh
 vendor/bin/vendor.mmi.cxp.sh
 vendor/etc/init/hw/init.mmi.backup.trustlet.rc
