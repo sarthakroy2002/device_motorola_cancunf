@@ -56,12 +56,6 @@ on early-boot
     chown system system /sys/devices/platform/soc/112b0000.ufshci/manual_gc
     chown system system /sys/devices/platform/soc/112b0000.ufshci/ufshid/trigger
 
-service nxpnfcinfo /system/vendor/bin/nxpnfcinfo
-    class late_start
-    group nfc
-    user system
-    oneshot
-
 on property:ro.vendor.hw.nfc=ese_nq
    insmod /vendor/lib/modules/nxp_i2c.ko
    insmod /vendor/lib/modules/nxp_ese.ko
