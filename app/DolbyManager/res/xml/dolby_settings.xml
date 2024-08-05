@@ -33,6 +33,12 @@
                 android:targetClass="co.aospa.settings.dolby.geq.EqualizerActivity" />
         </Preference>
 
+        <co.aospa.settings.dolby.preference.DolbyIeqPreference
+            android:key="dolby_ieq"
+            android:entries="@array/dolby_ieq_entries"
+            android:entryValues="@array/dolby_ieq_values"
+            android:title="@string/dolby_ieq" />
+
         <SwitchPreferenceCompat
             android:key="dolby_spk_virtualizer"
             android:title="@string/dolby_spk_virtualizer" />
