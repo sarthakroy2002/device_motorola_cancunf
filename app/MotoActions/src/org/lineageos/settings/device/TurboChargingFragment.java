@@ -38,12 +38,16 @@ import java.io.FileWriter;
 public class TurboChargingFragment extends PreferenceFragment {
 
     private static final String TAG = "TurboChargingFragment";
-    private static final String CHARGE_CURRENT_FILE = "/sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max";
+    private static final String PRIMARY_CHARGE_CURRENT_FILE = "/sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max";
+    private static final String ALTERNATE_CHARGE_CURRENT_FILE = "/sys/devices/platform/charger/power_supply/mtk-master-charger/constant_charge_current_max";
+    private String CHARGE_CURRENT_FILE;
     private boolean turboEnabled;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.charging_panel);
+
+        CheckChargeCurrentFile();
 
         MainSwitchPreference switchPreference = findPreference("turbo_enable");
         if (switchPreference != null) {
@@ -74,12 +78,31 @@ public class TurboChargingFragment extends PreferenceFragment {
         }
     }
 
+    private void CheckChargeCurrentFile() {
+        File primaryFile = new File(PRIMARY_CHARGE_CURRENT_FILE);
+        if (primaryFile.exists()) {
+            CHARGE_CURRENT_FILE = PRIMARY_CHARGE_CURRENT_FILE;
+        } else {
+            CHARGE_CURRENT_FILE = ALTERNATE_CHARGE_CURRENT_FILE;
+            ListPreference turboCurrentPreference = findPreference("turbo_current");
+            if (turboCurrentPreference != null) {
+                turboCurrentPreference.setVisible(false);
+            }
+        }
+        Log.i(TAG, "Using charge current file: " + CHARGE_CURRENT_FILE);
+    }
+
     private void updateChargeCurrent() {
         turboEnabled = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("turbo_enable", false);
         Log.i(TAG, "isTurbo=" + turboEnabled);
-        String defaultValue = "2000000";
+        String defaultValue = "3000000";
+        String currentValue;
         if (turboEnabled) {
-            String currentValue = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("turbo_current", "5000000");
+            if (CHARGE_CURRENT_FILE == PRIMARY_CHARGE_CURRENT_FILE) {
+                currentValue = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("turbo_current", "5000000");
+            } else {
+                currentValue = defaultValue;
+            }
             Log.i(TAG, "currentValue=" + currentValue);
             writeChargeCurrent(currentValue);
         } else {

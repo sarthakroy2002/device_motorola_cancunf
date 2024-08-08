@@ -738,6 +738,8 @@ on boot
     # Allow system to change fast charging current node
     chown system system /sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max
     chmod 0660 /sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max
+    chown system system /sys/devices/platform/charger/power_supply/mtk-master-charger/constant_charge_current_max
+    chmod 0660 /sys/devices/platform/charger/power_supply/mtk-master-charger/constant_charge_current_max
 
 # Smartbook Handler Framework
     chown system system /sys/power/sb_state
