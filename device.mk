@@ -331,6 +331,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayCancunf \
     BesLoudnessOverlayCancunf \
     CarrierConfigOverlayCancunf \
+    EsimOverlayCancunf \
     FrameworksResOverlayCancunf \
     FrameworksResOverlayCancunfXT2343-1 \
     FrameworksResOverlayCancunfXT2343-2 \
