@@ -2368,7 +2368,7 @@ system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
 -system_ext/lib64/libmtkperf_client.so;MODULE=libmtkperf_client.system_ext|3daebbc2569077f08fc9c27d4e9becc73faa0d1e
 -system_ext/lib64/libsignal.so|0f55bb64c660fe4cda2b695121580b054f026e73
 -system_ext/lib64/libsink.so|6bd8c55847116a9a37e223ea2a6e5ce1379e53f7
--system_ext/lib64/libsource.so|66a481fd2e260a820899d60cf9190fb986d36768
+-system_ext/lib64/libsource.so|66a481fd2e260a820899d60cf9190fb986d36768|ee271172265c74ee48409123a3d04f9434fb758a
 -system_ext/lib64/libvcodec_cap.so|6973253cb2e4ddf365451ed2ac8db9d04085bc4a
 -system_ext/lib64/libvcodec_capenc.so|5527525dfcd25169bc380ac53d8181ffa1429c6f
 -system_ext/lib64/libvt_avsync.so|632cb05532ef2e022072d91bff3c1ae47c888b7e
