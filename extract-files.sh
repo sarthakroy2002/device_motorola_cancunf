@@ -74,10 +74,12 @@ function blob_fixup {
             ;&
         vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so)
             ;&
-        vendor/lib*/hw/audio.primary.mediatek.so)
-            ;&
         vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib*/hw/audio.primary.mediatek.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
             ;;
         vendor/bin/mnld)
             ;&
