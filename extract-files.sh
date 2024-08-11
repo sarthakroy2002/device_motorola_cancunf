@@ -80,6 +80,7 @@ function blob_fixup {
         vendor/lib*/hw/audio.primary.mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
+            grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/bin/mnld)
             ;&
