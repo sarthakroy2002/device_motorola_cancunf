@@ -93,8 +93,7 @@ on enable-low-power
     write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
 
     # foreground
-    # cap the max utilisation for foreground tasks to save power.
-    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/foreground/cpu.uclamp.max max
     write /dev/cpuctl/foreground/cpu.uclamp.min 10
     write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
 
