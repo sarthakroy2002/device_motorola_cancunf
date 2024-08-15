@@ -86,6 +86,7 @@ ro.vendor.composer_version=2.1
 debug.mediatek.disp_decompress=1
 debug.renderengine.backend=skiagl
 debug.sf.disable_backpressure=1
+debug.sf.treat_170m_as_sRGB=1
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
 debug.sf.earlyGl.app.duration=20000000
