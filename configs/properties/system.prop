@@ -11,10 +11,12 @@ vendor.camera.aux.packagelist=org.lineageos.aperture
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
+debug.sf.auto_latch_unsignaled=false
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
 debug.sf.earlyGl.app.duration=20000000
 debug.sf.earlyGl.sf.duration=27600000
+debug.sf.enable_gl_backpressure=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.hwc.min.duration=23000000
 debug.sf.latch_unsignaled=true
@@ -22,11 +24,9 @@ debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.use_phase_offsets_as_durations=1
+persist.sys.brightness.low.gamma=true
 ro.opengles.version=196610
 vendor.debug.sf.display_dejitter=0
-debug.sf.enable_gl_backpressure=0
-debug.sf.auto_latch_unsignaled=false
-persist.sys.brightness.low.gamma=true
 
 # FUSE
 persist.sys.fuse.passthrough.enable=true
