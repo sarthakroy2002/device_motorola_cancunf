@@ -6,4 +6,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_cancunf.mk
+    $(LOCAL_DIR)/yaap_cancunf.mk

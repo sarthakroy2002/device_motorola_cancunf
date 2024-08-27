@@ -11,11 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/motorola/cancunf/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common YAAP stuff.
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := aosp_cancunf
+PRODUCT_NAME := yaap_cancunf
 PRODUCT_DEVICE := cancunf
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
