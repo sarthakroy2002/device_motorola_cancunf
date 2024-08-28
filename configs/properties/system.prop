@@ -4,8 +4,8 @@ ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
 
 # Camera
-persist.vendor.camera.privapp.list=org.lineageos.aperture
-vendor.camera.aux.packagelist=org.lineageos.aperture
+persist.vendor.camera.privapp.list=org.lineageos.aperture,com.motorola.camera3
+vendor.camera.aux.packagelist=org.lineageos.aperture,com.motorola.camera3
 
 # Dex
 dalvik.vm.dex2oat64.enabled=true

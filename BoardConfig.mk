@@ -187,6 +187,7 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Inherit the proprietary files
 include vendor/motorola/cancunf/BoardConfigVendor.mk
+include vendor/motorola/cancunf-motcamera/BoardConfigVendor.mk
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
