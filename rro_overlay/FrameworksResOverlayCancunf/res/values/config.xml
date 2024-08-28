@@ -17,7 +17,7 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds.  Do not translate. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    
+
     <!-- Array of output values for LCD backlight corresponding to the lux values
          in the config_autoBrightnessLevels array.  This array should have size one greater
          than the size of the config_autoBrightnessLevels array.
@@ -153,7 +153,7 @@
         <item>238</item>
         <item>255</item>
     </array>
-    
+
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
          values in the config_screenBrightnessBacklight array.  On OLED displays these  values
          should be measured with an all white image while the display is in the fully on state.
@@ -482,7 +482,7 @@
 
     <!-- The OEM specified sensor type for the gesture to launch the camera app. -->
     <integer name="config_cameraLaunchGestureSensorType">65540</integer>
-    
+
     <!-- The OEM specified sensor string type for the gesture to launch camera app, this value
          must match the value of config_cameraLaunchGestureSensorType in OEM's HAL -->
     <string translatable="false" name="config_cameraLaunchGestureSensorStringType">com.motorola.sensor.camera_activate</string>

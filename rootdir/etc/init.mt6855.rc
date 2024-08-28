@@ -916,7 +916,7 @@ service factory_no_image /vendor/bin/factory
     capabilities BLOCK_SUSPEND NET_RAW NET_ADMIN SYS_ADMIN SYS_BOOT
     socket factory-atci stream 660 radio system
     disabled
-    oneshot	
+    oneshot
 
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset

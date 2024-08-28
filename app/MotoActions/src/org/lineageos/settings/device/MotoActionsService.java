@@ -122,7 +122,7 @@ public class MotoActionsService extends Service implements ScreenStateNotifier,
     private void updateChargeCurrent() {
         boolean turboEnabled = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("turbo_enable", false);
         Log.i(TAG, "isTurbo="+turboEnabled);
-        
+
         String currentValue;
 
         if (CHARGE_CURRENT_FILE == PRIMARY_CHARGE_CURRENT_FILE) {

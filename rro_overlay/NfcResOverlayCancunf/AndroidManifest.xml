@@ -4,7 +4,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.nfc.overlay.cancunf">
-    <overlay 
+    <overlay
           android:targetPackage="com.android.nfc"
           android:targetName="NfcCustomization"
           android:isStatic="true"

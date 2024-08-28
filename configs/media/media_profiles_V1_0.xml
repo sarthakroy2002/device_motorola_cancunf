@@ -1622,7 +1622,7 @@
 
     <EncoderOutputFileFormat name="mp4" />
     <EncoderOutputFileFormat name="3gp" />
-    
+
     <!--
          If a codec is not enabled, it is invisible to the applications
          In other words, the applications won't be able to use the codec

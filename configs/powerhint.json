@@ -101,7 +101,7 @@
           "[33] freq: 457000, volt: 59375, vsram: 75000, posdiv: 2, vaging: 0, power: 365",
           "[34] freq: 435000, volt: 58750, vsram: 75000, posdiv: 2, vaging: 0, power: 334",
           "[35] freq: 412000, volt: 58125, vsram: 75000, posdiv: 2, vaging: 0, power: 311",
-          "[36] freq: 390000, volt: 57500, vsram: 75000, posdiv: 2, vaging: 0, power: 289"          
+          "[36] freq: 390000, volt: 57500, vsram: 75000, posdiv: 2, vaging: 0, power: 289"
         ]
       },
       {
@@ -377,7 +377,7 @@
         "Node": "CPULittleClusterMaxFreq",
         "Duration": 0,
         "Value": "1800000"
-      }, 
+      },
       {
         "PowerHint": "FIXED_PERFORMANCE",
         "Node": "CPUBigClusterMaxFreq",
