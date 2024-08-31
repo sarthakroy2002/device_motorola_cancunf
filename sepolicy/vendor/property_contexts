@@ -1,5 +1,6 @@
 # Camera
 vendor.mot_ota_tuning.valid      u:object_r:vendor_mot_camera_prop:s0
+persist.vendor.camera.privapp.list  u:object_r:vendor_persist_camera_prop:s0
 
 # FPS
 vendor.hw.fingerprint.status     u:object_r:vendor_mot_prop:s0
