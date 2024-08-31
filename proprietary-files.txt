@@ -21,10 +21,10 @@ vendor/etc/ap_gain.bin
 vendor/etc/ap_gain_mmul.bin
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_rv.xml
--vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
--vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 -vendor/lib/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib/hw/audio.primary.mt6855.so
 -vendor/lib/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib/hw/audio.r_submix.mt6855.so
+-vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
+-vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 -vendor/lib/libMtkSpeechEnh.so
 -vendor/lib/libMtkSpeechEnh_swb.so
 -vendor/lib/lib_iir.so
@@ -56,10 +56,11 @@ vendor/etc/aurisys_config_rv.xml
 -vendor/lib/libspeechparser_vendor.so
 -vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 -vendor/lib/vendor.mediatek.hardware.audio@7.1.so
--vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
--vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 -vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6855.so
 -vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6855.so
+-vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
+-vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
+-vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so
 -vendor/lib64/mt6855/libstereoinfoaccessor_vsdof.so;SYMLINK=vendor/lib64/libstereoinfoaccessor_vsdof.so
 -vendor/lib64/libMtkSpeechEnh.so
 -vendor/lib64/libMtkSpeechEnh_swb.so
@@ -68,7 +69,6 @@ vendor/etc/aurisys_config_rv.xml
 -vendor/lib64/libaualgo_azp_wrapper.so
 -vendor/lib64/libaualgo_foundation.so
 -vendor/lib64/libaualgo_sst_component.so
--vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so
 -vendor/lib64/libaudio_param_parser-vnd.so
 -vendor/lib64/libaudiocompensationfilter_vendor.so
 -vendor/lib64/libaudiocompensationfilterc.so
@@ -2582,6 +2582,7 @@ vendor/etc/vhw.xml
 vendor/etc/init.insmod.mt6855.cfg
 
 # Motorola
+-vendor/bin/motobox;SYMLINK=vendor/bin/expat
 vendor/bin/hardware_revisions.sh
 vendor/bin/init.insmod.sh
 vendor/bin/init.mmi.backup.trustlet.sh
@@ -2593,7 +2594,6 @@ vendor/bin/init.mmi.touch.sh
 vendor/bin/init.oem.fingerprint2.sh
 -vendor/bin/kpgather
 -vendor/bin/kpreadwrite
--vendor/bin/motobox;SYMLINK=vendor/bin/expat
 vendor/bin/pstore_annotate.sh
 vendor/bin/vendor.mmi.cxp.sh
 vendor/etc/init/hw/init.mmi.backup.trustlet.rc
@@ -2897,8 +2897,8 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
 -vendor/lib/libhwm.so
 -vendor/lib/sensors.moto.so
--vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 -vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6855.so
+-vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 -vendor/lib64/libhfmanager.so
 -vendor/lib64/libhfmanagerwrapper.so
 -vendor/lib64/libhwm.so
