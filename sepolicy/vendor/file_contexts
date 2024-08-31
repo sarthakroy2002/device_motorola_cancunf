@@ -2,6 +2,7 @@
 /data/vendor/misc/imager                                                               u:object_r:vendor_camera_data_file:s0
 /data/vendor/camera(/.*)?                                                              u:object_r:vendor_camera_data_file:s0
 /mnt/vendor/persist/camera(/.*)?                                                       u:object_r:vendor_persist_camera_file:s0
+/vendor/bin/hw/motorola\.hardware\.camera\.imgtuner@2\.0-service                       u:object_r:hal_camera_default_exec:s0
 
 # Dolby
 /data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
