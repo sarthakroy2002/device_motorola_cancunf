@@ -22,6 +22,7 @@ genfscon sysfs /devices/virtual/touchscreen u:object_r:vendor_sysfs_touchpanel:s
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:mtk_gauge/power_supply/battery/wakeup36 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11ed4000.i2c/i2c-9/9-0065/power_supply/cp-standalone/wakeup52                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11ed4000.i2c/i2c-9/9-0065/power_supply/cp-standalone/wakeup152                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11ed4000.i2c/i2c-9/9-0065/power_supply/cp-standalone/wakeup168                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1e990000.gce/wakeup/wakeup4                                                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup30                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/input/input8/wakeup169                                                              u:object_r:sysfs_wakeup:s0
