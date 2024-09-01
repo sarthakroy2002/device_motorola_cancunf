@@ -1,5 +1,6 @@
 # Camera
-camera.mot.is.coming.cts    u:object_r:system_mot_prop:s0
+camera.mot.                 u:object_r:system_mot_camera_prop:s0
+jpeg.exif.                  u:object_r:system_mot_camera_prop:s0
 debuglog.drv                u:object_r:exported_system_prop:s0
 debuglog.drv.               u:object_r:exported_system_prop:s0
 

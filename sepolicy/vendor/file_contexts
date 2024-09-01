@@ -49,6 +49,9 @@
 /dev/sec-nfc                                                                           u:object_r:nfc_device:s0
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.sec                                u:object_r:hal_nfc_default_exec:s0
 
+# Neural Networks
+/vendor/lib(64)?/libapusys\.so                                                         u:object_r:same_process_hal_file:s0
+
 # Wakeups
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?                              u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?                              u:object_r:sysfs_wakeup:s0
