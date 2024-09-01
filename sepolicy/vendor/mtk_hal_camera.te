@@ -6,6 +6,8 @@ allow mtk_hal_camera vendor_camera_data_file:sock_file write;
 allow mtk_hal_camera vendor_camera_data_file:file create_file_perms;
 allow mtk_hal_camera vendor_imager_data_file:dir rw_dir_perms;
 allow mtk_hal_camera vendor_imager_data_file:file rw_file_perms;
+allow mtk_hal_camera vendor_imager_metadata_file:dir rw_dir_perms;
+allow mtk_hal_camera vendor_imager_metadata_file:file rw_file_perms;
 allow mtk_hal_camera sysfs_therm:dir r_dir_perms;
 allow mtk_hal_camera sysfs_therm:file r_file_perms;
 r_dir_file(mtk_hal_camera, persist_data_file)
