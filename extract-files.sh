@@ -66,6 +66,9 @@ function blob_fixup {
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.security.keymint-service.trustonic)
+            "${PATCHELF}" --replace-needed "android.hardware.security.keymint-V1-ndk_platform.so" "android.hardware.security.keymint-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.secureclock-V1-ndk_platform.so" "android.hardware.security.secureclock-V1-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.security.sharedsecret-V1-ndk_platform.so" "android.hardware.security.sharedsecret-V1-ndk.so" "${2}"
             grep -q "android.hardware.security.rkp-V1-ndk.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
             ;;
         vendor/lib*/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so)
@@ -119,6 +122,14 @@ function blob_fixup {
             ;;
         system_ext/lib64/libsource.so)
             grep -q libui_shim.so "$2" || "$PATCHELF" --add-needed libui_shim.so "$2"
+            ;;
+        vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
+            ;&
+        vendor/bin/hw/android.hardware.gnss-service.mediatek)
+            "${PATCHELF}" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.memtrack-service.mediatek)
+            "${PATCHELF}" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "${2}"
             ;;
     esac
 }
