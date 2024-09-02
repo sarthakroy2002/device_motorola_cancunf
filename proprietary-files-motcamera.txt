@@ -5,7 +5,7 @@
 -product/etc/permissions/deviceowner-configuration-com.motorola.camera3.xml
 -product/etc/permissions/privapp-permissions-com.motorola.camera3.xml
 -product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera3.xml
--product/priv-app/MotCamera4/MotCamera4.apk;OVERRIDES=Aperture;PRESIGNED
+-product/priv-app/MotCamera4/MotCamera4.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo,GCamGOPrebuilt;PRESIGNED
 -system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
 -system/etc/permissions/com.motorola.motosignature.xml
 -system/etc/permissions/moto-core_services.xml
