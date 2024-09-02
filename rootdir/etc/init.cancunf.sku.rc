@@ -10,3 +10,6 @@ on property:ro.boot.hardware.sku="XT2431-3"
 
 on property:ro.vendor.hw.esim=""
     mount none /product/lost+found /product/etc/permissions/android.hardware.telephony.euicc.xml bind
+
+on property:ro.vendor.hw.nfc=""
+    stop mtk_secure_element_hal_service
