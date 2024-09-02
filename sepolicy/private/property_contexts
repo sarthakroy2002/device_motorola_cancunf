@@ -4,5 +4,8 @@ jpeg.exif.                  u:object_r:system_mot_camera_prop:s0
 debuglog.drv                u:object_r:exported_system_prop:s0
 debuglog.drv.               u:object_r:exported_system_prop:s0
 
+# Hardware
+ro.hardware.chipname        u:object_r:exported_system_prop:s0
+
 # Radio
 persist.vendor.log.tag.tel_dbg u:object_r:system_mtk_em_tel_log_prop:s0
