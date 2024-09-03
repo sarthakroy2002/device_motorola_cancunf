@@ -2505,7 +2505,6 @@ vendor/etc/mtk_platform_codecs_config.xml
 -vendor/bin/hw/android.hardware.memtrack-service.mediatek
 vendor/etc/init/memtrack-mediatek.rc
 -vendor/etc/vintf/manifest/memtrack-mediatek.xml
--vendor/lib/mt6855/libmemtrack_GL.so;SYMLINK=vendor/lib/libmemtrack_GL.so
 -vendor/lib64/mt6855/libmemtrack_GL.so;SYMLINK=vendor/lib64/libmemtrack_GL.so
 
 # Misc
