@@ -2860,8 +2860,6 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 
 # Sensors
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
--vendor/lib/libhwm.so
--vendor/lib/sensors.moto.so
 -vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6855.so
 -vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 -vendor/lib64/libhfmanager.so
