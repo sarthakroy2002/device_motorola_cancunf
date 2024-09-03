@@ -2689,11 +2689,6 @@ vendor/etc/sec_s3nrn4v_hwreg.bin
 vendor/etc/sec_s3nrn4v_swreg.bin
 vendor/etc/sn100u_nfcon.pnscr
 vendor/etc/sn100u_pnx_ese_cplc.pnscr
--vendor/lib/libpn557_fw.so
--vendor/lib/libpn560_fw.so
--vendor/lib/libsn100u_fw.so
--vendor/lib/libsn220u_fw.so
--vendor/lib/nfc_nci_sec.so
 -vendor/lib64/libpn557_fw.so
 -vendor/lib64/libpn560_fw.so
 -vendor/lib64/libsn100u_fw.so
