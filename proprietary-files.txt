@@ -2144,17 +2144,6 @@ vendor/etc/init/init.chipone_ident.rc
 vendor/etc/init/init.gf_ident.rc
 -vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
 -vendor/framework/com.fingerprints.extension.jar
--vendor/lib/hw/fingerprint.goodix.default.so
--vendor/lib/hw/fpsensor_fingerprint.default.so
--vendor/lib/com.fingerprints.extension@1.0.so
--vendor/lib/com.motorola.hardware.biometric.fingerprint@1.0.so
--vendor/lib/libfp_ext_svc2.so
--vendor/lib/libfpc.sensortest.hal.so
--vendor/lib/libgf_ca.so
--vendor/lib/libgf_hal.so
--vendor/lib/libgoodixhwfingerprint.so
--vendor/lib/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
--vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@3.0.so
 -vendor/lib64/hw/fingerprint.goodix.default.so
 -vendor/lib64/hw/fpsensor_fingerprint.default.so
 -vendor/lib64/com.fingerprints.extension@1.0.so
