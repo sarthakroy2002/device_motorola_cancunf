@@ -2898,8 +2898,6 @@ vendor/etc/thermal/thermal_policy_18.conf
 vendor/etc/thermal/thermal_policy_19.conf
 vendor/etc/fstb.cfg
 vendor/etc/mpe.conf
--vendor/lib/hw/android.hardware.thermal@2.0-impl.so
--vendor/lib/hw/thermal_hal.so
 -vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 -vendor/lib64/hw/thermal_hal.so
 
