@@ -2293,7 +2293,6 @@ vendor/lib/egl/egl.cfg
 -vendor/bin/batt_health
 -vendor/bin/fuelgauged
 vendor/etc/init/fuelgauged_init.rc
--vendor/lib/libfgauge_gm30.so
 -vendor/lib64/libfgauge_gm30.so
 
 # HotwordEnrollment
