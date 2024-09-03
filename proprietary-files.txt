@@ -2117,12 +2117,6 @@ vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 -vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
--vendor/lib/mediadrm/libmockdrmcryptoplugin.so
--vendor/lib/mediadrm/libwvdrmengine.so
--vendor/lib/liboemcrypto.so
--vendor/lib/libtlcWidevineModularDrm.so
--vendor/lib/liburee_meta_drmkeyinstall.so
--vendor/lib/libwvhidl.so
 -vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 -vendor/lib64/mediadrm/libwvdrmengine.so
 -vendor/lib64/liboemcrypto.so
