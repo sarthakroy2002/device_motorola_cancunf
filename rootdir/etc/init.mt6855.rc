@@ -918,10 +918,6 @@ on property:vendor.mtk.md1.status=reset
 on property:persist.vendor.mediatek.fast_charging.support=*
     write /sys/devices/platform/charger/fast_chg_indicator ${persist.vendor.mediatek.fast_charging.support}
 
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
 # NFC
 on property:ro.vendor.hw.nfc=nq && property:persist.vendor.nfc.config_file_name=*
     start vendor.nfc_hal_service
