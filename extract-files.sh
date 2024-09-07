@@ -100,7 +100,8 @@ function blob_fixup {
         |vendor/lib64/libcodec2_soft_ddpdec.so \
         |vendor/lib*/soundfx/libswdap.so \
         |vendor/lib*/soundfx/libdlbvol.so \
-        |vendor/lib64/libcodec2_soft_ac4dec.so)
+        |vendor/lib64/libcodec2_soft_ac4dec.so \
+        |vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service)
             [ "$2" = "" ] && return 0
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
