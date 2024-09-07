@@ -917,26 +917,3 @@ on property:vendor.mtk.md1.status=reset
 # MTK fast charging support
 on property:persist.vendor.mediatek.fast_charging.support=*
     write /sys/devices/platform/charger/fast_chg_indicator ${persist.vendor.mediatek.fast_charging.support}
-
-# NFC
-on property:ro.vendor.hw.nfc=nq && property:persist.vendor.nfc.config_file_name=*
-    start vendor.nfc_hal_service
-
-on property:ro.vendor.hw.nfc=ese_nq && property:persist.vendor.nfc.config_file_name=*
-    start vendor.nfc_hal_service
-
-on property:ro.vendor.hw.nfc=true && property:persist.vendor.nfc.config_file_name=*
-    start vendor.nfc_hal_service
-
-on property:ro.vendor.hw.nfc=nxp && property:persist.vendor.nfc.config_file_name=*
-    start vendor.nfc_hal_service
-
-on property:ro.vendor.hw.nfc=ese_nxp && property:persist.vendor.nfc.config_file_name=*
-    start vendor.nfc_hal_service
-
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
-    override
-    class early_hal
-    user nfc
-    group nfc drmrpc system
-    disabled

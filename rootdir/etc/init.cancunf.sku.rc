@@ -11,5 +11,28 @@ on property:ro.boot.hardware.sku="XT2431-3"
 on property:ro.vendor.hw.esim=""
     mount none /product/lost+found /product/etc/permissions/android.hardware.telephony.euicc.xml bind
 
+# NFC
 on property:ro.vendor.hw.nfc=""
     stop mtk_secure_element_hal_service
+
+on property:ro.vendor.hw.nfc=nq && property:persist.vendor.nfc.config_file_name=*
+    start vendor.nfc_hal_service
+
+on property:ro.vendor.hw.nfc=ese_nq && property:persist.vendor.nfc.config_file_name=*
+    start vendor.nfc_hal_service
+
+on property:ro.vendor.hw.nfc=true && property:persist.vendor.nfc.config_file_name=*
+    start vendor.nfc_hal_service
+
+on property:ro.vendor.hw.nfc=nxp && property:persist.vendor.nfc.config_file_name=*
+    start vendor.nfc_hal_service
+
+on property:ro.vendor.hw.nfc=ese_nxp && property:persist.vendor.nfc.config_file_name=*
+    start vendor.nfc_hal_service
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
+    override
+    class early_hal
+    user nfc
+    group nfc drmrpc system
+    disabled
