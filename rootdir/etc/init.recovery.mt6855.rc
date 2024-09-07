@@ -8,19 +8,3 @@ on fs && property:ro.debuggable=0
     write /sys/class/udc/musb-hdrc/device/cmode 2
     # set charging free due to it wait for USB activation
     start adbd
-
-on post-fs
-    # Support A/B feature for EMMC and UFS boot region
-    symlink /dev/block/sda /dev/block/mmcblk0boot0
-    symlink /dev/block/sdb /dev/block/mmcblk0boot1
-    symlink /dev/block/mmcblk0boot0 /dev/block/by-name/preloader_a
-    symlink /dev/block/mmcblk0boot1 /dev/block/by-name/preloader_b
-
-    # Support A/B feature for combo emmc and ufs OTA update
-    symlink /dev/block/by-name/preloader_a /dev/block/by-name/preloader_emmc_a
-    symlink /dev/block/by-name/preloader_b /dev/block/by-name/preloader_emmc_b
-    symlink /dev/block/by-name/preloader_a /dev/block/by-name/preloader_ufs_a
-    symlink /dev/block/by-name/preloader_b /dev/block/by-name/preloader_ufs_b
-
-    symlink /dev/block/mapper/pl_a /dev/block/by-name/preloader_raw_a
-    symlink /dev/block/mapper/pl_b /dev/block/by-name/preloader_raw_b
