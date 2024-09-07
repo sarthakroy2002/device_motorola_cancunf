@@ -48,8 +48,7 @@ BOARD_RAMDISK_OFFSET := 0x66f00000
 BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_CMDLINE += \
-    bootopt=64S3,32N2,64N2 \
-    printk.devkmsg=on
+    bootopt=64S3,32N2,64N2
 
 BOARD_MKBOOTIMG_ARGS += \
     --dtb_offset $(BOARD_TAGS_OFFSET) \
