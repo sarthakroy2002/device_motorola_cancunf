@@ -2098,7 +2098,7 @@ vendor/etc/meow.cfg
 -vendor/etc/dolby/dax-default.xml
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
--vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml:vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+-vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 -vendor/etc/media_codecs_dolby_audio.xml
 -vendor/lib/libdapparamstorage.so
 -vendor/lib/libdlbpreg.so
@@ -2361,9 +2361,9 @@ vendor/etc/init/init.vtservice_hidl.rc|f2e992214ed5bb99c2c2a135cf1f0996dba8a8a0
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
--vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml:vendor/etc/vintf/manifest/manifest_android.hardware.security.keymint-service.trustonic.xml
--vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml:vendor/etc/vintf/manifest/manifest_android.hardware.security.secureclock-service.trustonic.xml
--vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml:vendor/etc/vintf/manifest/manifest_android.hardware.security.sharedsecret-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 -vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 -vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 -vendor/lib64/libdecrypt.so
@@ -2588,7 +2588,7 @@ vendor/etc/init/networksetting.rc
 # Neural networks
 -vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml:vendor/etc/vintf/manifest/manifest_android.hardware.neuralnetworks-shim-service-mtk.xml
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
 vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils.xml
