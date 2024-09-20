@@ -183,17 +183,8 @@ vendor/etc/SwadParamList.txt
 vendor/lib64/soundfx/libmsstwrapper.so
 
 # Bluetooth
-vendor/bin/autobt
-vendor/bin/bt_dump
-vendor/etc/bt_stack_debug.conf
-vendor/etc/bt_stack_level6.conf
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/libbluetooth_hw_test.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
-vendor/lib64/libbluetooth_relayer.so
-vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
 
 # Camera
