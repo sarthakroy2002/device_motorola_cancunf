@@ -1,3 +1,4 @@
+masterclear.allow_retain_esim_profiles_after_fdr=true
 persist.vendor.mtk_rcs_ua_support=0
 persist.vendor.mtk_uce_support=0
 persist.vendor.vt.RTPInfo=1
