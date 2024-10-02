@@ -30,6 +30,9 @@ on property:ro.vendor.hw.nfc=nxp && property:persist.vendor.nfc.config_file_name
 on property:ro.vendor.hw.nfc=ese_nxp && property:persist.vendor.nfc.config_file_name=*
     start vendor.nfc_hal_service
 
+on property:ro.vendor.hw.nfc=ese_nq
+    start vendor.secure_element_hal_service
+
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     override
     class early_hal
@@ -38,6 +41,13 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     disabled
 
 service mtk_secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
+    override
+    class hal
+    user secure_element
+    group secure_element
+    disabled
+
+service vendor.secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element-service.nxp
     override
     class hal
     user secure_element
