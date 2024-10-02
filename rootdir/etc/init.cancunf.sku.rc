@@ -12,8 +12,8 @@ on property:ro.vendor.hw.esim=""
     mount none /product/lost+found /product/etc/permissions/android.hardware.telephony.euicc.xml bind
 
 # NFC
-on property:ro.vendor.hw.nfc=""
-    stop mtk_secure_element_hal_service
+on boot && property:ro.vendor.hw.nfc=samsung
+    start mtk_secure_element_hal_service
 
 on property:ro.vendor.hw.nfc=nq && property:persist.vendor.nfc.config_file_name=*
     start vendor.nfc_hal_service
@@ -35,4 +35,11 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     class early_hal
     user nfc
     group nfc drmrpc system
+    disabled
+
+service mtk_secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
+    override
+    class hal
+    user secure_element
+    group secure_element
     disabled
