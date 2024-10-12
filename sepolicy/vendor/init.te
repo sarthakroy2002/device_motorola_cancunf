@@ -1,2 +1,4 @@
 r_dir_file(init, sysfs_batteryinfo)
 allow init sysfs_power_supply:file { setattr };
+get_prop(init, vendor_mot_prop)
+set_prop(init, vendor_mot_prop)

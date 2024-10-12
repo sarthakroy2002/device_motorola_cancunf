@@ -7,3 +7,5 @@ rw_dir_file(vendor_init, sysfs_ged)
 rw_dir_file(vendor_init, sysfs_power_supply)
 get_prop(vendor_init, vendor_sku_prop)
 set_prop(vendor_init, vendor_sku_prop)
+set_prop(vendor_init, system_mot_prop)
+allow vendor_init nfc_device:chr_file r_file_perms;
