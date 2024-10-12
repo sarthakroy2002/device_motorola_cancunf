@@ -94,10 +94,6 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             grep -q "libshim_sensors.so" "$2" || "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
-        vendor/lib64/libwifi-hal-mtk.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --set-soname "libwifi-hal-mtk.so" "${2}"
-            ;;
         vendor/lib64/libdlbdsservice.so \
         |vendor/lib64/libcodec2_soft_ddpdec.so \
         |vendor/lib*/soundfx/libswdap.so \

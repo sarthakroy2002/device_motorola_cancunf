@@ -52,7 +52,7 @@ vendor/etc/aurisys_config_rv.xml
 -vendor/lib/libcvsd_mtk.so
 -vendor/lib/libmsbc_mtk.so
 -vendor/lib/librt_extamp_intf.so
--vendor/lib/libspeech_enh_lib.so
+-vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 -vendor/lib/libspeechparser_vendor.so
 -vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 -vendor/lib/vendor.mediatek.hardware.audio@7.1.so
@@ -60,7 +60,7 @@ vendor/etc/aurisys_config_rv.xml
 -vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6855.so
 -vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
 -vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
--vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so
+-vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 -vendor/lib64/mt6855/libstereoinfoaccessor_vsdof.so;SYMLINK=vendor/lib64/libstereoinfoaccessor_vsdof.so
 -vendor/lib64/libMtkSpeechEnh.so
 -vendor/lib64/libMtkSpeechEnh_swb.so
@@ -90,7 +90,7 @@ vendor/etc/aurisys_config_rv.xml
 -vendor/lib64/libmsbc_mtk.so
 -vendor/lib64/libmtktinyxml.so
 -vendor/lib64/librt_extamp_intf.so
--vendor/lib64/libspeech_enh_lib.so
+-vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 -vendor/lib64/libspeechparser_vendor.so
 -vendor/lib64/libundistort_impl.so
 -vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
@@ -2607,7 +2607,7 @@ vendor/etc/nnapi_powerhal.json
 -vendor/lib/libneuroeara.so
 -vendor/lib/libneuron_graph_delegate.mtk.so
 -vendor/lib/libneuropilot_hal_utils.so
--vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so
+-vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 -vendor/lib/libtflite_mtk.so
 -vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 -vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so
@@ -2648,7 +2648,7 @@ vendor/etc/nnapi_powerhal.json
 -vendor/lib64/libneuron_graph_delegate.mtk.so
 -vendor/lib64/libneuron_platform.so
 -vendor/lib64/libneuropilot_hal_utils.so
--vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
+-vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 -vendor/lib64/libtflite_mtk.so
 -vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
 -vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
@@ -2943,6 +2943,6 @@ vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 -vendor/bin/wmt_loader
 vendor/etc/init/wlan_assistant.rc
 -vendor/lib/meta_wifi_data.so
--vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
+-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 -vendor/lib64/libwifitest.so
 -vendor/lib64/meta_wifi_data.so
