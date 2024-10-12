@@ -134,6 +134,20 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "${2}"
             ;;
+        vendor/lib64/mt6855/lib3a.flash.so \
+        |vendor/lib64/mt6855/lib3a.ae.stat.so \
+        |vendor/lib64/mt6855/lib3a.sensors.flicker.so \
+        |vendor/lib64/mt6855/lib3a.sensors.color.so \
+        |vendor/lib64/mt6855/libaaa_ltm.so \
+        |vendor/lib64/lib3a.ae.pipe.so \
+        |vendor/lib64/libSQLiteModule_VER_ALL.so)
+            [ "$2" = "" ] && return 0
+            grep -q "liblog.so" "${2}" || "${PATCHELF_0_17_2}" --add-needed "liblog.so" "${2}"
+            ;;
+        vendor/lib64/mt6855/libmnl.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
+            ;;
         *)
             return 1
             ;;
