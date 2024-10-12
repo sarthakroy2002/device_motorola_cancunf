@@ -1010,7 +1010,6 @@ vendor/etc/dual_golden_wide.bin
 -vendor/lib/libcamalgo.utility.so
 -vendor/lib/libimgsensorca.so
 -vendor/lib/libispcameraca.so
--vendor/lib/libportrait_repair_ppl3_ocl.so
 -vendor/lib/motorola.hardware.camera.imgtuner@1.0.so
 -vendor/lib/motorola.hardware.camera.imgtuner@2.0.so
 -vendor/lib/vendor.mediatek.hardware.camera.atms@1.0.so
@@ -1994,7 +1993,6 @@ vendor/etc/meow.cfg
 -vendor/lib/hw/mt6855/gralloc.rogue.so;SYMLINK=vendor/lib/hw/gralloc.rogue.so
 -vendor/lib/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 -vendor/lib/hw/mt6855/vulkan.mtk.so;SYMLINK=vendor/lib/hw/vulkan.mtk.so
--vendor/lib/hw/displaypanel.default.so
 -vendor/lib/mt6855/libIMGegl.so;SYMLINK=vendor/lib/libIMGegl.so
 -vendor/lib/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib/libPVRMtkutils.so
 -vendor/lib/mt6855/libPVROCL.so;SYMLINK=vendor/lib/libPVROCL.so
@@ -2043,7 +2041,6 @@ vendor/etc/meow.cfg
 -vendor/lib64/hw/mt6855/gralloc.rogue.so;SYMLINK=vendor/lib64/hw/gralloc.rogue.so
 -vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 -vendor/lib64/hw/mt6855/vulkan.mtk.so;SYMLINK=vendor/lib64/hw/vulkan.mtk.so
--vendor/lib64/hw/displaypanel.default.so
 -vendor/lib64/hw/hwcomposer.mtk_common.so
 -vendor/lib64/mt6855/libIMGegl.so;SYMLINK=vendor/lib64/libIMGegl.so
 -vendor/lib64/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib64/libPVRMtkutils.so
@@ -2317,10 +2314,6 @@ etc/permissions/moto-telephony.xml
 -vendor/bin/volte_rcs_ua
 vendor/etc/init/lbs_hidl_service.rc
 vendor/etc/init/volte_clientapi_ua.rc
--vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
--vendor/lib/libmtkspparser.so
--vendor/lib/libmtkspparser_swb.so
--vendor/lib/libmtksysutils.so
 -vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 -vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
 -vendor/lib64/lbs_hidl_service-impl.so
@@ -2342,7 +2335,6 @@ system_ext/etc/init/init.vtservice.rc
 -system_ext/lib64/libimsma_socketwrapper.so
 -system_ext/lib64/libmtk_vt_service.so
 -system_ext/lib64/libmtk_vt_wrapper.so
--system_ext/lib64/libmtkperf_client.so;MODULE=libmtkperf_client.system_ext
 -system_ext/lib64/libsignal.so
 -system_ext/lib64/libsink.so
 -system_ext/lib64/libsource.so
@@ -2364,6 +2356,7 @@ vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 -vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
 -vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 -vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
+vendor/lib/libthha.so
 -vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 -vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 -vendor/lib64/libdecrypt.so
@@ -2381,7 +2374,6 @@ vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/etc/init/tetheroffloadservice.rc
 
 # Media
--vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 -vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 -vendor/bin/mt6855/jpegtool;SYMLINK=vendor/bin/jpegtool
 -vendor/bin/mt6855/v3avpud.mt6855;SYMLINK=vendor/bin/v3avpud
@@ -2524,7 +2516,6 @@ vendor/etc/vhw.xml
 -vendor/lib/liblog_vendor.so
 -vendor/lib/libminiui.so
 -vendor/lib/liboem_specific.so
--vendor/lib/libpkip.so
 -vendor/lib/libscltm.so
 -vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so
 -vendor/lib64/mt6855/libacdk.so;SYMLINK=vendor/lib64/libacdk.so
@@ -2921,11 +2912,12 @@ vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin
 vendor/app/mcRegistry/attpre_6716af0c135559728ae9e9754da47ccd.tabin
 vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin
 -vendor/bin/hw/vendor.trustonic.tee@1.1-service
--vendor/bin/TBaseDeviceBinding
 -vendor/bin/mcDriverDaemon
 vendor/etc/init/tee.rc
 vendor/etc/init/trustonic.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
+vendor/lib/libgz_gp_client.so
+vendor/lib/libgz_uree.so
 -vendor/lib64/libMcClient.so
 -vendor/lib64/libTEECommon.so
 -vendor/lib64/libgz_gp_client.so
