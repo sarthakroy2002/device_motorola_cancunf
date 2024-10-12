@@ -1,0 +1,181 @@
+From bb3f41b172716e6bbbf209a9d52dcf085f6193c4 Mon Sep 17 00:00:00 2001
+From: electimon <electimon@gmail.com>
+Date: Mon, 3 Jun 2024 02:26:56 +0000
+Subject: [PATCH 3/6] ImsService: fix more issues
+
+Change-Id: Ifd9933a47df6c41b8d320a700ca91a5aff6db59b
+---
+ .../mediatek/ims/ImsPhoneStateListener.smali  | 20 +++++-----
+ .../internal/ImsConfigEventReceiver$1.smali   | 13 ++-----
+ .../mediatek/ims/ril/ImsRadioIndication.smali | 39 +------------------
+ 3 files changed, 16 insertions(+), 56 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/ImsPhoneStateListener.smali b/smali/com/mediatek/ims/ImsPhoneStateListener.smali
+index f62b06d..0f6ff44 100644
+--- a/smali/com/mediatek/ims/ImsPhoneStateListener.smali
++++ b/smali/com/mediatek/ims/ImsPhoneStateListener.smali
+@@ -1,5 +1,5 @@
+ .class public Lcom/mediatek/ims/ImsPhoneStateListener;
+-.super Lcom/motorola/android/telephony/MotoExtPhoneStateListener;
++.super Landroid/telephony/PhoneStateListener;
+ .source "ImsPhoneStateListener.java"
+ 
+ 
+@@ -26,7 +26,7 @@
+ 
+ .field private mSIPInvateCache:Ljava/lang/StringBuffer;
+ 
+-.field private mTelephony:Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++.field private mTelephony:Landroid/telephony/TelephonyManager;
+ 
+ 
+ # direct methods
+@@ -41,7 +41,7 @@
+ 
+     move-result-object v0
+ 
+-    invoke-direct {p0, v0}, Lcom/motorola/android/telephony/MotoExtPhoneStateListener;-><init>(Ljava/lang/Integer;)V
++    invoke-direct {p0, v0}, Landroid/telephony/PhoneStateListener;-><init>(Ljava/lang/Integer;)V
+ 
+     .line 43
+     new-instance v0, Ljava/lang/StringBuffer;
+@@ -54,13 +54,13 @@
+     iput-object p1, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mContext:Landroid/content/Context;
+ 
+     .line 75
+-    new-instance v0, Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    new-instance v0, Landroid/telephony/TelephonyManager;
+ 
+     iget-object v1, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mContext:Landroid/content/Context;
+ 
+-    invoke-direct {v0, v1, p2}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;-><init>(Landroid/content/Context;I)V
++    invoke-direct {v0, v1, p2}, Landroid/telephony/TelephonyManager;-><init>(Landroid/content/Context;I)V
+ 
+-    iput-object v0, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mTelephony:Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    iput-object v0, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mTelephony:Landroid/telephony/TelephonyManager;
+ 
+     .line 76
+     iput p3, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mPhoneId:I
+@@ -904,11 +904,11 @@
+     invoke-direct {p0, v0}, Lcom/mediatek/ims/ImsPhoneStateListener;->logd(Ljava/lang/String;)V
+ 
+     .line 183
+-    iget-object v0, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mTelephony:Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    iget-object v0, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mTelephony:Landroid/telephony/TelephonyManager;
+ 
+     const v1, 0x8000
+ 
+-    invoke-virtual {v0, p0, v1}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;->listen(Lcom/motorola/android/telephony/MotoExtPhoneStateListener;I)V
++    invoke-virtual {v0, p0, v1}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
+ 
+     .line 184
+     return-void
+@@ -1024,11 +1024,11 @@
+     invoke-direct {p0, v0}, Lcom/mediatek/ims/ImsPhoneStateListener;->logd(Ljava/lang/String;)V
+ 
+     .line 188
+-    iget-object v0, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mTelephony:Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    iget-object v0, p0, Lcom/mediatek/ims/ImsPhoneStateListener;->mTelephony:Landroid/telephony/TelephonyManager;
+ 
+     const/4 v1, 0x0
+ 
+-    invoke-virtual {v0, p0, v1}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;->listen(Lcom/motorola/android/telephony/MotoExtPhoneStateListener;I)V
++    invoke-virtual {v0, p0, v1}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
+ 
+     .line 189
+     return-void
+diff --git a/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali b/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali
+index 76b90fa..ff20ce6 100644
+--- a/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali
++++ b/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali
+@@ -154,17 +154,15 @@
+ 
+     .line 371
+     .local v2, "voiceDomain":I
+-    new-instance v3, Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    new-instance v3, Landroid/telephony/TelephonyManager;
+ 
+     iget-object v4, p0, Lcom/mediatek/ims/config/internal/ImsConfigEventReceiver$1;->val$context:Landroid/content/Context;
+ 
+-    invoke-direct {v3, v4, v0}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;-><init>(Landroid/content/Context;I)V
++    invoke-direct {v3, v4, v0}, Landroid/telephony/TelephonyManager;-><init>(Landroid/content/Context;I)V
+ 
+     .line 372
+-    .local v3, "mMotoExtTM":Lcom/motorola/android/telephony/MotoExtTelephonyManager;
+-    invoke-virtual {v3}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;->getVoiceDomainSetting()I
+-
+-    move-result v4
++    .local v3, "mMotoExtTM":Landroid/telephony/TelephonyManager;
++    const/4 v4, 0x0
+ 
+     if-eq v2, v4, :cond_5
+ 
+@@ -195,9 +193,6 @@
+ 
+     invoke-static {v4, v5}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
+ 
+-    .line 374
+-    invoke-virtual {v3, v2}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;->setVoiceDomainSetting(I)Z
+-
+     .line 376
+     :cond_5
+     return-void
+diff --git a/smali/com/mediatek/ims/ril/ImsRadioIndication.smali b/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
+index 48d8c7b..ca5416e 100644
+--- a/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
++++ b/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
+@@ -342,49 +342,14 @@
+     add-int/lit8 v1, v1, -0x1
+ 
+     .line 360
+-    new-instance v2, Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    new-instance v2, Landroid/telephony/TelephonyManager;
+ 
+     iget-object v3, p0, Lcom/mediatek/ims/ril/ImsRadioIndication;->mRil:Lcom/mediatek/ims/ril/ImsRILAdapter;
+ 
+     iget-object v3, v3, Lcom/mediatek/ims/ril/ImsRILAdapter;->mContext:Landroid/content/Context;
+ 
+-    invoke-direct {v2, v3}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;-><init>(Landroid/content/Context;)V
+-
+-    .line 361
+-    .local v2, "motoExtTM":Lcom/motorola/android/telephony/MotoExtTelephonyManager;
+-    if-gtz v1, :cond_2
+-
+-    iget v3, p0, Lcom/mediatek/ims/ril/ImsRadioIndication;->mPhoneId:I
+-
+-    invoke-virtual {v2, v3}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;->getAndResetInTestEmergencyCall(I)Z
+-
+-    move-result v3
+-
+-    if-eqz v3, :cond_2
+-
+-    .line 362
+-    iget-object v3, p0, Lcom/mediatek/ims/ril/ImsRadioIndication;->mRil:Lcom/mediatek/ims/ril/ImsRILAdapter;
+-
+-    iget-object v3, v3, Lcom/mediatek/ims/ril/ImsRILAdapter;->mEnterECBMRegistrants:Landroid/os/RegistrantList;
+-
+-    if-eqz v3, :cond_2
+-
+-    .line 363
+-    iget-object v3, p0, Lcom/mediatek/ims/ril/ImsRadioIndication;->mRil:Lcom/mediatek/ims/ril/ImsRILAdapter;
+-
+-    const-string v4, "callInfoIndication: call ended, testing emergency call, notify ECM Registrants"
+-
+-    invoke-virtual {v3, v4}, Lcom/mediatek/ims/ril/ImsRILAdapter;->riljLog(Ljava/lang/String;)V
+-
+-    .line 365
+-    iget-object v3, p0, Lcom/mediatek/ims/ril/ImsRadioIndication;->mRil:Lcom/mediatek/ims/ril/ImsRILAdapter;
+-
+-    iget-object v3, v3, Lcom/mediatek/ims/ril/ImsRILAdapter;->mEnterECBMRegistrants:Landroid/os/RegistrantList;
+-
+-    invoke-virtual {v3}, Landroid/os/RegistrantList;->notifyRegistrants()V
+-
+     .line 370
+-    .end local v2    # "motoExtTM":Lcom/motorola/android/telephony/MotoExtTelephonyManager;
++    .end local v2    # "motoExtTM":Landroid/telephony/TelephonyManager;
+     :cond_2
+     return-void
+ 
+-- 
+2.45.2
+

@@ -1,0 +1,41 @@
+From dbacfa33099d87695b324a38357e38d8a85ef040 Mon Sep 17 00:00:00 2001
+From: Erfan Abdi <erfangplus@gmail.com>
+Date: Mon, 17 Jun 2024 21:47:41 +0530
+Subject: [PATCH 2/6] ImsConfigImpl: Return 0 in getWfcMDN in any case
+
+Signed-off-by: betaxab <betaxab@gmail.com>
+Change-Id: Ie1d12eba911ec00e94f2210aa2b09efc50b7c9e4
+---
+ .../ims/config/internal/ImsConfigController.smali   | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/config/internal/ImsConfigController.smali b/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
+index b4b3acf..3fa2461 100644
+--- a/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
++++ b/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
+@@ -592,22 +592,9 @@
+     .param p1, "subid"    # I
+ 
+     .line 758
+-    const-string v0, "wfc_ims_mdn"
+-
+-    iget-object v1, p0, Lcom/mediatek/ims/config/internal/ImsConfigController;->mContext:Landroid/content/Context;
+-
+-    invoke-virtual {p0, p1, v0, v1}, Lcom/mediatek/ims/config/internal/ImsConfigController;->getSubscriptionProperty(ILjava/lang/String;Landroid/content/Context;)Ljava/lang/String;
+-
+-    move-result-object v0
+-
+-    .line 760
+-    .local v0, "mdn":Ljava/lang/String;
+-    if-nez v0, :cond_0
+ 
+     const-string v0, "0"
+ 
+-    .line 761
+-    :cond_0
+     return-object v0
+ .end method
+ 
+-- 
+2.45.2
+

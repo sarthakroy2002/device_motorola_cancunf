@@ -148,6 +148,10 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
             ;;
+        system_ext/priv-app/ImsService/ImsService.apk)
+            [ "$2" = "" ] && return 0
+            apktool_patch "${2}" "$MY_DIR/ims-patches"
+            ;;
         *)
             return 1
             ;;

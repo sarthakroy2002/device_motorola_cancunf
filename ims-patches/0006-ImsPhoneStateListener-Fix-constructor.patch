@@ -1,0 +1,27 @@
+From 4023b3536315a24b28750f96851798fec3684994 Mon Sep 17 00:00:00 2001
+From: Sarthak Roy <sarthakroy2002@gmail.com>
+Date: Wed, 26 Jun 2024 14:42:27 +0530
+Subject: [PATCH 6/6] ImsPhoneStateListener: Fix constructor
+
+Signed-off-by: Sarthak Roy <sarthakroy2002@gmail.com>
+Change-Id: I1f1dd4e683e7bd377a6bc93b965c7e12c3a98560
+---
+ smali/com/mediatek/ims/ImsPhoneStateListener.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/smali/com/mediatek/ims/ImsPhoneStateListener.smali b/smali/com/mediatek/ims/ImsPhoneStateListener.smali
+index 0f6ff44..3e84e1f 100644
+--- a/smali/com/mediatek/ims/ImsPhoneStateListener.smali
++++ b/smali/com/mediatek/ims/ImsPhoneStateListener.smali
+@@ -41,7 +41,7 @@
+ 
+     move-result-object v0
+ 
+-    invoke-direct {p0, v0}, Landroid/telephony/PhoneStateListener;-><init>(Ljava/lang/Integer;)V
++    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
+ 
+     .line 43
+     new-instance v0, Ljava/lang/StringBuffer;
+-- 
+2.45.2
+

@@ -2255,7 +2255,7 @@ etc/permissions/moto-telephony.xml
 -system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
 -system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
 -system_ext/framework/mediatek-ims-oem-plugin.jar:framework/mediatek-ims-oem-plugin.jar
--system_ext/priv-app/ImsService/ImsService.apk|2722dac2880026ed9250bfe04cee250632542d9d
+-system_ext/priv-app/ImsService/ImsService.apk
 
 # IMS (Vendor)
 -vendor/bin/lbs_hidl_service
