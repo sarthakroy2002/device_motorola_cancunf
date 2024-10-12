@@ -6,4 +6,4 @@ persist.vendor.vt.supported=1
 ril.subscription.types=RUIM
 ro.mot.build.customerid=global
 ro.telephony.default_network=26,26
-ro.vendor.radio.imei.sv=18
+ro.vendor.radio.imei.sv=19
