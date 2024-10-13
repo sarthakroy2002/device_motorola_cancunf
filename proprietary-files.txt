@@ -1930,25 +1930,13 @@ vendor/lib/libconnfem.so
 vendor/lib64/libconnfem.so
 
 # Display
-vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/cust_color_0.xml
 vendor/etc/cust_color_1.xml
 vendor/etc/cust_color_2.xml
-vendor/etc/meow.cfg
-vendor/lib/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/gralloc.rogue.so
 vendor/lib/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/vulkan.mtk.so
-vendor/lib/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libIMGegl.so
-vendor/lib/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib/libPVRMtkutils.so
-vendor/lib/mt6855/libPVROCL.so;SYMLINK=vendor/lib/libPVROCL.so
-vendor/lib/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib/libPVRScopeServices.so
 vendor/lib/mt6855/libdpframework.so;SYMLINK=vendor/lib/libdpframework.so
-vendor/lib/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libgpudataproducer.so
 vendor/lib/mt6855/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/mt6855/libpq_cust_base.so;SYMLINK=vendor/lib/libpq_cust_base.so
 vendor/lib/mt6855/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so
@@ -1957,12 +1945,6 @@ vendor/lib/mt6855/libpqpconfig.so;SYMLINK=vendor/lib/libpqpconfig.so
 vendor/lib/libaal_key.so
 vendor/lib/libappgamepq.so
 vendor/lib/libdre.so
-vendor/lib/libged.so
-vendor/lib/libgpu_aux.so;DISABLE_CHECKELF
-vendor/lib/libgpud.so
-vendor/lib/libgralloc_extra.so
-vendor/lib/libgralloc_metadata.so
-vendor/lib/libgralloctypes_mtk.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
@@ -1987,16 +1969,8 @@ vendor/lib/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
-vendor/lib64/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/gralloc.rogue.so
 vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib64/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/vulkan.mtk.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
-vendor/lib64/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libIMGegl.so
-vendor/lib64/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib64/libPVRMtkutils.so
-vendor/lib64/mt6855/libPVROCL.so;SYMLINK=vendor/lib64/libPVROCL.so
-vendor/lib64/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib64/libPVRScopeServices.so
-vendor/lib64/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libgpudataproducer.so
 vendor/lib64/mt6855/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/mt6855/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
 vendor/lib64/mt6855/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
@@ -2006,12 +1980,6 @@ vendor/lib64/libaal_key.so
 vendor/lib64/libappgamepq.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libdre.so
-vendor/lib64/libged.so
-vendor/lib64/libgpu_aux.so;DISABLE_CHECKELF
-vendor/lib64/libgpud.so
-vendor/lib64/libgralloc_extra.so
-vendor/lib64/libgralloc_metadata.so
-vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
@@ -2208,6 +2176,10 @@ vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
 # Graphics
+vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/etc/vintf/manifest/manifest_hwcomposer.xml
+vendor/etc/meow.cfg
 vendor/firmware/rgx.fw
 vendor/firmware/rgx.sh
 vendor/lib/egl/mt6855/libEGL_mtk.so;SYMLINK=vendor/lib/egl/libEGL_mtk.so
@@ -2219,10 +2191,24 @@ vendor/lib/egl/libMEOW_data.so
 vendor/lib/egl/libMEOW_gift.so
 vendor/lib/egl/libMEOW_qt.so
 vendor/lib/egl/libMEOW_trace.so
+vendor/lib/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/gralloc.rogue.so
+vendor/lib/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/vulkan.mtk.so
+vendor/lib/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libIMGegl.so
+vendor/lib/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib/libPVRMtkutils.so
+vendor/lib/mt6855/libPVROCL.so;SYMLINK=vendor/lib/libPVROCL.so
+vendor/lib/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib/libPVRScopeServices.so
+vendor/lib/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libgpudataproducer.so
 vendor/lib/libDefaultFpsActor.so
 vendor/lib/libFrameRecord.so
 vendor/lib/libNoFpsActor.so
 vendor/lib/libOpenCL.so
+vendor/lib/libged.so
+vendor/lib/libgpu_aux.so;DISABLE_CHECKELF
+vendor/lib/libgpud.so
+vendor/lib/libgralloc_extra.so
+vendor/lib/libgralloc_metadata.so
+vendor/lib/libgralloctypes_mtk.so
 vendor/lib64/egl/mt6855/libEGL_mtk.so;SYMLINK=vendor/lib64/egl/libEGL_mtk.so
 vendor/lib64/egl/mt6855/libGLESv1_CM_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLESv1_CM_mtk.so
 vendor/lib64/egl/mt6855/libGLESv2_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLESv2_mtk.so
@@ -2231,10 +2217,24 @@ vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_qt.so
 vendor/lib64/egl/libMEOW_trace.so
+vendor/lib64/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib64/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/gralloc.rogue.so
+vendor/lib64/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/vulkan.mtk.so
+vendor/lib64/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libIMGegl.so
+vendor/lib64/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib64/libPVRMtkutils.so
+vendor/lib64/mt6855/libPVROCL.so;SYMLINK=vendor/lib64/libPVROCL.so
+vendor/lib64/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib64/libPVRScopeServices.so
+vendor/lib64/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libgpudataproducer.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
+vendor/lib64/libged.so
+vendor/lib64/libgpu_aux.so;DISABLE_CHECKELF
+vendor/lib64/libgpud.so
+vendor/lib64/libgralloc_extra.so
+vendor/lib64/libgralloc_metadata.so
+vendor/lib64/libgralloctypes_mtk.so
 
 # Health
 vendor/bin/batt_health
