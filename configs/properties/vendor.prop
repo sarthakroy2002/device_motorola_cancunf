@@ -82,6 +82,12 @@ ro.vendor.mtk_fast_charging_support=1
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dex2oat
+dalvik.vm.dex2oat-cpu-set=4,5,6,7
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
+dalvik.vm.image-dex2oat-threads=4
+
 # Display
 debug.mediatek.disp_decompress=1
 debug.sf.auto_latch_unsignaled=1
