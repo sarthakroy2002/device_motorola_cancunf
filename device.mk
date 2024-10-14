@@ -265,6 +265,14 @@ PRODUCT_PACKAGES += \
     WifiResOverlayCancunpXT2431-1 \
     WifiResOverlayCancunpXT2431-3
 
+PRODUCT_PACKAGES += \
+    RegulatoryOverlayXT2343-1 \
+    RegulatoryOverlayXT2343-2 \
+    RegulatoryOverlayXT2343-4 \
+    RegulatoryOverlayXT2343-5 \
+    RegulatoryOverlayXT2431-1 \
+    RegulatoryOverlayXT2431-3
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
