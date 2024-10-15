@@ -253,7 +253,6 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayCancunfXT2343-2 \
     NfcResOverlayCancunf \
     PowerOffAlarmOverlayCancunf \
-    SettingsLibOverlayCancunf \
     SettingsOverlayCancunf \
     SettingsProviderOverlayCancunf \
     SettingsProviderOverlayCancunpXT2431-1 \
