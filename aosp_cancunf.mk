@@ -24,7 +24,7 @@ PRODUCT_MODEL := moto g54 5G
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=cancunf_g_sysq \
-    PRIVATE_BUILD_DESC="cancunf_g_sysq-user 14 U1TD34.94-12-9-10 cc897d-c6704 release-keys"
+    TARGET_PRODUCT=cancunf_g_sys \
+    PRIVATE_BUILD_DESC="cancunf_g_sys-user 14 U1TD34.94-12-9-10 cc897d-c6704 release-keys"
 
-BUILD_FINGERPRINT := motorola/cancunf_g_sysq/cancunf:14/U1TD34.94-12-9-10/cc897d-c6704:user/release-keys
+BUILD_FINGERPRINT := motorola/cancunf_g_sys/cancunf:14/U1TD34.94-12-9-10/cc897d-c6704:user/release-keys
