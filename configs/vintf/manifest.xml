@@ -81,12 +81,6 @@
         <fqname>@1.1::IOffloadControl/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>motorola.hardware.camera.imgtuner</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IImageTuning/default</fqname>
-        <fqname>@2.0::IImageTuning/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IBluetoothAudioProvidersFactory/default</fqname>

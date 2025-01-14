@@ -6,7 +6,7 @@ persist.vendor.vt.supported=1
 ril.subscription.types=RUIM
 ro.mot.build.customerid=global
 ro.telephony.default_network=26,26
-ro.vendor.radio.imei.sv=22
+ro.vendor.radio.imei.sv=24
 ro.com.google.lens.oem_camera_package=com.motorola.camera3
 
 # FM

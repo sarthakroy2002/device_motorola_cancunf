@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sys-user 14 U1TDS34.94-12-9-10-2 e34746 release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sys-user 15 V1TD35M.83-20-5 c7172e release-keys, unless pinned
 
 # AEE
 vendor/lib/libaedv.so
@@ -205,16 +205,16 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/mt6855/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
-vendor/bin/hw/motorola.hardware.camera.imgtuner@2.0-service
+vendor/bin/hw/motorola.hardware.camera.imgtuner.aidl-service
 vendor/etc/init/camerahalserver.rc
-vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
+vendor/etc/init/motorola.hardware.camera.imgtuner.aidl-service.rc
 vendor/etc/tetras/portrait_repair_composite.model
 vendor/etc/vintf/manifest/manifest_cameraprovider.xml
+vendor/etc/vintf/manifest/motorola.hardware.camera.imgtuner.aidl.xml
 vendor/etc/default_pd_calibration.bin
 vendor/etc/dual_golden_wide.bin
 vendor/lib/hw/mt6855/vendor.mediatek.hardware.camera.atms@1.0-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib/hw/mt6855/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
-vendor/lib/hw/motorola.hardware.camera.imgtuner@2.0-impl.so
 vendor/lib/mt6855/lib3a.ae.core.so;SYMLINK=vendor/lib/lib3a.ae.core.so
 vendor/lib/mt6855/lib3a.ae.so;SYMLINK=vendor/lib/lib3a.ae.so
 vendor/lib/mt6855/lib3a.awb.core.so;SYMLINK=vendor/lib/lib3a.awb.core.so
@@ -952,8 +952,6 @@ vendor/lib/lib_ainr_enh.so
 vendor/lib/libcamalgo.utility.so
 vendor/lib/libimgsensorca.so
 vendor/lib/libispcameraca.so
-vendor/lib/motorola.hardware.camera.imgtuner@1.0.so
-vendor/lib/motorola.hardware.camera.imgtuner@2.0.so
 vendor/lib/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
@@ -964,7 +962,6 @@ vendor/lib64/hw/mt6855/vendor.mediatek.hardware.camera.ccap@1.0-impl.so;SYMLINK=
 vendor/lib64/hw/mt6855/vendor.mediatek.hardware.camera.isphal@1.0-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so
 vendor/lib64/hw/mt6855/vendor.mediatek.hardware.camera.isphal@1.1-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.1-impl.so
 vendor/lib64/hw/mt6855/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
-vendor/lib64/hw/motorola.hardware.camera.imgtuner@2.0-impl.so
 vendor/lib64/mt6855/lib3a.ae.core.so;SYMLINK=vendor/lib64/lib3a.ae.core.so
 vendor/lib64/mt6855/lib3a.ae.so;SYMLINK=vendor/lib64/lib3a.ae.so
 vendor/lib64/mt6855/lib3a.ae.stat.so;SYMLINK=vendor/lib64/lib3a.ae.stat.so
@@ -1188,7 +1185,6 @@ vendor/lib64/mt6855/mtk000_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/mtk000_mipi_r
 vendor/lib64/mt6855/mtk000_mipi_raw_tuning.so;SYMLINK=vendor/lib64/mtk000_mipi_raw_tuning.so
 vendor/lib64/mtkcam/mt6855/libmtkcam_streaminfo_plugin-p1stt.so;SYMLINK=vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/lib3a.ae.pipe.so
-vendor/lib64/libArcNetMtk.so
 vendor/lib64/libBasicModule.so
 vendor/lib64/libCamera_motcancunfhi1634qmipiraw_ArcSoft_Raw_NV_Capture.so
 vendor/lib64/libCamera_motcancunfhi1634qmipiraw_ArcSoft_Raw_NV_Capture_flash.so
@@ -1882,9 +1878,7 @@ vendor/lib64/libmtkcam_pipelinepolicy-aov.so
 vendor/lib64/libmtkisp_metadata.so
 vendor/lib64/libmtkisp_metadata_v2.so
 vendor/lib64/libportrait_repair_ppl3_ocl.so
-vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
-vendor/lib64/motorola.hardware.camera.imgtuner@2.0.so
-vendor/lib64/super_night_raw.bin
+vendor/lib64/motorola.hardware.camera.imgtuner.aidl-V1-ndk_platform.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
@@ -1897,14 +1891,13 @@ vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
 # Camera (arcsoft)
-vendor/lib64/arcsoft_portrait_super_night_se_raw.bin
 vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_high_dynamic_range_v2.so
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/libarcsoft_portrait_super_night_se_raw.so
-vendor/lib64/libarcsoft_super_night_raw.so
-vendor/lib64/libarcsoft_super_night_raw_bin.so
+vendor/lib64/libarcsoft_portrait_super_night_se_raw_lite.so;FIX_SONAME
 vendor/lib64/libarcsoft_super_night_se_raw.so
+vendor/lib64/libarcsoft_super_night_se_raw_lite.so;FIX_SONAME
 
 # Connectivity
 vendor/bin/conninfra_loader
@@ -2012,7 +2005,7 @@ product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # Felica
-product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED;SKIPAPKCHECKS
+product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
@@ -2140,66 +2133,66 @@ vendor/lib64/libviagpsrpc.so
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
-# Graphics - from cancunf 15 V1TD35H.58
-vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|e449440e5662e9c9cf6b9740fc21ba40cce024e7
-vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc|d9c0d008cc081ab1cf602036962a3fa20b630135
-vendor/etc/vintf/manifest/manifest_hwcomposer.xml|1e696e7404336fef2fb3e51af24daefd285fe896
-vendor/etc/meow.cfg|59b2389725cc6805794fc4d1febbb5d6aa88e042
-vendor/firmware/rgx.fw|9261577408cab8b4d9aff3f0172ddbc35c4ccf86
-vendor/firmware/rgx.sh|02be24e5498b8a7bd6c10e12e58521562d7035dc
-vendor/lib/egl/mt6855/libEGL_mtk.so;SYMLINK=vendor/lib/egl/libEGL_mtk.so|b6bfdaa6f274a0d2ef67822db32ce7a71be7b37d
-vendor/lib/egl/mt6855/libGLESv1_CM_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/egl/libGLESv1_CM_mtk.so|84dd67ccc642be0333324da6fe1286f97c9eb3be
-vendor/lib/egl/mt6855/libGLESv2_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/egl/libGLESv2_mtk.so|65fab34a48dc79e641b82661fc7d72cc60cf0b15
-vendor/lib/egl/egl.cfg|e9cf0173f529306ae3bf95a91d8ac221745968d0
-vendor/lib/egl/libGLES_meow.so|cf10feac2ff841419296beaed8acf96062c55242
-vendor/lib/egl/libMEOW_data.so|3e9c8f7b540cda97b314af4fecbb53446fade106
-vendor/lib/egl/libMEOW_gift.so|129f2511b8f1b37cf407a550a4ce7fd2c68b1c86
-vendor/lib/egl/libMEOW_qt.so|d2f540b35a1dcc8eb1afd946a267a3bd5e755064
-vendor/lib/egl/libMEOW_trace.so|bcf84eeb9e2067e8b9fe3ee95ab7ea4ef1de3d6a
-vendor/lib/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|e3a9fc2fff99265bae8e21a0e36a0b3a70242925
-vendor/lib/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/gralloc.rogue.so|d88f66acdd78d5cde9d0f9a2c81dfb6cac57d5ae
-vendor/lib/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/vulkan.mtk.so|eeda4496030963d51254e7ea3ed8ec8ecd751cba
-vendor/lib/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libIMGegl.so|bf18adde756be8157866581f2245d8606beab414
-vendor/lib/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib/libPVRMtkutils.so|4ba4a0964e0b96086dc22b9e00e6c36cb4cc8dd4
-vendor/lib/mt6855/libPVROCL.so;SYMLINK=vendor/lib/libPVROCL.so|6c7c58b95c5ea9eab1c69aa02d61f003cb542642
-vendor/lib/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib/libPVRScopeServices.so|8418eb4d443919f3f6970c4fbc4db6b69f33f689
-vendor/lib/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libgpudataproducer.so|c45e9ab8c355c516e424cd7785f0995cafb96af6
-vendor/lib/libDefaultFpsActor.so|31a5abb2ce11f60f7eda4e4698a3c02433041d13
-vendor/lib/libFrameRecord.so|c155c18cba5d468675a6dd980039a7fd4ddda72a
-vendor/lib/libNoFpsActor.so|f66150123a18c68ccd64aeb7e979b759e78d2bc1
-vendor/lib/libOpenCL.so|14d98e403027ad571231d5d7eea1638c0901820c
-vendor/lib/libged.so|d0967a01d7c56f297aa4d7fd4d8e43ccc54c8ad6
-vendor/lib/libgpu_aux.so;DISABLE_CHECKELF|c0d3510ae09abe05131b14ef1a0e81686ed2ea35
-vendor/lib/libgpud.so|85c9e33297b6d5bad0786e65f1eaa2ed9c47d5d8
-vendor/lib/libgralloc_extra.so|d4716f14bfb15fc1fa9af494a586c7194d13e7a1
-vendor/lib/libgralloc_metadata.so|cbc6d0d6045f14c66b46578e45888e5ef220ac71
-vendor/lib/libgralloctypes_mtk.so|7593f59ed46d6025045121d799edc7d9150b65d8
-vendor/lib64/egl/mt6855/libEGL_mtk.so;SYMLINK=vendor/lib64/egl/libEGL_mtk.so|f265d9a3addd8c1ae0f0fa426775b1b488ed3287
-vendor/lib64/egl/mt6855/libGLESv1_CM_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLESv1_CM_mtk.so|5a8c4c622a56b1dfeeca16e7b498ef1dd613ff4f
-vendor/lib64/egl/mt6855/libGLESv2_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLESv2_mtk.so|dc3e35121caf07b1c9c2ad87f828d5f87f62cdef
-vendor/lib64/egl/libGLES_meow.so|d7409435821b1dd5838124c4f9fb50b250192de9
-vendor/lib64/egl/libMEOW_data.so|d5c7181c9729f68bf066ac907db6e0154e7ae661
-vendor/lib64/egl/libMEOW_gift.so|6b1fc6c2d9a579f753cc67f33de79472a0e0244b
-vendor/lib64/egl/libMEOW_qt.so|b9525e6f84378dbcf7b7a54497f63b89b981f352
-vendor/lib64/egl/libMEOW_trace.so|480d0dc8e32ebfd9597f8580ac315738eff4587f
-vendor/lib64/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so|01acf4bc054b177abd1bd0bcb3240265606f5724
-vendor/lib64/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/gralloc.rogue.so|334197be6691313abad12fbb08fcc673fc57e404
-vendor/lib64/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/vulkan.mtk.so|a30cac46156597b3daf46f09ce308e69a2e5f174
-vendor/lib64/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libIMGegl.so|98057a1c4e026ec9c85d513a10448edcfe4aebab
-vendor/lib64/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib64/libPVRMtkutils.so|dfc7339f6d9079ff88118789e7abeaf79ec79b56
-vendor/lib64/mt6855/libPVROCL.so;SYMLINK=vendor/lib64/libPVROCL.so|221ab0f9408fa90ca5798aa1e985500b4e120c0e
-vendor/lib64/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib64/libPVRScopeServices.so|8564c95aaaff67eda81d4cb58d4b1011666a4baf
-vendor/lib64/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libgpudataproducer.so|fd6c3c0037c87fbf3df5bc485cf69b191ad98865
-vendor/lib64/libDefaultFpsActor.so|077becdfc47e0daa0a557fe6065946445ac381df
-vendor/lib64/libFrameRecord.so|80957958a2dc6928a6ff59c02a2673e5419a62aa
-vendor/lib64/libNoFpsActor.so|1284fd7148df01858337fd57c87ddf74dc015fd9
-vendor/lib64/libOpenCL.so|714ec93b30731600fe46f6b7184e24259b281fa0
-vendor/lib64/libged.so|15dd116e7e78db27c83182e60e2f596d8664a198
-vendor/lib64/libgpu_aux.so;DISABLE_CHECKELF|8cf7cddc0cd2e668471a7f4279963150fc9d5d3a
-vendor/lib64/libgpud.so|58e96562456c27be6177033654a2a0d4703de48b
-vendor/lib64/libgralloc_extra.so|f06b11d5dc307391a9b6bc6e97c96b93b441bcbd
-vendor/lib64/libgralloc_metadata.so|c9f12ee4accb59995eadfc3bfe67552ab212b472
-vendor/lib64/libgralloctypes_mtk.so|260b602effbf59aab30432bd25d8216df0929bdc
+# Graphics
+vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/etc/vintf/manifest/manifest_hwcomposer.xml
+vendor/etc/meow.cfg
+vendor/firmware/rgx.fw
+vendor/firmware/rgx.sh
+vendor/lib/egl/mt6855/libEGL_mtk.so;SYMLINK=vendor/lib/egl/libEGL_mtk.so
+vendor/lib/egl/mt6855/libGLESv1_CM_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/egl/libGLESv1_CM_mtk.so
+vendor/lib/egl/mt6855/libGLESv2_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/egl/libGLESv2_mtk.so
+vendor/lib/egl/egl.cfg
+vendor/lib/egl/libGLES_meow.so
+vendor/lib/egl/libMEOW_data.so
+vendor/lib/egl/libMEOW_gift.so
+vendor/lib/egl/libMEOW_qt.so
+vendor/lib/egl/libMEOW_trace.so
+vendor/lib/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/gralloc.rogue.so
+vendor/lib/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/hw/vulkan.mtk.so
+vendor/lib/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libIMGegl.so
+vendor/lib/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib/libPVRMtkutils.so
+vendor/lib/mt6855/libPVROCL.so;SYMLINK=vendor/lib/libPVROCL.so
+vendor/lib/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib/libPVRScopeServices.so
+vendor/lib/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libgpudataproducer.so
+vendor/lib/libDefaultFpsActor.so
+vendor/lib/libFrameRecord.so
+vendor/lib/libNoFpsActor.so
+vendor/lib/libOpenCL.so
+vendor/lib/libged.so
+vendor/lib/libgpu_aux.so;DISABLE_CHECKELF
+vendor/lib/libgpud.so
+vendor/lib/libgralloc_extra.so
+vendor/lib/libgralloc_metadata.so
+vendor/lib/libgralloctypes_mtk.so
+vendor/lib64/egl/mt6855/libEGL_mtk.so;SYMLINK=vendor/lib64/egl/libEGL_mtk.so
+vendor/lib64/egl/mt6855/libGLESv1_CM_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLESv1_CM_mtk.so
+vendor/lib64/egl/mt6855/libGLESv2_mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/egl/libGLESv2_mtk.so
+vendor/lib64/egl/libGLES_meow.so
+vendor/lib64/egl/libMEOW_data.so
+vendor/lib64/egl/libMEOW_gift.so
+vendor/lib64/egl/libMEOW_qt.so
+vendor/lib64/egl/libMEOW_trace.so
+vendor/lib64/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib64/hw/mt6855/gralloc.rogue.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/gralloc.rogue.so
+vendor/lib64/hw/mt6855/vulkan.mtk.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/hw/vulkan.mtk.so
+vendor/lib64/mt6855/libIMGegl.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libIMGegl.so
+vendor/lib64/mt6855/libPVRMtkutils.so;SYMLINK=vendor/lib64/libPVRMtkutils.so
+vendor/lib64/mt6855/libPVROCL.so;SYMLINK=vendor/lib64/libPVROCL.so
+vendor/lib64/mt6855/libPVRScopeServices.so;SYMLINK=vendor/lib64/libPVRScopeServices.so
+vendor/lib64/mt6855/libgpudataproducer.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libgpudataproducer.so
+vendor/lib64/libDefaultFpsActor.so
+vendor/lib64/libFrameRecord.so
+vendor/lib64/libNoFpsActor.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libged.so
+vendor/lib64/libgpu_aux.so;DISABLE_CHECKELF
+vendor/lib64/libgpud.so
+vendor/lib64/libgralloc_extra.so
+vendor/lib64/libgralloc_metadata.so
+vendor/lib64/libgralloctypes_mtk.so
 
 # Health
 vendor/bin/fuelgauged
@@ -2299,7 +2292,7 @@ vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
-vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolbydax39.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_dolby_default9.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/etc/mtk_omx_core.cfg
@@ -2332,7 +2325,6 @@ vendor/lib/libh264dec_customize.so
 vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
 vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libhdrvideo.so
 vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libicd_decoder.so
@@ -2340,7 +2332,6 @@ vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib/libmp3dec_mtk.so
 vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libmp4enc_xa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libstagefrighthw.so
 vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib/libvcodec_utility_plat.mt6789.so
@@ -2623,8 +2614,8 @@ vendor/bin/ccci_rpcd
 vendor/bin/gsm0710muxd
 vendor/bin/ipsec_mon
 vendor/bin/muxreport
-vendor/etc/apdb/APDB_MT6855___W2401
-vendor/etc/apdb/APDB_MT6855___W2401_ENUM
+vendor/etc/apdb/APDB_MT6855___W2425
+vendor/etc/apdb/APDB_MT6855___W2425_ENUM
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.bip_ap.rc
 vendor/etc/init/init.cccifsd.rc
@@ -2656,7 +2647,6 @@ vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib/libMtkAinrEnh.so
-vendor/lib/libadropbox.so
 vendor/lib/libcapctrl.so
 vendor/lib/libcares_naptr.so
 vendor/lib/libcarrierconfig.so

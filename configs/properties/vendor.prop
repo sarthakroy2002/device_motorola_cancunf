@@ -218,7 +218,7 @@ ro.vendor.pref_scale_enable_cfg=1
 ro.hardware.soc.manufacturer=mtk
 ro.vendor.mediatek.platform=MT6855
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1.tc2sp2
-ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc2sp2-V1.531
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc2sp2-V3
 ro.vendor.mgk_name=mgk_64_entry_level_k510
 ro.vendor.mgvi_name=mgvi_64_ww_armv82
 

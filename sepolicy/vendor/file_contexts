@@ -4,7 +4,7 @@
 /data/vendor/misc/imager                                                               u:object_r:vendor_camera_data_file:s0
 /data/vendor/camera(/.*)?                                                              u:object_r:vendor_camera_data_file:s0
 /mnt/vendor/persist/camera(/.*)?                                                       u:object_r:vendor_persist_camera_file:s0
-/vendor/bin/hw/motorola\.hardware\.camera\.imgtuner@2\.0-service                       u:object_r:hal_camera_default_exec:s0
+/vendor/bin/hw/motorola\.hardware\.camera\.imgtuner\.aidl-service                      u:object_r:hal_camera_default_exec:s0
 
 # Double Tap
 /sys/devices/virtual/touchscreen/primary/double_tap_enabled                            u:object_r:vendor_sysfs_touchpanel:s0

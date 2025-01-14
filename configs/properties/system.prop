@@ -1,6 +1,7 @@
 # Audio
 ro.audio.silent=0
 ro.audio.usb.period_us=16000
+ro.audio.flinger_standbytime_ms=1000
 ro.camera.sound.forced=0
 
 # Camera
