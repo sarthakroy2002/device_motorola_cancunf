@@ -12,21 +12,7 @@ vendor.camera.aux.packagelist=org.lineageos.aperture,com.motorola.camera3
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
-debug.sf.auto_latch_unsignaled=false
-debug.sf.early.app.duration=20000000
-debug.sf.early.sf.duration=27600000
-debug.sf.earlyGl.app.duration=20000000
-debug.sf.earlyGl.sf.duration=27600000
-debug.sf.enable_gl_backpressure=0
-debug.sf.enable_transaction_tracing=false
-debug.sf.hwc.min.duration=23000000
-debug.sf.late.app.duration=20000000
-debug.sf.late.sf.duration=27600000
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.use_phase_offsets_as_durations=1
-ro.opengles.version=196610
 sys.brightness.disable_gamma_conversion=true
-vendor.debug.sf.display_dejitter=0
 
 # FUSE
 persist.sys.fuse.passthrough.enable=true
@@ -40,7 +26,6 @@ persist.dbg.wfc_avail_ovr=1
 ro.config.per_app_memcg=false
 
 # Media
-debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Motorola
