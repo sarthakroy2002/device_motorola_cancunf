@@ -2554,7 +2554,6 @@ vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 
 # NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service.sec
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/bin/pnscr
 vendor/bin/pnscr_cal
@@ -2582,7 +2581,6 @@ vendor/lib64/libpn560_fw.so
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
 vendor/lib64/ls_client.so;DISABLE_CHECKELF
-vendor/lib64/nfc_nci_sec.so
 
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service

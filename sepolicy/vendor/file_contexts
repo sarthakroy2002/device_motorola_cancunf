@@ -49,7 +49,7 @@
 /dev/nq-nci                                                                            u:object_r:nfc_device:s0
 /dev/p73                                                                               u:object_r:nfc_device:s0
 /dev/sec-nfc                                                                           u:object_r:nfc_device:s0
-/vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.sec                                u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.samsung                            u:object_r:hal_nfc_default_exec:s0
 
 # Neural Networks
 /vendor/lib(64)?/libapusys\.so                                                         u:object_r:same_process_hal_file:s0

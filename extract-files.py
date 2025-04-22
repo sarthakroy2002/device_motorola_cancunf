@@ -82,6 +82,9 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/libstfactory-vendor.so', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 
      'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libtflite_mtk.so', 'vendor/lib64/libtflite_mtk.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    'vendor/etc/init/android.hardware.nfc@1.2-service.sec.rc': blob_fixup()
+        .regex_replace('sec', 'samsung')
+        .regex_replace('class hal\n    user nfc', 'override\n    class hal\n    user nfc'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
