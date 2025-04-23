@@ -2,7 +2,6 @@
 
 import /vendor/etc/init/hw/init_connectivity.rc
 import /vendor/etc/init/hw/init.connectivity.common.rc
-import /vendor/etc/init/hw/init.cancunf.sku.rc
 import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.aee.rc
 import /vendor/etc/init/hw/init.volte.rc
@@ -12,6 +11,7 @@ import /vendor/etc/init/hw/init.mt6855.power.rc
 import /vendor/etc/init/hw/init.mt6855.usb.rc
 import /vendor/etc/init/hw/init.mmi.rc
 import /vendor/etc/init/hw/init.modem.rc
+import /vendor/etc/init/init.cancunf.sku.rc
 
 on early-init
     write /proc/bootprof "INIT:early-init"

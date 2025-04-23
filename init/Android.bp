@@ -42,7 +42,7 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.cancunf.sku.rc",
     src: "init.cancunf.sku.rc",
-    relative_install_path: "init/hw",
+    relative_install_path: "init",
     vendor: true,
 }
 
