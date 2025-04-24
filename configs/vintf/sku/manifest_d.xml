@@ -82,4 +82,7 @@
         <fqname>@3.0::IMtkRadioEx/mtkSmartRatSwitch1</fqname>
         <fqname>@3.0::IMtkRadioEx/mtkSmartRatSwitch2</fqname>
     </hal>
+    <hal format="aidl" override="true">
+        <name>android.hardware.secure_element</name>
+    </hal>
 </manifest>

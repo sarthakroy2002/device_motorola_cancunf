@@ -62,4 +62,7 @@
         <fqname>@3.0::IRadioOp/OpImsRILd1</fqname>
         <fqname>@3.0::IRadioOp/slot1</fqname>
     </hal>
+    <hal format="aidl" override="true">
+        <name>android.hardware.secure_element</name>
+    </hal>
 </manifest>
