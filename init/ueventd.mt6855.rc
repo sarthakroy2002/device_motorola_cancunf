@@ -218,3 +218,6 @@
 # change permission for some capsensor nodes
 /sys/class/sensors/Moto\ CapSense\ Ch*   enable       0660    root    input
 /sys/class/sensors/Moto\ CapSense\ Ch*   poll_delay   0660    root    input
+
+# Raw HID devices
+/dev/hidraw*     0660   system     system
