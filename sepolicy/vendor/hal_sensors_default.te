@@ -23,3 +23,10 @@ allow hal_sensors_default vendor_sysfs_input:dir r_dir_perms;
 allow hal_sensors_default vendor_sysfs_input:file rw_file_perms;
 allow hal_sensors_default hal_audio_default:unix_stream_socket connectto;
 get_prop(hal_sensors_default, vendor_mot_prop)
+
+# Allow access for dynamic sensor properties.
+get_prop(hal_sensors_default, vendor_dynamic_sensor_prop)
+
+# Allow access to raw HID devices for dynamic sensors.
+allow hal_sensors_default device:dir r_dir_perms;
+allow hal_sensors_default hidraw_device:chr_file rw_file_perms;
