@@ -83,7 +83,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 debug.mediatek.disp_decompress=1
-debug.sf.auto_latch_unsignaled=false
+debug.sf.auto_latch_unsignaled=1
 debug.sf.disable_backpressure=1
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
