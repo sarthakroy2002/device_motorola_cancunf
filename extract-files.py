@@ -82,6 +82,8 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/libstfactory-vendor.so', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 
      'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libtflite_mtk.so', 'vendor/lib64/libtflite_mtk.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    'system_ext/lib64/libimsma.so': blob_fixup()
+        .replace_needed('libsink.so', 'libsink-mtk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
