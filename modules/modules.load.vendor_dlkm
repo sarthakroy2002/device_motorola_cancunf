@@ -147,7 +147,6 @@ camera_dip_isp6s.ko
 widevine_driver.ko
 sec.ko
 vdec-fmt.ko
-mtk_perf_common.ko
 mtk-pwm.ko
 mtk_irtx_pwm.ko
 arm_dsu_pmu.ko
