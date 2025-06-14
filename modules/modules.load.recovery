@@ -100,7 +100,6 @@ mtk_dcm.ko
 spi-mt65xx.ko
 mt6375.ko
 extdev_io_class.ko
-mt6685-core.ko
 rt5133-regulator.ko
 rt6160-regulator.ko
 mt6685-core.ko
@@ -174,7 +173,6 @@ clk-disable-unused.ko
 mtk-pm-domain-disable-unused.ko
 cache-parity.ko
 sec.ko
-arm_dsu_pmu.ko
 mtk-socinfo.ko
 emi-mpu-hook-v1.ko
 moto_chg_tcmd.ko

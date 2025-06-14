@@ -98,7 +98,6 @@ mtk_dcm.ko
 spi-mt65xx.ko
 mt6375.ko
 extdev_io_class.ko
-mt6685-core.ko
 rt5133-regulator.ko
 rt6160-regulator.ko
 mt6685-core.ko
