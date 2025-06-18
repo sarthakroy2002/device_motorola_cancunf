@@ -84,6 +84,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+        .add_needed('libutils-v32.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
