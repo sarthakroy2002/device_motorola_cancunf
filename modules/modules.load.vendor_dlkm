@@ -78,7 +78,6 @@ snd-soc-mtk-scp-ultra.ko
 mt6855-mt6369.ko
 mddp.ko
 mtk_qos.ko
-atf_logger.ko
 mtk-vow.ko
 mtk-scp-vow.ko
 vcp.ko

@@ -2,11 +2,7 @@ mkp.ko
 bootprof.ko
 sc8551_mmi.ko
 dbgtop-drm.ko
-mrdump.ko
 mtk_disp_notify.ko
-aee_aed.ko
-aee_hangdet.ko
-monitor_hang.ko
 mtk_printk_ctrl.ko
 log_store.ko
 nvmem_mtk-devinfo.ko
@@ -67,7 +63,6 @@ mtk_panel_ext.ko
 dsi-panel-mot-tm-nt36672c-650-fhdp-dphy-vdo-120hz.ko
 dsi-panel-mot-txd-ili7807s-650-fhdp-dphy-vdo-120hz.ko
 mediatek-drm.ko
-aee_rs.ko
 mmprofile.ko
 mtk-uart-apdma.ko
 8250_mtk.ko
