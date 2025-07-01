@@ -1,0 +1,9 @@
+//
+// SPDX-FileCopyrightText: PixelOS
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "WifiResOverlayCancunpXT2431-2",
+    product_specific: true,
+}

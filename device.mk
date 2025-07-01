@@ -284,6 +284,7 @@ PRODUCT_PACKAGES += \
     TetheringConfigResOverlayCancunf \
     WifiResOverlayCancunf \
     WifiResOverlayCancunpXT2431-1 \
+    WifiResOverlayCancunpXT2431-2 \
     WifiResOverlayCancunpXT2431-3
 
 PRODUCT_PACKAGES += \
