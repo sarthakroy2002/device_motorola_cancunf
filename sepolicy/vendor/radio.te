@@ -1,0 +1,2 @@
+get_prop(radio, system_mot_radio_prop)
+set_prop(radio, system_mot_radio_prop)
