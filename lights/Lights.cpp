@@ -18,24 +18,13 @@
 #define LOG_TAG "android.hardware.lights-service.cancunf"
 
 #include "Lights.h"
-#include <android-base/file.h>
-#include <android-base/logging.h>
+
 #include <fstream>
-
-/* clang-format off */
-#define PPCAT_NX(A, B) A/B
-#define PPCAT(A, B) PPCAT_NX(A, B)
-#define STRINGIFY_INNER(x) #x
-#define STRINGIFY(x) STRINGIFY_INNER(x)
-
-#define CHARGING_ATTR(x) STRINGIFY(PPCAT(/sys/class/leds/charging, x))
 
 #define LCD_LED         "/sys/class/leds/lcd-backlight/"
 
 #define BRIGHTNESS      "brightness"
 #define MAX_BRIGHTNESS  "max_brightness"
-
-/* clang-format on */
 
 namespace aidl {
 namespace android {
@@ -69,57 +58,6 @@ static uint32_t getBrightness(const HwLightState &state) {
   blue = blue * alpha / 0xFF;
 
   return (77 * red + 150 * green + 29 * blue) >> 8;
-}
-
-uint32_t RgbaToBrightness(uint32_t color) {
-  // Extract brightness from AARRGGBB.
-  uint32_t alpha = (color >> 24) & 0xFF;
-
-  // Retrieve each of the RGB colors
-  uint32_t red = (color >> 16) & 0xFF;
-  uint32_t green = (color >> 8) & 0xFF;
-  uint32_t blue = color & 0xFF;
-
-  // Scale RGB colors if a brightness has been applied by the user
-  if (alpha != 0xFF && alpha != 0) {
-    red = red * alpha / 0xFF;
-    green = green * alpha / 0xFF;
-    blue = blue * alpha / 0xFF;
-  }
-
-  return (77 * red + 150 * green + 29 * blue) >> 8;
-}
-
-inline bool IsLit(uint32_t color) { return color & 0x00ffffff; }
-
-void ApplyNotificationState(const HwLightState &state) {
-  bool blink = state.flashOnMs > 0 && state.flashOffMs > 0;
-  bool ok = false;
-
-  switch (state.flashMode) {
-  case FlashMode::HARDWARE:
-    ok = WriteToFile(CHARGING_ATTR(breath), blink);
-    // fallback to timed blinking if breath is not supported
-    if (ok)
-      break;
-    FALLTHROUGH_INTENDED;
-  case FlashMode::TIMED:
-    ok = WriteToFile(CHARGING_ATTR(delay_off), state.flashOffMs);
-    ok &= WriteToFile(CHARGING_ATTR(delay_on), state.flashOnMs);
-    // fallback to constant on if timed blinking is not supported
-    if (ok)
-      break;
-    FALLTHROUGH_INTENDED;
-  case FlashMode::NONE:
-  default:
-    ok = WriteToFile(CHARGING_ATTR(brightness), RgbaToBrightness(state.color));
-    break;
-  }
-
-  LOG(DEBUG) << __func__ << ": mode=" << toString(state.flashMode)
-             << ", colorRGB=" << std::hex << state.color << std::dec
-             << ", onMS=" << state.flashOnMs << ", offMS=" << state.flashOffMs
-             << ", ok=" << ok;
 }
 
 static inline uint32_t scaleBrightness(uint32_t brightness,
@@ -180,48 +118,15 @@ static void handleBacklight(const HwLightState &state) {
 } // anonymous namespace
 
 ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState &state) {
-  static_assert(kAvailableLights.size() ==
-                std::tuple_size_v<decltype(notif_states_)>);
-
   if (id == static_cast<int32_t>(LightType::BACKLIGHT)) {
     handleBacklight(state);
     return ndk::ScopedAStatus::ok();
-  }
-
-  // Update saved state first
-  bool found = false;
-  for (size_t i = 0; i < notif_states_.size(); ++i) {
-    if (kAvailableLights[i].id == id) {
-      notif_states_[i] = state;
-      LOG(DEBUG) << __func__ << ": updating id=" << id
-                 << ", type=" << toString(kAvailableLights[i].type);
-      found = true;
-      break;
-    }
-  }
-  if (!found) {
-    LOG(ERROR) << "Light not supported";
+  } else {
     return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
   }
-
-  // Lit up in order or fallback to battery light if others are dim
-  for (size_t i = 0; i < notif_states_.size(); ++i) {
-    auto &&cur_state = notif_states_[i];
-    auto &&cur_light = kAvailableLights[i];
-    if (IsLit(cur_state.color) || cur_light.type == LightType::BATTERY) {
-      LOG(DEBUG) << __func__ << ": applying id=" << cur_light.id
-                 << ", type=" << toString(cur_light.type);
-      ApplyNotificationState(cur_state);
-      break;
-    }
-  }
-
-  return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Lights::getLights(std::vector<HwLight> *lights) {
-  lights->insert(lights->end(), kAvailableLights.begin(),
-                 kAvailableLights.end());
   lights->push_back(
       {static_cast<int32_t>(LightType::BACKLIGHT), 0, LightType::BACKLIGHT});
   return ndk::ScopedAStatus::ok();
