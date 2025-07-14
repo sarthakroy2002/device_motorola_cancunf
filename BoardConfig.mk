@@ -126,9 +126,6 @@ BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 6471811072
 
 BOARD_USES_METADATA_PARTITION := true
 
-# Platform
-BOARD_HAS_MTK_HARDWARE := true
-
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
