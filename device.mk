@@ -127,7 +127,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Fastboot
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
+    android.hardware.fastboot-service.example_recovery \
     fastbootd
 
 # Felica 
