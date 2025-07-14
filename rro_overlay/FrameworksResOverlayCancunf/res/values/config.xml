@@ -500,13 +500,4 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.settings.device.TouchKeyHandler</item>
     </string-array>
-
-    <!-- Applications which are disabled unless matching a particular sku -->
-    <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
-        <item>com.felicanetworks.mfc</item>
-    </string-array>
-    <string-array name="config_disableApkUnlessMatchedSku_skus_list" translatable="false">
-        <item>XT2431-2</item>
-        <item>XT2431-3</item>
-    </string-array>
 </resources>
