@@ -112,6 +112,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service
 
+# DisplayFeatures
+PRODUCT_PACKAGES += \
+    DisplayFeatures
+
 # DRM
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
@@ -268,6 +272,7 @@ $(foreach DEVICE_NFC_SKU, $(DEVICE_NFC_SKUS), \
 PRODUCT_PACKAGES += \
     BesLoudnessOverlayCancunf \
     CarrierConfigOverlayCancunf \
+    DisplayFeaturesOverlayCancunf \
     EsimOverlayCancunf \
     FrameworksResOverlayCancunf \
     FrameworksResOverlayCancunfXT2343-1 \

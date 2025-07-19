@@ -679,6 +679,12 @@ on boot
     # gauge symbolic
     symlink /sys/devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:mtk_gauge /dev/gauge
 
+    # Allow system to manipulate HBM and CABC nodes
+    chown system system /sys/devices/platform/soc/14017000.dsi/hbm
+    chmod 0660 /sys/devices/platform/soc/14017000.dsi/hbm
+    chown system system /sys/devices/platform/soc/14017000.dsi/cabc
+    chmod 0660 /sys/devices/platform/soc/14017000.dsi/cabc
+
     # Permission for hibernation
     chown radio system /sys/power/tuxonice
     chown radio system /sys/power/tuxonice/do_hibernate
