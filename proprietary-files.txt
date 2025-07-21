@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sys-user 15 V1TDS35M.83-20-5-3 b0a5b release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sys-user 15 V1TDS35M.83-20-5-5 a8c92 release-keys, unless pinned
 
 # AEE
 vendor/lib/libaedv.so
