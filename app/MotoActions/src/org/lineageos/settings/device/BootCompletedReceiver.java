@@ -20,6 +20,8 @@ package org.lineageos.settings.device;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.util.Log;
 import org.lineageos.settings.device.actions.TapGestureSettings;
@@ -33,5 +35,16 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         TapGestureSettings.MainSettingsFragment.restoreTapGestureStates(context);
         context.startServiceAsUser(new Intent(context, MotoActionsService.class),
                 UserHandle.CURRENT);
+        felicaDisabler(context);
+    }
+
+    private void felicaDisabler(Context context) {
+        String sku = SystemProperties.get("ro.boot.hardware.sku", "");
+        boolean isJapaneseVariant = "XT2431-2".equals(sku) || "XT2431-3".equals(sku);
+        int flag = isJapaneseVariant ?
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED :
+                PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+
+        context.getPackageManager().setApplicationEnabledSetting("com.felicanetworks.mfc", flag, 0);
     }
 }
