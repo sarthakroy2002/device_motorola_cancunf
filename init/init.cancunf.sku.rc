@@ -10,9 +10,6 @@ on property:ro.boot.hardware.sku="XT2431-2"
     setprop persist.vendor.nfc.config_file_name "libnfc-nxp_220.conf"
     mount none /product/etc/felica_ymobile /product/etc/felica bind
 
-on init && property:ro.vendor.hw.felica="false"
-    mount none /product/lost+found /product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk bind
-
 on property:ro.boot.hardware.sku="XT2431-3"
     setprop bluetooth.device.default_name "moto g64 5G"
     setprop vendor.usb.product_string "moto g64 5G"
