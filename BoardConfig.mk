@@ -179,6 +179,8 @@ include vendor/motorola/cancunf-motcamera/BoardConfigVendor.mk
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_mt66xx
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
 BOARD_HOSTAPD_DRIVER := NL80211
 WIFI_DRIVER_FW_PATH_PARAM := "/dev/wmtWifi"
 WIFI_DRIVER_FW_PATH_STA := "STA"
