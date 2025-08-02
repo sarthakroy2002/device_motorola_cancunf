@@ -77,6 +77,7 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
 BOARD_VENDOR_RAMDISK_FRAGMENTS := dlkm
 BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.PREBUILT := $(KERNEL_PATH)/modules/vendor_boot/dlkm.cpio
+BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.MKBOOTIMG_ARGS := --ramdisk_type DLKM
 
 ## Kernel Modules configuration
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.load.recovery))
