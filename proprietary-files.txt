@@ -2214,6 +2214,7 @@ system_ext/framework/mediatek-framework.jar:system/framework/mediatek-framework.
 system_ext/framework/mediatek-ims-base.jar:system/framework/mediatek-ims-base.jar;BOOT_JAR
 system_ext/framework/mediatek-ims-oem-plugin.jar:system/framework/mediatek-ims-oem-plugin.jar;BOOT_JAR
 system_ext/priv-app/ImsService/ImsService.apk
+system_ext/priv-app/MtkGbaService/MtkGbaService.apk
 
 # IMS (Vendor)
 vendor/bin/lbs_hidl_service
