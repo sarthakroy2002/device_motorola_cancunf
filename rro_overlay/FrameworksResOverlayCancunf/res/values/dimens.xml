@@ -32,6 +32,7 @@
     <dimen name="status_bar_height_portrait">117px</dimen>
 
         <!-- Radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">95px</dimen>
     <dimen name="rounded_corner_radius_top">95px</dimen>
     <dimen name="rounded_corner_radius_bottom">95px</dimen>
 
