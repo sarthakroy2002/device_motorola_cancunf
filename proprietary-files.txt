@@ -185,13 +185,10 @@ vendor/etc/SwadParamList.txt
 vendor/lib64/soundfx/libmsstwrapper.so
 
 # Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/bin/autobt
 vendor/bin/bt_dump
-vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/bt_stack_debug.conf
 vendor/etc/bt_stack_level6.conf
-vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_hw_test.so
