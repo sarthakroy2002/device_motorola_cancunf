@@ -221,3 +221,6 @@
 
 # Raw HID devices
 /dev/hidraw*     0660   system     system
+
+# Flashlight
+/dev/flashlight 0660 cameraserver camera
