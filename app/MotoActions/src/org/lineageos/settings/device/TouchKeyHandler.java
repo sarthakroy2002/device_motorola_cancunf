@@ -137,11 +137,12 @@ public class TouchKeyHandler implements DeviceKeyHandler {
 
     public KeyEvent handleKeyEvent(final KeyEvent event) {
         final int action = mActionMapping.get(event.getScanCode(), -1);
-        if (action < 0 || event.getAction() != KeyEvent.ACTION_UP || !hasSetupCompleted()) {
+        if (action < 0 || !hasSetupCompleted()) {
             return event;
         }
 
-        if (action != 0 && !mEventHandler.hasMessages(GESTURE_REQUEST)) {
+        if (action != 0 && !mEventHandler.hasMessages(GESTURE_REQUEST)
+                && event.getAction() != KeyEvent.ACTION_UP) {
             final Message msg = getMessageForAction(action);
             if (mProximitySensor != null) {
                 mGestureWakeLock.acquire(2 * 100);
