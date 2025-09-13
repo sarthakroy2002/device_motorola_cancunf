@@ -31,4 +31,7 @@ ro.telephony.default_network=26,26
 ro.vendor.radio.imei.sv=27
 ro.com.google.lens.oem_camera_package=com.motorola.camera3
 
+# Skia tracing
+debug.hwui.skia_atrace_enabled=false
+
 import /product/product.${ro.boot.hardware.sku}.prop
