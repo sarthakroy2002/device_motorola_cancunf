@@ -2,8 +2,7 @@ on post-fs
     chown system system /sys/devices/virtual/touchscreen/primary/single_tap_enabled
     chmod 0664 /sys/devices/virtual/touchscreen/primary/single_tap_enabled
 
-service vendor.touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.cancunf
-    interface vendor.lineage.touch@1.0::ITouchscreenGesture default
+service vendor.touch-hal.cancunf /vendor/bin/hw/vendor.lineage.touch-service.cancunf
     class hal
     user system
     group system

@@ -1,17 +1,6 @@
 /*
  * SPDX-FileCopyrightText: The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 #define LOG_TAG "TouchscreenGestureService"
@@ -23,38 +12,34 @@
 
 #include "TouchscreenGesture.h"
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
-Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
+ndk::ScopedAStatus TouchscreenGesture::getSupportedGestures(std::vector<Gesture>* _aidl_return) {
     std::vector<Gesture> gestures;
     for (int32_t i = 0; i < std::size(kGestureNodes); ++i) {
         gestures.push_back({i, kGestureNodes[i].name, kGestureNodes[i].keycode});
     }
-    resultCb(gestures);
-    return Void();
+    *_aidl_return = gestures;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> TouchscreenGesture::setGestureEnabled(
-    const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enable) {
+ndk::ScopedAStatus TouchscreenGesture::setGestureEnabled(const Gesture& gesture, bool enabled) {
+    auto rc = ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
     if (gesture.id >= std::size(kGestureNodes)) {
-        return false;
+        return rc;
     }
 
-    if (!android::base::WriteStringToFile(enable ? kGestureNodes[gesture.id].enable : kGestureNodes[gesture.id].disable,
+    if (android::base::WriteStringToFile(enabled ? kGestureNodes[gesture.id].enable : kGestureNodes[gesture.id].disable,
                                           kGestureNodes[gesture.id].path)) {
-        LOG(ERROR) << "Writing to file " << kGestureNodes[gesture.id].path << " failed";
-        return false;
+        rc = ndk::ScopedAStatus::ok();
     }
-
-    return true;
+    return rc;
 }
 
-}  // namespace implementation
-}  // namespace V1_0
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
+}  // aidl

@@ -65,4 +65,4 @@
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?                              u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?                                     u:object_r:sysfs_wakeup:s0
 
-/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.cancunf                         u:object_r:hal_lineage_touch_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.touch-service\.cancunf                                 u:object_r:hal_lineage_touch_default_exec:s0

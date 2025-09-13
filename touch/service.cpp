@@ -1,43 +1,30 @@
 /*
  * SPDX-FileCopyrightText: The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "lineage.touch@1.0-service.cancunf"
+#define LOG_TAG "lineage.touch-service.cancunf"
 
 #include <android-base/logging.h>
-#include <hidl/HidlTransportSupport.h>
+#include <android/binder_manager.h>
+#include <android/binder_process.h>
 
 #include "TouchscreenGesture.h"
 
-using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
-using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
+using aidl::vendor::lineage::touch::TouchscreenGesture;
 
 int main() {
-    android::sp<ITouchscreenGesture> touchscreenGesture = new TouchscreenGesture();
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
 
-    android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
+    auto tg = ndk::SharedRefBase::make<TouchscreenGesture>();
+    auto status = AServiceManager_addService(
+            tg->asBinder().get(), TouchscreenGesture::makeServiceName("default").c_str());
+    CHECK_EQ(status, STATUS_OK) << "Cannot register touchscreen gesture HAL service.";
 
-    if (touchscreenGesture->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register touchscreen gesture HAL service.";
-        return 1;
-    }
+    LOG(DEBUG) << "Touchscreen Gesture HAL service ready.";
 
-    LOG(INFO) << "Touchscreen HAL service ready.";
+    ABinderProcess_joinThreadPool();
 
-    android::hardware::joinRpcThreadpool();
-
-    LOG(ERROR) << "Touchscreen HAL service failed to join thread pool.";
-    return 1;
+    LOG(ERROR) << "Touchscreen HAL Gesture service failed to join thread pool.";
+    return EXIT_FAILURE;  // should not reach
 }
