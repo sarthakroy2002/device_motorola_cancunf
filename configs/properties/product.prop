@@ -28,7 +28,7 @@ persist.vendor.vt.RTPInfo=1
 persist.vendor.vt.supported=1
 ril.subscription.types=RUIM
 ro.telephony.default_network=26,26
-ro.vendor.radio.imei.sv=27
+ro.vendor.radio.imei.sv=29
 ro.com.google.lens.oem_camera_package=com.motorola.camera3
 
 # Skia tracing
