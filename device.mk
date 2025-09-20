@@ -297,6 +297,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RegulatoryOverlayXT2343-1 \
     RegulatoryOverlayXT2343-2 \
+    RegulatoryOverlayXT2343-3 \
     RegulatoryOverlayXT2343-4 \
     RegulatoryOverlayXT2343-5 \
     RegulatoryOverlayXT2431-1 \
