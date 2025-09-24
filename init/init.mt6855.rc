@@ -81,18 +81,14 @@ on fs
 
     # mount fstab
     write /proc/bootprof "INIT:Mount_START"
-    write /sys/kernel/tracing/trace_marker "B|1|Mount"
     mount_all --early
-    write /sys/kernel/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
 
 on late-fs
     write /proc/bootprof "INIT:late-fs"
 
     write /proc/bootprof "INIT:Mount_START --late"
-    write /sys/kernel/tracing/trace_marker "B|1|Mount late"
     mount_all --late
-    write /sys/kernel/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END --late"
 
 
