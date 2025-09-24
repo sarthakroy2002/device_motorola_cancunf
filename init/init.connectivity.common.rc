@@ -7,14 +7,6 @@ on post-fs-data
 # Connectivity related device nodes & configuration (begin)
 #
 
-#/dev/ttyMT2 for Connectivity BT/FM/GPS usage
-    chmod 0660 /dev/ttyMT2
-    chown system system /dev/ttyMT2
-
-#/dev/ttyMT1 for GPS 3337 usage
-    chmod 0660 /dev/ttyMT1
-    chown system system /dev/ttyMT1
-
 # GPS
     mkdir /data/vendor/gps 0770 gps system
     mkdir /data/vendor/log 0770 gps system
