@@ -644,7 +644,6 @@ on early-boot
 on boot
     write /proc/bootprof "INIT:boot"
 
-    write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
 
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
