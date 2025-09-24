@@ -9,7 +9,6 @@ import /vendor/etc/init/hw/init.sensor_2_0.rc
 import /vendor/etc/init/hw/init.mt6855.power.rc
 import /vendor/etc/init/hw/init.mt6855.usb.rc
 import /vendor/etc/init/hw/init.mmi.rc
-import /vendor/etc/init/hw/init.modem.rc
 
 on early-init
     write /proc/bootprof "INIT:early-init"

@@ -61,13 +61,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.modem.rc",
-    src: "init.modem.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.mt6855.rc",
     src: "init.mt6855.rc",
     relative_install_path: "init/hw",

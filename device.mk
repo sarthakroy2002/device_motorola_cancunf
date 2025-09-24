@@ -181,7 +181,6 @@ PRODUCT_PACKAGES += \
     init.cancunf.sku.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.modem.rc \
     init.mt6855.rc \
     init.mt6855.power.rc \
     init.mt6855.usb.rc \
