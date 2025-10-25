@@ -1,2 +1,2 @@
-get_prop(hal_secure_element_default, vendor_nfc_prop)
 allow hal_secure_element_default nfc_device:chr_file { open read write };
+get_prop(hal_secure_element_default, vendor_nfc_prop)

@@ -1,2 +1,2 @@
-genfscon sysfs /devices/platform/soc/14017000.dsi/hbm u:object_r:sysfs_displayfeatures:s0
 genfscon sysfs /devices/platform/soc/14017000.dsi/cabc u:object_r:sysfs_displayfeatures:s0
+genfscon sysfs /devices/platform/soc/14017000.dsi/hbm u:object_r:sysfs_displayfeatures:s0

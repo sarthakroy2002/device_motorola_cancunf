@@ -1,14 +1,14 @@
-get_prop(hal_audio_default, vendor_mot_prop)
+allow hal_audio_default adsp_device:chr_file rw_file_perms;
+allow hal_audio_default adsp_device:file rw_file_perms;
+allow hal_audio_default audio_ipi_device:chr_file rw_file_perms;
 allow hal_audio_default ccci_aud_device:chr_file { rw_file_perms ioctl };
-allow hal_audio_default sysfs_boot_info:file r_file_perms;
+allow hal_audio_default mnt_vendor_file:dir search;
 allow hal_audio_default mtk_audiohal_data_file:dir create_dir_perms;
 allow hal_audio_default mtk_audiohal_data_file:file create_file_perms;
-allow hal_audio_default mnt_vendor_file:dir search;
 allow hal_audio_default persist_data_file:dir search;
-allow hal_audio_default audio_ipi_device:chr_file rw_file_perms;
-allow hal_audio_default adsp_device:file rw_file_perms;
-allow hal_audio_default adsp_device:chr_file rw_file_perms;
-allow hal_audio_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
-hal_client_domain(hal_audio_default, hal_power)
 allow hal_audio_default persist_data_file:file r_file_perms;
+allow hal_audio_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow hal_audio_default sysfs_boot_info:file r_file_perms;
+get_prop(hal_audio_default, vendor_mot_prop)
+hal_client_domain(hal_audio_default, hal_power)
 set_prop(hal_audio_default, vendor_mtk_audiohal_prop)
