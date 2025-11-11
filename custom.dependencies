@@ -23,10 +23,5 @@
     "repository": "cyberknight777/android_packages_apps_DisplayFeatures",
     "target_path": "packages/apps/DisplayFeatures",
     "branch": "master"
-  },
-  {
-    "repository": "LineageOS/android_packages_apps_FMRadio",
-    "target_path": "packages/apps/FMRadio",
-    "branch": "lineage-23.0"
   }
 ]
