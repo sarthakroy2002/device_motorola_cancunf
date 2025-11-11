@@ -1,0 +1,32 @@
+[
+  {
+    "repository": "PixelOS-Devices/android_device_motorola_cancunf-kernel",
+    "target_path": "device/motorola/cancunf-kernel"
+  },
+  {
+    "repository": "sarthakroy2002/vendor_motorola_cancunf",
+    "target_path": "vendor/motorola/cancunf"
+  },
+  {
+    "repository": "YAAP/vendor_motorola_cancunf-motcamera",
+    "target_path": "vendor/motorola/cancunf-motcamera"
+  },
+  {
+    "repository": "YAAP/hardware_mediatek",
+    "target_path": "hardware/mediatek"
+  },
+  {
+    "repository": "YAAP/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr"
+  },
+  {
+    "repository": "cyberknight777/android_packages_apps_DisplayFeatures",
+    "target_path": "packages/apps/DisplayFeatures",
+    "branch": "master"
+  },
+  {
+    "repository": "LineageOS/android_packages_apps_FMRadio",
+    "target_path": "packages/apps/FMRadio",
+    "branch": "lineage-23.0"
+  }
+]
