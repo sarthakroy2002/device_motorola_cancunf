@@ -4,7 +4,8 @@
     "target_path": "device/motorola/cancunf-kernel"
   },
   {
-    "repository": "sarthakroy2002/vendor_motorola_cancunf",
+    "remote": "gitlab",
+    "repository": "NoPrincessHere/proprietary_vendor_motorola_cancunf",
     "target_path": "vendor/motorola/cancunf"
   },
   {
