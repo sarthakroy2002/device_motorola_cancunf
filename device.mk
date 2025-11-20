@@ -412,6 +412,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
+    hardware/mediatek/libaedv \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/wlan/wifi_hal \
     $(DEVICE_PATH)

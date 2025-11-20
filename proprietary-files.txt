@@ -1,10 +1,8 @@
 # Device proprietary files - From cancunf_g_sys-user 15 V1TDS35H.83-20-5-9 f08ad3 release-keys, unless pinned
 
 # AEE
-vendor/lib/libaedv.so
 vendor/lib/libladder.so
 vendor/lib/libudf.so
-vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 vendor/lib64/libudf.so
 
