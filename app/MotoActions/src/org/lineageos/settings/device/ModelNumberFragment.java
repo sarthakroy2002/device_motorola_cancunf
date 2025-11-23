@@ -19,9 +19,9 @@ package org.lineageos.settings.device;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
-public class ModelNumberFragment extends PreferenceFragmentCompat {
+public class ModelNumberFragment extends SettingsBasePreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

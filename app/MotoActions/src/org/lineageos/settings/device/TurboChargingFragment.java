@@ -22,10 +22,10 @@ import android.os.Bundle;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.widget.MainSwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import android.util.Log;
 
@@ -35,7 +35,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-public class TurboChargingFragment extends PreferenceFragmentCompat {
+public class TurboChargingFragment extends SettingsBasePreferenceFragment {
 
     private static final String TAG = "TurboChargingFragment";
     private static final String PRIMARY_CHARGE_CURRENT_FILE = "/sys/devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/constant_charge_current_max";
