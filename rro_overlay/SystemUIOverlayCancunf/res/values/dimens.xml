@@ -18,6 +18,6 @@
 <resources>
 
     <!-- Biometric Dialog values -->
-    <dimen name="biometric_dialog_corner_size">95px</dimen>
+    <dimen name="biometric_dialog_corner_size">80px</dimen>
 
 </resources>
