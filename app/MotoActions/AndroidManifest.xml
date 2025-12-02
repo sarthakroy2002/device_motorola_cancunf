@@ -23,7 +23,8 @@
     <application
         android:allowBackup="true"
         android:label="@string/device_settings_app_name"
-        android:persistent="true">
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver
             android:name="org.lineageos.settings.device.BootCompletedReceiver"
@@ -42,8 +43,7 @@
         <activity
             android:name=".DozePreferenceActivity"
             android:exported="false"
-            android:label="@string/ambient_display_gestures_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/ambient_display_gestures_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -54,8 +54,7 @@
         <activity
             android:name=".ActionsPreferenceActivity"
             android:exported="true"
-            android:label="@string/moto_gestures_panel_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/moto_gestures_panel_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -72,15 +71,13 @@
         <activity
             android:name=".actions.TapGestureSettings"
             android:label="@string/tap_gesture_settings_title"
-            android:theme="@style/Theme.SubSettingsBase"
             android:exported="false">
         </activity>
 
         <activity
             android:name=".ModelNumberActivity"
             android:exported="false"
-            android:label="@string/model_number_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/model_number_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -95,8 +92,7 @@
         <activity
             android:name=".TurboChargingActivity"
             android:exported="false"
-            android:label="@string/turbo_charge_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/turbo_charge_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
