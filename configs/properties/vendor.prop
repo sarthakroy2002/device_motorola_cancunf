@@ -90,7 +90,6 @@ debug.sf.enable_gl_backpressure=1
 debug.sf.enable_hwc_vds=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.force_populate_color_modes=true
-debug.sf.frame_rate_multiple_threshold=120
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.region_sampling_period_ns=1000000000
 debug.sf.treat_170m_as_sRGB=1
