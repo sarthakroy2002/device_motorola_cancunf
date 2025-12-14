@@ -115,6 +115,12 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
+    (
+        'vendor/lib64/librt_extamp_intf.so',
+        'vendor/lib64/hw/audio.primary.mediatek.so',
+        'vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-legacy.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

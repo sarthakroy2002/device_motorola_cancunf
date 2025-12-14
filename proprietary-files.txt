@@ -2731,6 +2731,9 @@ vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/sensors.moto.so
 
+# Tinyxml
+system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-legacy.so;FIX_SONAME
+
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
