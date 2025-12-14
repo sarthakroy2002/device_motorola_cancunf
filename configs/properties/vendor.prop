@@ -117,8 +117,6 @@ ro.surface_flinger.uclamp.min=307
 ro.vendor.jpeg_decode_sw_opt=1
 ro.vendor.mtk_cuva_hdr_support=1
 vendor.debug.sf.display_dejitter=0
-vendor.hw.sf.IdleLazyResetThresholdT=500
-vendor.hw.sf.hwc.min.duration=23000000
 vendor.media.heif.highThreshold=20
 
 # DRM
