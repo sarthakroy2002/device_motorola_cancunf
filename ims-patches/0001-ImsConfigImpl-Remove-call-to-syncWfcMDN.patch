@@ -1,7 +1,7 @@
 From 334d930282499bc8720f7e3538f3322258ed969a Mon Sep 17 00:00:00 2001
 From: Vachounet <vachounet@live.fr>
 Date: Thu, 6 Mar 2025 18:52:01 +0530
-Subject: [PATCH 1/5] ImsConfigImpl: Remove call to syncWfcMDN()
+Subject: [PATCH 1/6] ImsConfigImpl: Remove call to syncWfcMDN()
 
 Signed-off-by: betaxab <betaxab@gmail.com>
 Signed-off-by: Sarthak Roy <sarthakroy2002@gmail.com>
@@ -11,7 +11,7 @@ Change-Id: I4ff254b61d6f8cff658535b29c50d9664f1cffd2
  1 file changed, 2 deletions(-)
 
 diff --git a/smali/com/mediatek/ims/config/internal/ImsConfigController.smali b/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
-index a94b044..bec4b00 100644
+index a94b0448..bec4b003 100644
 --- a/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
 +++ b/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
 @@ -148,8 +148,6 @@
@@ -24,5 +24,5 @@ index a94b044..bec4b00 100644
  .end method
  
 -- 
-2.48.1
+2.52.0
 

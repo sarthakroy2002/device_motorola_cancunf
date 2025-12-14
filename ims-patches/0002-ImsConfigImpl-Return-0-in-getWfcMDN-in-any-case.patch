@@ -1,7 +1,7 @@
 From dd37909230f2062cae6230cc673cd4edec275f20 Mon Sep 17 00:00:00 2001
 From: Erfan Abdi <erfangplus@gmail.com>
 Date: Thu, 6 Mar 2025 18:54:18 +0530
-Subject: [PATCH 2/5] ImsConfigImpl: Return 0 in getWfcMDN in any case
+Subject: [PATCH 2/6] ImsConfigImpl: Return 0 in getWfcMDN in any case
 
 Signed-off-by: betaxab <betaxab@gmail.com>
 Change-Id: Ie1d12eba911ec00e94f2210aa2b09efc50b7c9e4
@@ -10,7 +10,7 @@ Change-Id: Ie1d12eba911ec00e94f2210aa2b09efc50b7c9e4
  1 file changed, 13 deletions(-)
 
 diff --git a/smali/com/mediatek/ims/config/internal/ImsConfigController.smali b/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
-index bec4b00..9347fdf 100644
+index bec4b003..9347fdf5 100644
 --- a/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
 +++ b/smali/com/mediatek/ims/config/internal/ImsConfigController.smali
 @@ -574,22 +574,9 @@
@@ -37,5 +37,5 @@ index bec4b00..9347fdf 100644
  .end method
  
 -- 
-2.48.1
+2.52.0
 

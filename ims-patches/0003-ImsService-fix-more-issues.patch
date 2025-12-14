@@ -1,7 +1,7 @@
 From 7fb69949fc184e71933555d2df35875b889924a9 Mon Sep 17 00:00:00 2001
 From: electimon <electimon@gmail.com>
 Date: Thu, 6 Mar 2025 19:06:27 +0530
-Subject: [PATCH 3/5] ImsService: fix more issues
+Subject: [PATCH 3/6] ImsService: fix more issues
 
 Change-Id: Ifd9933a47df6c41b8d320a700ca91a5aff6db59b
 ---
@@ -12,7 +12,7 @@ Change-Id: Ifd9933a47df6c41b8d320a700ca91a5aff6db59b
  4 files changed, 21 insertions(+), 61 deletions(-)
 
 diff --git a/smali/com/mediatek/ims/ImsPhoneStateListener.smali b/smali/com/mediatek/ims/ImsPhoneStateListener.smali
-index 61f8ea3..c1f316c 100644
+index 61f8ea38..c1f316c2 100644
 --- a/smali/com/mediatek/ims/ImsPhoneStateListener.smali
 +++ b/smali/com/mediatek/ims/ImsPhoneStateListener.smali
 @@ -1,5 +1,5 @@
@@ -86,7 +86,7 @@ index 61f8ea3..c1f316c 100644
      .line 189
      return-void
 diff --git a/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali b/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali
-index 2442ede..ba22ad2 100644
+index 2442edea..ba22ad28 100644
 --- a/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali
 +++ b/smali/com/mediatek/ims/config/internal/ImsConfigEventReceiver$1.smali
 @@ -167,17 +167,15 @@
@@ -122,7 +122,7 @@ index 2442ede..ba22ad2 100644
      :cond_5
      return-void
 diff --git a/smali/com/mediatek/ims/ril/ImsRadioIndication.smali b/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
-index 7c2d77b..d596869 100644
+index 7c2d77b0..d596869a 100644
 --- a/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
 +++ b/smali/com/mediatek/ims/ril/ImsRadioIndication.smali
 @@ -342,49 +342,14 @@
@@ -178,7 +178,7 @@ index 7c2d77b..d596869 100644
      return-void
  
 diff --git a/smali/com/mediatek/ims/ril/MtkRadioExImsIndication.smali b/smali/com/mediatek/ims/ril/MtkRadioExImsIndication.smali
-index 9d32281..a9d2f47 100644
+index 9d32281d..a9d2f47a 100644
 --- a/smali/com/mediatek/ims/ril/MtkRadioExImsIndication.smali
 +++ b/smali/com/mediatek/ims/ril/MtkRadioExImsIndication.smali
 @@ -187,21 +187,21 @@
@@ -217,5 +217,5 @@ index 9d32281..a9d2f47 100644
      return-void
  
 -- 
-2.48.1
+2.52.0
 
