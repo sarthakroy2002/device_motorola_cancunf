@@ -1,0 +1,57 @@
+From dc3b11902cb39672f9749cf5d6e17bfeadfa7f66 Mon Sep 17 00:00:00 2001
+From: Cyber Knight <cyberknight755@gmail.com>
+Date: Tue, 16 Dec 2025 19:53:37 +0800
+Subject: [PATCH 8/8] ImsService: Remove remaining TelephonyMetrics references
+
+- Following the previous commit, drop all references to it.
+
+Signed-off-by: Cyber Knight <cyberknight755@gmail.com>
+---
+ smali/com/mediatek/ims/ril/ImsRILAdapter.smali | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/ril/ImsRILAdapter.smali b/smali/com/mediatek/ims/ril/ImsRILAdapter.smali
+index dedad8d5..4c16f635 100644
+--- a/smali/com/mediatek/ims/ril/ImsRILAdapter.smali
++++ b/smali/com/mediatek/ims/ril/ImsRILAdapter.smali
+@@ -176,8 +176,6 @@
+ 
+ .field mLastNITZTimeInfo:[Ljava/lang/Object;
+ 
+-.field private mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+-
+ .field public mModemIndication:Lcom/mediatek/ims/ril/ModemIndication;
+ 
+ .field public mModemResponse:Lcom/mediatek/ims/ril/ModemResponse;
+@@ -322,14 +320,6 @@
+ 
+ 
+ # direct methods
+-.method static bridge synthetic -$$Nest$fgetmMetrics(Lcom/mediatek/ims/ril/ImsRILAdapter;)Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+-    .locals 0
+-
+-    iget-object p0, p0, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+-
+-    return-object p0
+-.end method
+-
+ .method static bridge synthetic -$$Nest$fgetmMtkRadioVersion(Lcom/mediatek/ims/ril/ImsRILAdapter;)Ljava/util/Map;
+     .locals 0
+ 
+@@ -694,13 +684,6 @@
+ 
+     iput-object v0, v1, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMtkRadioVersion:Ljava/util/Map;
+ 
+-    .line 429
+-    invoke-static {}, Lcom/android/internal/telephony/metrics/TelephonyMetrics;->getInstance()Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+-
+-    move-result-object v0
+-
+-    iput-object v0, v1, Lcom/mediatek/ims/ril/ImsRILAdapter;->mMetrics:Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+-
+     .line 436
+     new-instance v0, Lcom/mediatek/ims/ril/ImsRILAdapter$DtmfQueueHandler;
+ 
+-- 
+2.52.0
+

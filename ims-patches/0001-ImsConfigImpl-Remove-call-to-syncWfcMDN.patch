@@ -1,7 +1,7 @@
 From 334d930282499bc8720f7e3538f3322258ed969a Mon Sep 17 00:00:00 2001
 From: Vachounet <vachounet@live.fr>
 Date: Thu, 6 Mar 2025 18:52:01 +0530
-Subject: [PATCH 1/6] ImsConfigImpl: Remove call to syncWfcMDN()
+Subject: [PATCH 1/8] ImsConfigImpl: Remove call to syncWfcMDN()
 
 Signed-off-by: betaxab <betaxab@gmail.com>
 Signed-off-by: Sarthak Roy <sarthakroy2002@gmail.com>

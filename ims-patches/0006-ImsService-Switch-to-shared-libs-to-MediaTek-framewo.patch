@@ -1,7 +1,7 @@
 From 9a779661cbefec57cf4f6e863b473a98ff46e3b9 Mon Sep 17 00:00:00 2001
 From: Erfan Abdi <erfangplus@gmail.com>
 Date: Wed, 31 Jan 2024 17:22:40 +0330
-Subject: [PATCH 6/6] ImsService: Switch to shared libs to MediaTek framework
+Subject: [PATCH 6/8] ImsService: Switch to shared libs to MediaTek framework
  jars
 
 - This is required to get IMS working in A16 QPR1.

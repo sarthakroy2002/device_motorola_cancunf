@@ -1,0 +1,46 @@
+From 54fc9656f1b29634a59f6bdc7e80326d523c45a3 Mon Sep 17 00:00:00 2001
+From: Mashopy <eliasgheeraert@gmail.com>
+Date: Tue, 9 Dec 2025 21:11:05 +0100
+Subject: [PATCH 1/2] MtkGbaService: Remove references to TelephonyMetrics
+
+Google deprecated TelephonyMetrics class in Android 16 QPR2 as it was considered legacy code [1].
+
+[1] https://android.googlesource.com/platform/frameworks/opt/telephony/+/a1e87f8d20c88efa8887091059d6abb5b5b2f0d0
+
+[cyberknight777: Adapt to cancunf]
+Signed-off-by: Cyber Knight <cyberknight755@gmail.com>
+---
+ .../gbaservice/ril/GbaRIL$RilHandler.smali      | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+diff --git a/smali/com/mediatek/gbaservice/ril/GbaRIL$RilHandler.smali b/smali/com/mediatek/gbaservice/ril/GbaRIL$RilHandler.smali
+index b6a7888..ad12276 100644
+--- a/smali/com/mediatek/gbaservice/ril/GbaRIL$RilHandler.smali
++++ b/smali/com/mediatek/gbaservice/ril/GbaRIL$RilHandler.smali
+@@ -154,23 +154,6 @@
+ 
+     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+ 
+-    .line 357
+-    iget-object v0, p0, Lcom/mediatek/gbaservice/ril/GbaRIL$RilHandler;->this$0:Lcom/mediatek/gbaservice/ril/GbaRIL;
+-
+-    invoke-static {v0}, Lcom/mediatek/gbaservice/ril/GbaRIL;->-$$Nest$fgetmMetrics(Lcom/mediatek/gbaservice/ril/GbaRIL;)Lcom/android/internal/telephony/metrics/TelephonyMetrics;
+-
+-    move-result-object v0
+-
+-    iget-object v1, p0, Lcom/mediatek/gbaservice/ril/GbaRIL$RilHandler;->this$0:Lcom/mediatek/gbaservice/ril/GbaRIL;
+-
+-    iget v1, v1, Lcom/mediatek/gbaservice/ril/GbaBaseCommands;->mPhoneId:I
+-
+-    iget v2, p1, Lcom/mediatek/gbaservice/ril/RILRequest;->mSerial:I
+-
+-    iget v3, p1, Lcom/mediatek/gbaservice/ril/RILRequest;->mRequest:I
+-
+-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/telephony/metrics/TelephonyMetrics;->writeOnRilTimeoutResponse(III)V
+-
+     .line 359
+     :cond_3
+     iget-object p0, p0, Lcom/mediatek/gbaservice/ril/GbaRIL$RilHandler;->this$0:Lcom/mediatek/gbaservice/ril/GbaRIL;
+-- 
+2.52.0
+
