@@ -36,9 +36,9 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
-        .apktool_patch('ims-patches'),
+        .apktool_patch('patches/ImsService'),
     'system_ext/priv-app/MtkGbaService/MtkGbaService.apk': blob_fixup()
-        .apktool_patch('gba-patches'),
+        .apktool_patch('patches/MtkGbaService'),
     (
         'system_ext/etc/init/init.vtservice.rc',
         'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc'
