@@ -39,6 +39,7 @@ import com.android.internal.lineage.hardware.LineageHardwareManager; // Need FWB
 import com.android.internal.lineage.hardware.TouchscreenGesture; // Need FWB support
 import org.lineageos.settings.device.Constants;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import java.lang.System;
 import java.util.ArrayList;
@@ -69,7 +70,7 @@ public class TapGestureSettings extends CollapsingToolbarBaseActivity
         return true;
     }
 
-    public static class MainSettingsFragment extends PreferenceFragmentCompat {
+    public static class MainSettingsFragment extends SettingsBasePreferenceFragment {
 
         private static final String KEY_TAP_GESTURE = "tap_gesture";
         private static final String KEY_TAP_GESTURE_HAPTIC = "tap_gesture_haptic_feedback";
