@@ -146,7 +146,6 @@ public class TapGestureSettings extends CollapsingToolbarBaseActivity
                 setEntryValues(org.lineageos.settings.device.R.array.tap_gesture_action_values);
                 setDefaultValue(String.valueOf(defaultAction));
 
-                setIconSpaceReserved(true);
                 setSummary("%s");
                 setDialogTitle(org.lineageos.settings.device.R.string.tap_gesture_action_dialog_title);
                 setTitle(getLocalizedString(
