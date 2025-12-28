@@ -2610,7 +2610,6 @@ vendor/bin/bip_ap
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/bin/gsm0710muxd
 vendor/bin/ipsec_mon
 vendor/bin/muxreport
 vendor/etc/apdb/APDB_MT6855___W2425
@@ -2720,6 +2719,9 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/lib64/vendor.mediatek.hardware.radio_op@3.0.so
+
+# Radio (Bin) - from bogota_g-user 16 W1VO36M.85 16a77 release-keys
+vendor/bin/gsm0710muxd|ca9871cfde2fc3220a0494d6a7494107a79cd4a1
 
 # Sensors
 vendor/etc/permissions/unavail.android.hardware.sensor.barometer.xml
