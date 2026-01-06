@@ -2052,7 +2052,6 @@ vendor/firmware/sec_s3nrn4v_firmware.bin
 vendor/firmware/soc_fm_v1_coeff.bin
 vendor/firmware/soc_fm_v1_patch.bin
 vendor/firmware/txpowerctrl.cfg
-vendor/firmware/valhall-1691526.wa
 vendor/firmware/wifi.cfg
 
 # Firmware (recovery)
