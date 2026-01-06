@@ -2234,6 +2234,7 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 # IMS (VT - System) - from rothko 16 BP2A.250605.015 OS2.0.215.0.WNNMIXM
 system_ext/bin/vtservice|4a8759f67cc4f238983c57193d88d1cc13956e06
 system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc|d1bad63ed1e5dc8cbf02c5ec37022a7753330729
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|ff807e93274637dc2c183680cd1df540a18a9df8|08df824f92bd139a6711b6b5ae3fcbd550244b99
 system_ext/lib64/libcomutils.so|05cdfb5eb128b670ec182235e75efeec2dd21773
 system_ext/lib64/libimsma.so|ef84a4ebd120834a1514197af96101e81839cd12|1b581eee25e72f399b7d6ebb11595f7cee03a8f8
 system_ext/lib64/libimsma_adapt.so|de3b5546ff7a5dc9f7ba3db3f06b53498600490d
@@ -2242,7 +2243,6 @@ system_ext/lib64/libimsma_socketwrapper.so|aaa678a3fe154066bd47c9ed67105a7b941b7
 system_ext/lib64/libmtk_vt_service.so|a1ba6d03b7ba0584885f252f1faf5d980659eac0
 system_ext/lib64/libmtk_vt_wrapper.so|9b62da09fbf2b89270a7734511f1d6fe76aa7e63
 system_ext/lib64/libsignal.so|38ab61c18cedce065ff16cbc71dbdf15681538f3
-system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|ff807e93274637dc2c183680cd1df540a18a9df8|08df824f92bd139a6711b6b5ae3fcbd550244b99
 system_ext/lib64/libsource.so|06d0948067791d30befd3d84adb196287b9bcc18|f6674fd2a5de3ce01b46558ce510ffba4a32e821
 system_ext/lib64/libvcodec_cap.so|a49da521496c7778b756654f7251657a8f04cc4f
 system_ext/lib64/libvcodec_capenc.so|5274c56e4c07a21cf3ff3b9678231a6d9c3ffe7c
@@ -2284,10 +2284,7 @@ vendor/etc/init/tetheroffloadservice.rc
 # Media
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/mt6855/jpegtool;SYMLINK=vendor/bin/jpegtool
-vendor/bin/mt6855/v3avpud.mt6855;SYMLINK=vendor/bin/v3avpud
-vendor/bin/vpud
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
-vendor/etc/init/v3avpud.rc
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/seccomp_policy/mediacodec.policy
@@ -2298,16 +2295,6 @@ vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/VideoLog_dynamic.xml
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml
-vendor/lib/mt6855/libvcodec_utility.so;SYMLINK=vendor/lib/libvcodec_utility.so
-vendor/lib/mt6855/libvcodec_utility_v3a.so;SYMLINK=vendor/lib/libvcodec_utility_v3a.so
-vendor/lib/mt6855/libvcodecdrv.so;SYMLINK=vendor/lib/libvcodecdrv.so
-vendor/lib/mt6855/libvcodecdrv_v3a.so;SYMLINK=vendor/lib/libvcodecdrv_v3a.so
-vendor/lib/mt6855/libvpudv3a_vcodec.so;SYMLINK=vendor/lib/libvpudv3a_vcodec.so
-vendor/lib/AVCSecureVdecCA.so
-vendor/lib/HEVCSecureVdecCA.so
-vendor/lib/VP9SecureVdecCA.so
-vendor/lib/libAVCSecureVencCA.so
-vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libJpgEncPipe.so
 vendor/lib/libMtkOmxAdpcmDec.so
 vendor/lib/libMtkOmxAlacDec.so
@@ -2322,32 +2309,12 @@ vendor/lib/libcodec2_mtk_venc.so
 vendor/lib/libcodec2_vpp_qt_plugin.so
 vendor/lib/libcodec2_vpp_rs_plugin.so
 vendor/lib/libformatter.so
-vendor/lib/libh264dec_customize.so
-vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
-vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
 vendor/lib/libhdrvideo.so
-vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libicd_decoder.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib/libmp3dec_mtk.so
-vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libstagefrighthw.so
-vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
-vendor/lib/libvcodec_utility_plat.mt6789.so
-vendor/lib/libvcodec_utility_plat.mt6855.so
-vendor/lib/libvcodec_utility_plat.mt6879.so
-vendor/lib/libvcodecdrv_header_stub.so
-vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvp9dec_sa.ca7.so;DISABLE_CHECKELF
-vendor/lib/libvpu5.so
-vendor/lib/libvpud_vcodec.so
-vendor/lib64/AVCSecureVdecCA.so
-vendor/lib64/HEVCSecureVdecCA.so
-vendor/lib64/VP9SecureVdecCA.so
-vendor/lib64/libAVCSecureVencCA.so
 vendor/lib64/libJpgEncPipe.so
 vendor/lib64/libMtkOmxCore.so
 vendor/lib64/libcodec2_mtk_c2store.so
@@ -2357,15 +2324,10 @@ vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libhdrvideo.so
-vendor/lib64/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib64/libicd_decoder.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libstagefrighthw.so
-vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
-vendor/lib64/libvcodecdrv_header_stub.so
-vendor/lib64/libvpu.so
-vendor/lib64/libvpu5.so
 
 # MediaTek Vision Processing Unit
 vendor/lib/libmvpu_cic_ci_compiler.so
@@ -2505,6 +2467,7 @@ vendor/lib/libneuron_graph_delegate.mtk.so
 vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib/libtflite_mtk.so;DISABLE_CHECKELF
+vendor/lib/libvpu5.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
@@ -2531,6 +2494,8 @@ vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libtflite_mtk.so;DISABLE_CHECKELF
+vendor/lib64/libvpu.so
+vendor/lib64/libvpu5.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
 vendor/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
@@ -2785,6 +2750,43 @@ vendor/lib64/libgz_uree.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
+
+# VPUD (Mediatek Video Processor Unit)
+vendor/bin/mt6855/v3avpud.mt6855;SYMLINK=vendor/bin/v3avpud
+vendor/bin/vpud
+vendor/etc/init/v3avpud.rc
+vendor/lib/mt6855/libvcodec_utility.so;SYMLINK=vendor/lib/libvcodec_utility.so
+vendor/lib/mt6855/libvcodec_utility_v3a.so;SYMLINK=vendor/lib/libvcodec_utility_v3a.so
+vendor/lib/mt6855/libvcodecdrv.so;SYMLINK=vendor/lib/libvcodecdrv.so
+vendor/lib/mt6855/libvcodecdrv_v3a.so;SYMLINK=vendor/lib/libvcodecdrv_v3a.so
+vendor/lib/mt6855/libvpudv3a_vcodec.so;SYMLINK=vendor/lib/libvpudv3a_vcodec.so
+vendor/lib/AVCSecureVdecCA.so
+vendor/lib/HEVCSecureVdecCA.so
+vendor/lib/VP9SecureVdecCA.so
+vendor/lib/libAVCSecureVencCA.so
+vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_customize.so
+vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
+vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
+vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
+vendor/lib/libvcodec_utility_plat.mt6789.so
+vendor/lib/libvcodec_utility_plat.mt6855.so
+vendor/lib/libvcodec_utility_plat.mt6879.so
+vendor/lib/libvcodecdrv_header_stub.so
+vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp9dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvpud_vcodec.so
+vendor/lib64/AVCSecureVdecCA.so
+vendor/lib64/HEVCSecureVdecCA.so
+vendor/lib64/VP9SecureVdecCA.so
+vendor/lib64/libAVCSecureVencCA.so
+vendor/lib64/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
+vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
+vendor/lib64/libvcodecdrv_header_stub.so
 
 # WiFi
 vendor/bin/stp_dump3
