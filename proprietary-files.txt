@@ -2753,7 +2753,6 @@ vendor/lib64/vendor.trustonic.tee@1.1.so
 
 # VPUD (Mediatek Video Processor Unit)
 vendor/bin/mt6855/v3avpud.mt6855;SYMLINK=vendor/bin/v3avpud
-vendor/bin/vpud
 vendor/etc/init/v3avpud.rc
 vendor/lib/mt6855/libvcodec_utility.so;SYMLINK=vendor/lib/libvcodec_utility.so
 vendor/lib/mt6855/libvcodec_utility_v3a.so;SYMLINK=vendor/lib/libvcodec_utility_v3a.so
