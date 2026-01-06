@@ -2011,7 +2011,6 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/chipone_ident
 vendor/bin/hw/fpc_ident
 vendor/bin/hw/goodix_ident
-vendor/bin/fpc_tee_test
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-chipone2.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
