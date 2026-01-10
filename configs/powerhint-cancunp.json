@@ -524,24 +524,30 @@
         "PowerHint": "EXPENSIVE_RENDERING",
         "Node": "GPUBlockBoost",
         "Duration": 0,
-        "Value": "50"
+        "Value": "101"
       },
       {
         "PowerHint": "EXPENSIVE_RENDERING",
         "Node": "CPUSuperClusterMinFreq",
-        "Duration": 0,
+        "Duration": 1000,
         "Value": "2050000"
       },
       {
         "PowerHint": "EXPENSIVE_RENDERING",
         "Node": "CPUEfficiencyClusterMinFreq",
-        "Duration": 0,
-         "Value": "9999999"
+        "Duration": 1000,
+         "Value": "1900000"
       },
       {
         "PowerHint": "EXPENSIVE_RENDERING",
         "Type": "EndHint",
         "Value": "INTERACTION"
+      },
+      {
+        "PowerHint": "EXPENSIVE_RENDERING",
+        "Node": "MemFreq",
+        "Duration": 4000,
+        "Value": "5500000000"
       },
       {
         "PowerHint": "ML_ACC",
