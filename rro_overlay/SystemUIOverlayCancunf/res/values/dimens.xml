@@ -20,4 +20,6 @@
     <!-- Biometric Dialog values -->
     <dimen name="biometric_dialog_corner_size">80px</dimen>
 
+    <!-- Blur radius behind Notification Shade -->
+    <dimen name="max_shade_window_blur_radius">23dp</dimen>
 </resources>
