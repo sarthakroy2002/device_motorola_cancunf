@@ -1,4 +1,4 @@
-From 9a779661cbefec57cf4f6e863b473a98ff46e3b9 Mon Sep 17 00:00:00 2001
+From d938b48a867f18db2ed95a46d29e13b2863894a8 Mon Sep 17 00:00:00 2001
 From: Erfan Abdi <erfangplus@gmail.com>
 Date: Wed, 31 Jan 2024 17:22:40 +0330
 Subject: [PATCH 6/8] ImsService: Switch to shared libs to MediaTek framework
@@ -10,25 +10,24 @@ Change-Id: I9d28da23ca7fdfb7a237b69d4624a86d2c096b9f
 Signed-off-by: Naveen <133593113+elohim-etz@users.noreply.github.com>
 Signed-off-by: Cyber Knight <cyberknight755@gmail.com>
 ---
- AndroidManifest.xml | 6 +++++-
- 1 file changed, 5 insertions(+), 1 deletion(-)
+ AndroidManifest.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index ad44db15..c1ec347b 100644
+index ad44db15..6990bdad 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
-@@ -55,6 +55,10 @@
+@@ -55,6 +55,9 @@
      <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:directBootAware="true" android:extractNativeLibs="false" android:label="ImsApp" android:name="com.mediatek.ims.ImsApp" android:persistent="true" android:usesNonSdkApi="true">
          <uses-library android:name="com.mediatek.ims.oemplugin" android:required="false"/>
          <uses-library android:name="com.mediatek.ims.plugin" android:required="false"/>
 +        <uses-library android:name="mediatek-common" android:required="true"/>
-+        <uses-library android:name="mediatek-framework" android:required="true"/>
 +        <uses-library android:name="mediatek-ims-base" android:required="true"/>
 +        <uses-library android:name="mediatek-ims-oem-plugin" android:required="true"/>
          <receiver android:exported="true" android:name="com.mediatek.ims.MotoDialerReceiver" android:permission="android.permission.READ_PRIVILEGED_PHONE_STATE">
              <intent-filter>
                  <action android:name="com.motorola.internal.intent.action.USER_OPEN_MISSED_CALL"/>
-@@ -93,4 +97,4 @@
+@@ -93,4 +96,4 @@
              </intent-filter>
          </receiver>
      </application>
