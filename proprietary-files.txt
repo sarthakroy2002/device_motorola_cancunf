@@ -2192,8 +2192,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 system/etc/permissions/moto-telephony.xml
 system/framework/moto-telephony.jar
 system_ext/etc/sysconfig/com.mediatek.ims.config.xml
-system_ext/framework/mediatek-common.jar
-system_ext/framework/mediatek-framework.jar
 system_ext/framework/mediatek-ims-base.jar
 system_ext/framework/mediatek-ims-oem-plugin.jar
 system_ext/priv-app/ImsService/ImsService.apk
