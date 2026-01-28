@@ -16,7 +16,7 @@
 <permissions>
     <library
         name="mediatek-ims-base"
-        file="/system/framework/mediatek-ims-base.jar"
+        file="/system_ext/framework/mediatek-ims-base.jar"
     />
 </permissions>
 

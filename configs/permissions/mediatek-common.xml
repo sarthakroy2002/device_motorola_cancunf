@@ -16,7 +16,7 @@
 <permissions>
     <library
         name="mediatek-common"
-        file="/system/framework/mediatek-common.jar"
+        file="/system_ext/framework/mediatek-common.jar"
     />
 </permissions>
 
