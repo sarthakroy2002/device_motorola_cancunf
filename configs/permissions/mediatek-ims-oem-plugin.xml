@@ -16,7 +16,7 @@
 <permissions>
     <library
         name="mediatek-ims-oem-plugin"
-        file="/system/framework/mediatek-ims-oem-plugin.jar"
+        file="/system_ext/framework/mediatek-ims-oem-plugin.jar"
     />
 </permissions>
 
