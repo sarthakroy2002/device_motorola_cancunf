@@ -2315,6 +2315,7 @@ vendor/lib/libMtkOmxApeDec.so
 vendor/lib/libMtkOmxCore.so
 vendor/lib/libMtkOmxGsmDec.so
 vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib/libadpcmdec_mtk.so
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_vdec.so
 vendor/lib/libcodec2_mtk_venc.so
@@ -2330,6 +2331,7 @@ vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libicd_decoder.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
+vendor/lib/libmp3dec_mtk.so
 vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libstagefrighthw.so
 vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
