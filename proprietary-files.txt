@@ -2778,6 +2778,5 @@ vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/wlan_assistant.rc
 vendor/lib/meta_wifi_data.so
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwifitest.so
 vendor/lib64/meta_wifi_data.so
