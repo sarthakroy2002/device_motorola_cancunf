@@ -417,6 +417,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/wlan/wifi_hal \
     $(DEVICE_PATH)
 
 # Thermal
@@ -454,9 +455,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant \
     android.hardware.wifi.supplicant@1.4.vendor
-
-PRODUCT_PACKAGES += \
-    libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
