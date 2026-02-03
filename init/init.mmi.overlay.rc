@@ -113,9 +113,6 @@ on boot
    chmod 0660 /sys/class/touchscreen/primary/gesture
    chmod 0664 /proc/cts_tool
 
-    write /sys/block/sdc/queue/scheduler bfq
-    write /sys/block/sdc/queue/iosched/slice_idle 0
-
     write /proc/sys/vm/dirty_background_bytes 26214400
     write /proc/sys/vm/dirty_bytes 104857600
 on fs
