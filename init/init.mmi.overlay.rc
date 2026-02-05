@@ -116,7 +116,7 @@ on boot
     write /proc/sys/vm/dirty_background_bytes 26214400
     write /proc/sys/vm/dirty_bytes 104857600
 on fs
-   exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_relay nova_0flash_mmi_v2 ilitek_v3_mmi
+   exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules nova_0flash_mmi_v2 ilitek_v3_mmi
 
 # camera eeprom calibration
 on property:sys.boot_completed=1
