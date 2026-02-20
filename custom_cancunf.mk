@@ -13,7 +13,7 @@ $(call inherit-product, device/motorola/cancunf/device.mk)
 
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_NAME := custom_cancunf
 PRODUCT_DEVICE := cancunf
