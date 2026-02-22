@@ -32,4 +32,7 @@
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">true</bool>
 
+    <!-- Show advanced refresh rate option -->
+    <bool name="config_show_advanced_refresh_rate" translatable="false">false</bool>
+
 </resources>
