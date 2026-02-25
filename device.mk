@@ -203,7 +203,7 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml \
+    android.hardware.hardware_keystore_V1.xml \
     android.system.wifi.keystore@1.0.vendor \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
