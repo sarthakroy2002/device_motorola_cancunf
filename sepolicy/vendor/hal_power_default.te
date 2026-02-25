@@ -18,6 +18,10 @@ allow hal_power_default cgroup:file rw_file_perms;
 allow hal_power_default vendor_sysfs_touchpanel:dir search;
 allow hal_power_default vendor_sysfs_touchpanel:file rw_file_perms;
 
+# Allow libperfmgr to control MTK CPU Memory Latency Management
+allow hal_power_default sysfs_cm_mgr:dir r_dir_perms;
+allow hal_power_default sysfs_cm_mgr:file rw_file_perms;
+
 # Sensors
 allow hal_power_default sysfs_sensor:file rw_file_perms;
 r_dir_file(hal_power_default, sysfs_sensor)
