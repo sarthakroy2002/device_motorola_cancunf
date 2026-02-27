@@ -1,4 +1,4 @@
-From 75c02a877a59cf2547b2664821954a165b22c04c Mon Sep 17 00:00:00 2001
+From 4428d6aec3305b13dbe042903d52f4489845ac55 Mon Sep 17 00:00:00 2001
 From: Cyber Knight <cyberknight755@gmail.com>
 Date: Tue, 16 Dec 2025 19:53:37 +0800
 Subject: [PATCH 8/8] ImsService: Remove remaining TelephonyMetrics references
@@ -53,5 +53,5 @@ index dedad8d5..4c16f635 100644
      new-instance v0, Lcom/mediatek/ims/ril/ImsRILAdapter$DtmfQueueHandler;
  
 -- 
-2.52.0
+2.53.0
 

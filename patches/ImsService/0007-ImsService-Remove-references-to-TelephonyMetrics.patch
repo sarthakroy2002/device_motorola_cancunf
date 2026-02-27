@@ -1,4 +1,4 @@
-From ad4c5d2bf3c9d4d04df61d2d53a5f3555c4dff10 Mon Sep 17 00:00:00 2001
+From 1c37286acebc327366d754dea3aee55f7a39fd2b Mon Sep 17 00:00:00 2001
 From: Mashopy <eliasgheeraert@gmail.com>
 Date: Mon, 15 Dec 2025 22:51:41 +0100
 Subject: [PATCH 7/8] ImsService: Remove references to TelephonyMetrics
@@ -264,5 +264,5 @@ index cbf1cc4f..f753dffb 100644
      .line 1148
      if-eqz p1, :cond_2
 -- 
-2.52.0
+2.53.0
 
