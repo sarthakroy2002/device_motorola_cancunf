@@ -2230,11 +2230,11 @@ system_ext/lib64/libvt_avsync.so|eb882010c551f5540aeccae0ec1fcfb1677d601e
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|d2c0e0d34176161df01565b4489b7748d50c7646
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|78739fb7a9bf1109693bdb16b6f1c54345f82353
 
-# IMS (VT - Vendor)
-vendor/bin/hw/vtservice_hidl
-vendor/etc/init/init.vtservice_hidl.rc
-vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+# IMS (VT - Vendor) - from bogota_g-user 16 W1VO36M.85 16a77 release-keys
+vendor/bin/hw/vtservice_aidl|f18effea88a444c5379837e850d6fe4fdc8794db
+vendor/etc/init/init.vtservice_aidl.rc|b213670f1233b2bb585adde523e37856c2750705
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony-impl.so|e8e31cf9d583edd466dc9622a0d2c2c6aa7638a8
+vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so;MODULE_SUFFIX=_vendor|5c257c032010f114b6b9239c35275ba0ac404104
 
 # Keystore
 vendor/bin/hw/android.hardware.security.keymint-service.trustonic
