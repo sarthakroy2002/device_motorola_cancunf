@@ -2180,6 +2180,7 @@ system_ext/framework/mediatek-ims-base.jar
 system_ext/framework/mediatek-ims-oem-plugin.jar
 system_ext/priv-app/ImsService/ImsService.apk
 system_ext/priv-app/MtkGbaService/MtkGbaService.apk
+system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
 
 # IMS (VT - System) - from nice_g_sys-user 17 A171VNH.25 e4c7ca release-keys
 system_ext/bin/vtservice|1383056a091c38235f6ad8a88b61cfd8ca6629ab
