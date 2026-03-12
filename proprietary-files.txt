@@ -2240,7 +2240,6 @@ vendor/etc/init/tetheroffloadservice.rc
 
 # Media
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
-vendor/bin/mt6855/jpegtool;SYMLINK=vendor/bin/jpegtool
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
@@ -2507,7 +2506,6 @@ vendor/lib/libarmnn.so
 vendor/lib/libarmnn_ndk.mtk.vndk.so
 vendor/lib/libcmdl.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
-vendor/lib/libneuroeara.so
 vendor/lib/libneuron_graph_delegate.mtk.so;MODULE_SUFFIX=_vendor
 vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
@@ -2535,10 +2533,7 @@ vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
 vendor/lib64/libmmagent.so
-vendor/lib64/libneuroeara.so
 vendor/lib64/libneuron_graph_delegate.mtk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libneuron_platform.so
-vendor/lib64/libneuropilot_hal_utils.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libtflite_mtk.so;DISABLE_CHECKELF;MODULE_SUFFIX=_vendor
 vendor/lib64/libvpu.so
