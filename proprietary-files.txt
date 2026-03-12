@@ -2086,15 +2086,21 @@ vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml:vendor/etc/vintf/manifest/gnss-mtk@2.1-service.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
-vendor/etc/mpe.conf
+vendor/etc/MNL_Config.xml
 vendor/etc/slp_conf
+vendor/lib/libapmonitor_vendor.so
+vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
+vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so
+vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;SYMLINK=vendor/lib64/libmnl-mtk.so;FIX_SONAME
 vendor/lib64/lbs_hidl_service-impl.so
+vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
+vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 
 # Gatekeeper
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
@@ -2385,7 +2391,6 @@ vendor/lib/liblog_vendor.so
 vendor/lib/libminiui.so
 vendor/lib/liboem_specific.so
 vendor/lib/libscltm.so
-vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so
 vendor/lib64/mt6855/libacdk.so;SYMLINK=vendor/lib64/libacdk.so
 vendor/lib64/mt6855/liblpcnr.so;SYMLINK=vendor/lib64/liblpcnr.so
 vendor/lib64/mt6855/libmfllcore.so;SYMLINK=vendor/lib64/libmfllcore.so
@@ -2508,7 +2513,6 @@ vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib/libtflite_mtk.so;DISABLE_CHECKELF;MODULE_SUFFIX=_vendor
 vendor/lib/libvpu5.so
-vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
@@ -2630,7 +2634,6 @@ vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/mtkrild.rc
 vendor/etc/init/muxreport.rc
-vendor/etc/MNL_Config.xml
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_preference.xml
 vendor/etc/mot_spn_table
@@ -2654,7 +2657,6 @@ vendor/lib/libmtkhardware_legacy.so
 vendor/lib/libmtknetutils.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
-vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;SYMLINK=vendor/lib64/libmnl-mtk.so;FIX_SONAME
 vendor/lib64/libMtkAinrEnh.so
 vendor/lib64/libadropbox.so
 vendor/lib64/libcapctrl.so
@@ -2709,6 +2711,9 @@ vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/sensors.moto.so
+
+# Thermal
+vendor/etc/mpe.conf
 
 # Tinyxml
 system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-legacy.so;FIX_SONAME
