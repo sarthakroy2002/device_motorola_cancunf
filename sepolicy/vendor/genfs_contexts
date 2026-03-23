@@ -40,8 +40,6 @@ genfscon sysfs /devices/platform/11ed4000.i2c/i2c-9/9-0065/power_supply/cp-stand
 genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup30                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-div-chg/wakeup28                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-div-chg/wakeup31                                      u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/pe5/wakeup                                                                         u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1e990000.gce/wakeup                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup155       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup169       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup55        u:object_r:sysfs_wakeup:s0
