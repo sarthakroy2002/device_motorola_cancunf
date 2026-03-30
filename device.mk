@@ -422,14 +422,14 @@ PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.cancunf
 
 # USB
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
 
 # Vibrator
-$(call soong_config_set,mediatek_vibrator,supports_effects,true)
+$(call soong_config_set_bool,mediatek_vibrator,supports_effects,true)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
