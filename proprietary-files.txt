@@ -2377,12 +2377,6 @@ vendor/lib64/libmvpu_runtime_pub.so
 vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
 
-# Memtrack
-vendor/bin/hw/android.hardware.memtrack-service.mediatek
-vendor/etc/init/memtrack-mediatek.rc
-vendor/etc/vintf/manifest/memtrack-mediatek.xml
-vendor/lib64/mt6855/libmemtrack_GL.so;SYMLINK=vendor/lib64/libmemtrack_GL.so
-
 # Misc
 vendor/bin/SN1X0__RF-On.txt
 vendor/bin/sns_mot_client

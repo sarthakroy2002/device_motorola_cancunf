@@ -218,6 +218,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.mediatek
+
 # MotoActions
 PRODUCT_PACKAGES += \
     MotoActions
