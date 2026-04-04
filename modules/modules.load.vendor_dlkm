@@ -128,7 +128,6 @@ scp.ko
 mtk_cm_ipi.ko
 mtk_cm_mgr.ko
 mtk_cm_mgr_mt6855.ko
-trace_mmstat.ko
 imgsensor_isp6s.ko
 camera_eeprom.ko
 archcounter_timesync.ko

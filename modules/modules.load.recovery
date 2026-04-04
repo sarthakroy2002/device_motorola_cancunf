@@ -1,10 +1,7 @@
-mkp.ko
 bootprof.ko
 sc8551_mmi.ko
 dbgtop-drm.ko
 mtk_disp_notify.ko
-mtk_printk_ctrl.ko
-log_store.ko
 nvmem_mtk-devinfo.ko
 mtk_wdt.ko
 sec-rng.ko
@@ -68,7 +65,6 @@ mtk-uart-apdma.ko
 8250_mtk.ko
 phy-generic.ko
 phy-mtk-tphy.ko
-musb_boost.ko
 musb_hdrc.ko
 musb_main.ko
 spmi-mtk-mpu.ko
@@ -83,8 +79,6 @@ rpmb.ko
 rpmb-mtk.ko
 ufs-mediatek-mod.ko
 ufs-mediatek-dbg.ko
-blocktag.ko
-pidmap.ko
 mtk-pmic-keys.ko
 mtk-kpd.ko
 regulator-vibrator.ko
@@ -146,7 +140,6 @@ syscon-reboot-mode.ko
 reset-ti-syscon.ko
 zsmalloc.ko
 zram.ko
-meta.ko
 mtk-cqdma.ko
 mtk_sync.ko
 emi.ko
@@ -162,7 +155,6 @@ mtk-mminfra-imax.ko
 mtk_rpmsg_mbox.ko
 mtk-mbox.ko
 mtk_tinysys_ipi.ko
-irq-dbg.ko
 camera_ldo.ko
 clk-disable-unused.ko
 mtk-pm-domain-disable-unused.ko
