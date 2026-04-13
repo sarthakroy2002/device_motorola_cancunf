@@ -336,6 +336,9 @@ ro.vendor.mtk_thermal_2_0=1
 # USB
 vendor.usb.use_ffs_mtp=1
 
+# UVC
+ro.usb.uvc.enabled=true
+
 # Vibrator
 ro.vendor.vibrator.hal.click.duration=70
 ro.vendor.vibrator.hal.texture_tick.duration=40
