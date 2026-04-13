@@ -58,61 +58,116 @@ on post-fs
 
     # uvc function
     write /config/usb_gadget/g1/functions/uvc.0/function_name "Android Webcam"
-    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket 3072
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket 512
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_interval 1
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxburst 0
 
     # setup control params
     mkdir /config/usb_gadget/g1/functions/uvc.0/control/header/h
     symlink /config/usb_gadget/g1/functions/uvc.0/control/header/h /config/usb_gadget/g1/functions/uvc.0/control/class/fs/h
     symlink /config/usb_gadget/g1/functions/uvc.0/control/header/h /config/usb_gadget/g1/functions/uvc.0/control/class/ss/h
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u
+
+    # advertise 360p resolution for webcam encoded as uncompressed
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwFrameInterval \
+"333333
+666666
+"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wWidth 640
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/wHeight 360
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxVideoFrameBufferSize 460800
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMinBitRate 55296000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/360p/dwMaxBitRate 110592000
+
+    # advertise 480p resolution for webcam encoded as uncompressed
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwFrameInterval \
+"500000
+666666
+"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wWidth 640
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/wHeight 480
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxVideoFrameBufferSize 614400
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMinBitRate 73728000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/480p/dwMaxBitRate 98304000
+
+    # advertise 720p resolution for webcam encoded as uncompressed
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p/dwFrameInterval \
+"1000000
+"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p/wWidth 1280
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p/wHeight 720
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p/dwMaxVideoFrameBufferSize 1843200
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p/dwMinBitRate 147456000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u/720p/dwMaxBitRate 147456000
 
     # advertise 360p resolution for webcam encoded as mjpeg
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/wHeight 360
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwFrameInterval \
+"333333
+666666
+"
     write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/wWidth 640
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwMaxVideoFrameBufferSize 460800
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwDefaultFrameInterval 333333
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwFrameInterval "166666
-333333
-416666
-666666"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/wHeight 360
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwMaxVideoFrameBufferSize 345600
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwMinBitRate 41472000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/360p/dwMaxBitRate 82944000
 
     # advertise 480p resolution for webcam encoded as mjpeg
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/wHeight 480
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwFrameInterval \
+"333333
+666666
+"
     write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/wWidth 640
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwMaxVideoFrameBufferSize 614400
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwDefaultFrameInterval 333333
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwFrameInterval "166666
-333333
-416666
-666666"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/wHeight 480
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwMaxVideoFrameBufferSize 460800
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwMinBitRate 55296000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/480p/dwMaxBitRate 110592000
 
     # advertise 720p resolution for webcam encoded as mjpeg
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wHeight 720
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwFrameInterval \
+"333333
+666666
+"
     write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wWidth 1280
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwMaxVideoFrameBufferSize 1843200
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwDefaultFrameInterval 333333
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwFrameInterval "166666
-333333
-416666
-666666"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/wHeight 720
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwMaxVideoFrameBufferSize 1382400
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwMinBitRate 165888000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/720p/dwMaxBitRate 331776000
 
+    # advertise 960p resolution for webcam encoded as mjpeg
+    mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p/dwFrameInterval \
+"333333
+666666
+"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p/wWidth 1280
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p/wHeight 960
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p/dwMaxVideoFrameBufferSize 1843200
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p/dwMinBitRate 221184000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/960p/dwMaxBitRate 442368000
+    
     # advertise 1080p resolution for webcam encoded as mjpeg
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wHeight 1080
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwFrameInterval \
+"333333
+666666
+"
     write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wWidth 1920
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwMaxVideoFrameBufferSize 4147200
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwDefaultFrameInterval 333333
-    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwFrameInterval "166666
-333333
-416666
-666666"
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/wHeight 1080
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwMaxVideoFrameBufferSize 3110400
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwMinBitRate 373248000
+    write /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/1080p/dwMaxBitRate 746496000
 
-    # TODO: Add uncompressed streams
     # setup streaming params
     mkdir /config/usb_gadget/g1/functions/uvc.0/streaming/header/h
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/uncompressed/u /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/u
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/m
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/fs/h
     symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h /config/usb_gadget/g1/functions/uvc.0/streaming/class/hs/h
