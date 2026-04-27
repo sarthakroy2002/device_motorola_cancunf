@@ -18,6 +18,7 @@
 package org.lineageos.settings.device.actions;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
@@ -34,7 +35,15 @@ public class TorchAction implements SensorAction {
 
     private String mRearCameraId;
 
+    private int mCurLevel;
+
+    private SharedPreferences mPrefs;
+    private static final String PREFS = "torch_prefs";
+    private static final String KEY_LEVEL = "torch_level";
+
     public TorchAction(Context mContext) {
+        mPrefs = mContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+        mCurLevel = mPrefs.getInt(KEY_LEVEL, 2);
         mCameraManager = (CameraManager) mContext.getSystemService(Context.CAMERA_SERVICE);
         mCameraManager.registerTorchCallback(new MyTorchCallback(), null);
         mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
@@ -57,7 +66,8 @@ public class TorchAction implements SensorAction {
         mVibrator.vibrate(VibrationEffect.createOneShot(250, VibrationEffect.DEFAULT_AMPLITUDE));
         if (mRearCameraId != null) {
             try {
-                mCameraManager.setTorchMode(mRearCameraId, !mTorchEnabled);
+                if (mTorchEnabled) mCameraManager.setTorchMode(mRearCameraId, !mTorchEnabled);
+                else mCameraManager.turnOnTorchWithStrengthLevel(mRearCameraId, mCurLevel);
                 mTorchEnabled = !mTorchEnabled;
             } catch (CameraAccessException ignored) {
             }
@@ -80,6 +90,17 @@ public class TorchAction implements SensorAction {
                 return;
             }
             mTorchEnabled = false;
+        }
+
+        @Override
+        public void onTorchStrengthLevelChanged(String cameraId, int newStrengthLevel) {
+            if (!cameraId.equals(mRearCameraId)) {
+                return;
+            }
+            if (mCurLevel != newStrengthLevel) {
+                mCurLevel = newStrengthLevel;
+                mPrefs.edit().putInt(KEY_LEVEL, newStrengthLevel).apply();
+            }
         }
     }
 }
