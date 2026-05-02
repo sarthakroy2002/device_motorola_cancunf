@@ -41,9 +41,6 @@
 # MultiHal
 /vendor/bin/hw/android\.hardware\.sensors@2.1-service\.cancunf-multihal                u:object_r:hal_sensors_default_exec:s0
 
-# NFC
-/dev/nq-nfc                                                                            u:object_r:nfc_device:s0
-
 # Neural Networks
 /vendor/lib(64)?/libapusys\.so                                                         u:object_r:same_process_hal_file:s0
 
