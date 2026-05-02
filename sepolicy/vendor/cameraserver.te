@@ -1,3 +1,2 @@
 get_prop(cameraserver, vendor_persist_camera_prop)
-
 allow cameraserver flashlight_device:chr_file rw_file_perms;

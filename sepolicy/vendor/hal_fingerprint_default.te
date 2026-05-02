@@ -8,8 +8,7 @@ allow hal_fingerprint_default self:netlink_kobject_uevent_socket { create setopt
 allow hal_fingerprint_default self:unix_stream_socket { connectto };
 allow hal_fingerprint_default tee_device:chr_file { open read write ioctl getattr };
 allow hal_fingerprint_default uhid_device:chr_file { open read write ioctl getattr };
-allow hal_fingerprint_default vendor_persist_fingerprint_file:dir r_dir_perms;
-allow hal_fingerprint_default vendor_persist_fingerprint_file:file rw_file_perms;
+rw_dir_file(hal_fingerprint_default, vendor_persist_fingerprint_file)
 get_prop(hal_fingerprint_default, boot_status_prop)
 hal_client_domain(hal_fingerprint_default, hal_health)
 hal_client_domain(hal_fingerprint_default, hal_power)

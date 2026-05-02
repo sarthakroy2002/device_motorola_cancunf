@@ -10,20 +10,15 @@ allow vendor_moto_init_shell { vendor_toolbox_exec vendor_shell_exec vendor_moto
 
 # /mnt/vendor/persist/fps access
 allow vendor_moto_init_shell mnt_vendor_file:dir search;
-allow vendor_moto_init_shell vendor_persist_fingerprint_file:dir rw_dir_perms;
-allow vendor_moto_init_shell vendor_persist_fingerprint_file:file rw_file_perms;
+rw_dir_file(vendor_moto_init_shell, vendor_persist_fingerprint_file)
 
 # /proc/hw RW access
-allow vendor_moto_init_shell vendor_proc_hw:dir r_dir_perms;
-allow vendor_moto_init_shell vendor_proc_hw:file rw_file_perms;
+rw_dir_file(vendor_moto_init_shell, vendor_proc_hw)
 
 # /sys/class/touchscreen access
-allow vendor_moto_init_shell vendor_sysfs_touchpanel:file { write setattr };
-r_dir_file(vendor_moto_init_shell, vendor_sysfs_touchpanel)
+rw_dir_file(vendor_moto_init_shell, vendor_sysfs_touchpanel)
 
 # Properties
-get_prop(vendor_moto_init_shell, vendor_mot_prop)
-get_prop(vendor_moto_init_shell, vendor_sku_prop)
 set_prop(vendor_moto_init_shell, ctl_start_prop)
 set_prop(vendor_moto_init_shell, vendor_mot_prop)
 set_prop(vendor_moto_init_shell, vendor_mtk_cxp_vendor_prop)

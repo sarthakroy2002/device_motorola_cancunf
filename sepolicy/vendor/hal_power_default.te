@@ -1,27 +1,8 @@
 # Allow libperfmgr to control cpu frequencies
-allow hal_power_default proc_cpufreq:dir r_dir_perms;
-allow hal_power_default proc_cpufreq:file rw_file_perms;
-allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
-
-# DMA Latency
-allow hal_power_default cpu_dma_latency_device:chr_file rw_file_perms;
-allow hal_power_default cpu_dma_latency_device:file rw_file_perms;
-
-# Allow libperfmgr to control GPU boost
-allow hal_power_default sysfs_ged:file w_file_perms;
-r_dir_file(hal_power_default, sysfs_ged)
-
-# Allow libperfmgr to control cgroups
-allow hal_power_default cgroup:file rw_file_perms;
+rw_dir_file(hal_power_default, proc_cpufreq)
 
 # Allow libperfmgr to control dt2w
-allow hal_power_default vendor_sysfs_touchpanel:dir search;
-allow hal_power_default vendor_sysfs_touchpanel:file rw_file_perms;
-
-# Allow libperfmgr to control MTK CPU Memory Latency Management
-allow hal_power_default sysfs_cm_mgr:dir r_dir_perms;
-allow hal_power_default sysfs_cm_mgr:file rw_file_perms;
+rw_dir_file(hal_power_default, vendor_sysfs_touchpanel)
 
 # Sensors
-allow hal_power_default sysfs_sensor:file rw_file_perms;
-r_dir_file(hal_power_default, sysfs_sensor)
+rw_dir_file(hal_power_default, sysfs_sensor)

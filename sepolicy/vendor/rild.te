@@ -4,4 +4,4 @@ get_prop(rild, vendor_mot_prop)
 set_prop(rild, vendor_mtk_radio_prop)
 
 # /proc/bootinfo
-allow rild vendor_proc_hw:file r_file_perms;
+r_dir_file(rild, vendor_proc_hw)
