@@ -47,9 +47,6 @@
 # Power
 /vendor/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr                      u:object_r:hal_power_default_exec:s0
 
-# Secure Element
-/vendor/bin/hw/android\.hardware\.secure_element-service\.nxp                          u:object_r:hal_secure_element_default_exec:s0
-
 # Touch
 /vendor/bin/hw/vendor\.lineage\.touch-service\.cancunf                                 u:object_r:hal_lineage_touch_default_exec:s0
 
