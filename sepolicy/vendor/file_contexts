@@ -14,7 +14,6 @@
 /mnt/vendor/persist/goodix(/.*)?                                                       u:object_r:vendor_persist_fingerprint_file:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-goodixservice           u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-chipone         u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc             u:object_r:hal_fingerprint_default_exec:s0
 
 # Init Scripts
 /vendor/bin/hardware_revisions\.sh                                                     u:object_r:vendor_moto_init_shell_exec:s0
