@@ -183,6 +183,7 @@ PRODUCT_PACKAGES += \
     init.mt6855.power.rc \
     init.mt6855.usb.rc \
     init.mtkgki.rc \
+    init.oem.fingerprint2.sh \
     init.oem.hw.sh \
     init.project.rc \
     init.recovery.mt6855.rc \

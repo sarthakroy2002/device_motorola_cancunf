@@ -2427,7 +2427,6 @@ vendor/bin/init.mmi.boot.sh
 vendor/bin/init.mmi.modem-rfs.sh
 vendor/bin/init.mmi.shutdown.sh
 vendor/bin/init.mmi.touch.sh|a82376b37c37794b6c3e2300809eec4913891dcd
-vendor/bin/init.oem.fingerprint2.sh
 vendor/bin/kpgather
 vendor/bin/kpreadwrite
 vendor/bin/pstore_annotate.sh
