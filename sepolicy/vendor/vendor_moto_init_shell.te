@@ -40,3 +40,6 @@ allow vendor_moto_init_shell persist_data_file:dir search;
 
 # kmesg
 allow vendor_moto_init_shell kmsg_device:chr_file rw_file_perms;
+
+# bootprof
+allow vendor_moto_init_shell proc_bootprof:file rw_file_perms;
