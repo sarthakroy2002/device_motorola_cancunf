@@ -24,7 +24,7 @@
 /vendor/bin/init\.mmi\.touch\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.usb\.sh                                                         u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.modprobe\.sh                                                         u:object_r:vendor_modinstall-sh_exec:s0
-/vendor/bin/init\.oem\.fingerprint2\.sh                                                u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.oem\.fingerprint\.sh                                                 u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.oem\.hw\.sh                                                          u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/vendor\.mmi\.cxp\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
 

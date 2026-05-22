@@ -5,8 +5,8 @@
 //
 
 sh_binary {
-    name: "init.oem.fingerprint2.sh",
-    src: "init.oem.fingerprint2.sh",
+    name: "init.oem.fingerprint.sh",
+    src: "init.oem.fingerprint.sh",
     vendor: true,
 }
 
