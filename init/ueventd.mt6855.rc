@@ -117,9 +117,6 @@
 #  chipone  fingerprint
 /dev/fpsensor  0660    system     system
 
-#  egis  fingerprint
-/dev/esfp0  0660    system     system
-
 # goodix fingerprint
 /dev/goodix_fp  0660    system     system
 

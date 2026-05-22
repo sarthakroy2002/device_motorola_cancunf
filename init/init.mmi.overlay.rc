@@ -15,9 +15,6 @@ on post-fs-data
     # config fingerprint
     mkdir /data/vendor/.fps 0770 system vendor_fingerp
     mkdir /mnt/vendor/persist/fps 0770 system system
-    mkdir /data/vendor/egis 0770 system vendor_fingerp
-    mkdir /data/vendor/egis/cqa 0770 system vendor_fingerp
-    mkdir /mnt/vendor/persist/egis 0770 system vendor_fingerp
 
     # Required by touchRec for write the touch data
     mkdir /data/vendor/touchrec 0770 input input
