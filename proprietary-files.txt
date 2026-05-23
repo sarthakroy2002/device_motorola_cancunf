@@ -2003,12 +2003,8 @@ product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone
-vendor/bin/hw/chipone_ident
-vendor/bin/hw/goodix_ident
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-chipone2.rc
-vendor/etc/init/init.chipone_ident.rc
-vendor/etc/init/init.gf_ident.rc
 vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/hw/fingerprint.goodix.default.so
