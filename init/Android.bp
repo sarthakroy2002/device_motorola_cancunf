@@ -5,6 +5,12 @@
 //
 
 sh_binary {
+    name: "init.insmod.sh",
+    src: "init.insmod.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.oem.fingerprint.sh",
     src: "init.oem.fingerprint.sh",
     vendor: true,
@@ -28,6 +34,12 @@ prebuilt_etc {
     name: "init_connectivity.rc",
     src: "init_connectivity.rc",
     relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.insmod.mt6855.cfg",
+    src: "init.insmod.mt6855.cfg",
     vendor: true,
 }
 

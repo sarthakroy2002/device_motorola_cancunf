@@ -2410,13 +2410,9 @@ vendor/lib64/libstfactory-vendor.so
 vendor/lib64/ls_nq_client.so
 vendor/lib64/se_extn_client.so
 
-# Modules
-vendor/etc/init.insmod.mt6855.cfg
-
 # Motorola
 vendor/bin/motobox;SYMLINK=vendor/bin/expat
 vendor/bin/hardware_revisions.sh|4f201c60b552db7a0ddd8e1284f01d8b630380cc
-vendor/bin/init.insmod.sh
 vendor/bin/init.mmi.backup.trustlet.sh
 vendor/bin/init.mmi.block_perm.sh
 vendor/bin/init.mmi.boot.sh

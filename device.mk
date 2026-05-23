@@ -177,6 +177,8 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.connectivity.common.rc \
     init.cancunf.sku.rc \
+    init.insmod.sh \
+    init.insmod.mt6855.cfg \
     init.mmi.overlay.rc \
     init.mmi.rc \
     init.mt6855.rc \
