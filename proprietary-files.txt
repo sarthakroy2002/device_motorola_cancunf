@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sys-user 15 V1TDS35H.83-20-5-10 0e08b5 release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sys-user 15 V1TDS35H.83-20-5-11 b11610 release-keys, unless pinned
 
 # AEE
 vendor/lib/libladder.so
