@@ -2416,7 +2416,6 @@ vendor/bin/hardware_revisions.sh|4f201c60b552db7a0ddd8e1284f01d8b630380cc
 vendor/bin/init.mmi.backup.trustlet.sh
 vendor/bin/init.mmi.block_perm.sh
 vendor/bin/init.mmi.boot.sh
-vendor/bin/init.mmi.shutdown.sh
 vendor/bin/init.mmi.touch.sh|a82376b37c37794b6c3e2300809eec4913891dcd
 vendor/bin/kpgather
 vendor/bin/kpreadwrite
