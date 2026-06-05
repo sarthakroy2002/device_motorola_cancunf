@@ -1,18 +1,60 @@
 # cancunf project sku
 
+on property:ro.boot.hardware.sku="XT2343-1"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model.external_name "MT6855G"
+    setprop ro.vendor.soc.model.part_name "MT6855G"
+    setprop ro.vendor.soc.model "MT6855V/AZA"
+
+on property:ro.boot.hardware.sku="XT2343-2"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model.external_name "MT6855G"
+    setprop ro.vendor.soc.model.part_name "MT6855G"
+    setprop ro.vendor.soc.model "MT6855V/AZA"
+
+on property:ro.boot.hardware.sku="XT2343-3"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model.external_name "MT6855G"
+    setprop ro.vendor.soc.model.part_name "MT6855G"
+    setprop ro.vendor.soc.model "MT6855V/AZA"
+
+on property:ro.boot.hardware.sku="XT2343-4"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model.external_name "MT6855G"
+    setprop ro.vendor.soc.model.part_name "MT6855G"
+    setprop ro.vendor.soc.model "MT6855V/AZA"
+
+on property:ro.boot.hardware.sku="XT2343-5"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model.external_name "MT6855G"
+    setprop ro.vendor.soc.model.part_name "MT6855G"
+    setprop ro.vendor.soc.model "MT6855V/AZA"
+
 on property:ro.boot.hardware.sku="XT2431-1"
     setprop bluetooth.device.default_name "moto g64 5G"
     setprop vendor.usb.product_string "moto g64 5G"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model "MT6855"
+    setprop ro.vendor.soc.model.external_name "MT6855V/ATZA"
+    setprop ro.vendor.soc.model.part_name "MT6855V/ATZA"
 
 on property:ro.boot.hardware.sku="XT2431-2"
     setprop bluetooth.device.default_name "moto g64y 5G"
     setprop vendor.usb.product_string "moto g64y 5G"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model "MT6855"
+    setprop ro.vendor.soc.model.external_name "MT6855V/ATZA"
+    setprop ro.vendor.soc.model.part_name "MT6855V/ATZA"
     setprop persist.vendor.nfc.config_file_name "libnfc-nxp_220.conf"
     mount none /product/etc/felica_ymobile /product/etc/felica bind
 
 on property:ro.boot.hardware.sku="XT2431-3"
     setprop bluetooth.device.default_name "moto g64 5G"
     setprop vendor.usb.product_string "moto g64 5G"
+    setprop ro.vendor.soc.manufacturer "Mediatek"
+    setprop ro.vendor.soc.model "MT6855"
+    setprop ro.vendor.soc.model.external_name "MT6855V/ATZA"
+    setprop ro.vendor.soc.model.part_name "MT6855V/ATZA"
     setprop persist.vendor.nfc.config_file_name "libnfc-nxp_220.conf"
 
 on init && property:ro.vendor.hw.esim="false"
