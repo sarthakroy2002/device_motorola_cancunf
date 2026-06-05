@@ -20,7 +20,6 @@
 /vendor/bin/init\.mmi\.backup\.trustlet\.sh                                            u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.block_perm\.sh                                                  u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.boot\.sh                                                        u:object_r:vendor_moto_init_shell_exec:s0
-/vendor/bin/init\.mmi\.modem-rfs\.sh                                                   u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.touch\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.mmi\.usb\.sh                                                         u:object_r:vendor_moto_init_shell_exec:s0
 /vendor/bin/init\.modprobe\.sh                                                         u:object_r:vendor_modinstall-sh_exec:s0
