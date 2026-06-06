@@ -2372,7 +2372,6 @@ vendor/lib64/libmvpuop_mtk_nn.so
 # Misc
 vendor/bin/SN1X0__RF-On.txt
 vendor/bin/sns_mot_client
-vendor/etc/init/bootperf.rc
 vendor/etc/AW_DSP.bin
 vendor/etc/AW_SINWAVE_DSP.bin
 vendor/etc/sec_s3nrn4v_hwreg.bin
