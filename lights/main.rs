@@ -29,7 +29,7 @@ use log::LevelFilter;
 
 fn main() {
     let logger_success = logger::init(
-        logger::Config::default().with_tag_on_device(LOG_TAG).with_max_level(LevelFilter::Trace),
+        logger::Config::default().with_tag_on_device(LOG_TAG).with_max_level(LevelFilter::Info),
     );
     if !logger_success {
         panic!("{LOG_TAG}: Failed to start logger.");
