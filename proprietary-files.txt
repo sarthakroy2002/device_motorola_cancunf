@@ -2674,7 +2674,7 @@ vendor/lib/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib/vendor.mediatek.hardware.mms@1.6.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib64/mt6855/libmnl.so;SYMLINK=vendor/lib64/libmnl.so
+vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;SYMLINK=vendor/lib64/libmnl-mtk.so;FIX_SONAME
 vendor/lib64/libMtkAinrEnh.so
 vendor/lib64/libadropbox.so
 vendor/lib64/libcapctrl.so
