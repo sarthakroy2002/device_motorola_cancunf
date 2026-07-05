@@ -6,11 +6,8 @@
  */
 
 #include "LockoutTracker.h"
-#include <fingerprint.sysprop.h>
 #include "Fingerprint.h"
 #include "util/Util.h"
-
-using namespace ::android::fingerprint::cancunf;
 
 namespace aidl::android::hardware::biometrics::fingerprint {
 

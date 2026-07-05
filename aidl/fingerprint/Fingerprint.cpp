@@ -8,7 +8,6 @@
 #include "Fingerprint.h"
 
 #include <android-base/properties.h>
-#include <fingerprint.sysprop.h>
 #include "util/Util.h"
 
 #include <android-base/logging.h>
@@ -30,8 +29,7 @@ typedef struct fingerprint_hal {
 } fingerprint_hal_t;
 
 static const fingerprint_hal_t kModules[] = {
-        {"fortsense"},  {"fpc"},         {"fpc_fod"}, {"goodix"},
-        {"goodix_fod"}, {"goodix_fod6"}, {"silead"},  {"syna"},
+    {"goodix"},
 };
 
 }  // namespace
@@ -39,8 +37,8 @@ static const fingerprint_hal_t kModules[] = {
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
 static Fingerprint* sInstance;
 
-Fingerprint::Fingerprint(std::shared_ptr<FingerprintConfig> config) : mConfig(std::move(config)) {
-    sInstance = this;  // keep track of the most recent instance
+int Fingerprint::init() {
+    sInstance = this;
 
     if (mDevice) {
         ALOGI("fingerprint HAL already opened");
@@ -56,28 +54,12 @@ Fingerprint::Fingerprint(std::shared_ptr<FingerprintConfig> config) : mConfig(st
         }
         if (!mDevice) {
             ALOGE("Can't open any fingerprint HAL module");
+            return -1;
         }
     }
 
-    std::string sensorTypeProp = mConfig->get<std::string>("type");
-    if (sensorTypeProp == "udfps" || sensorTypeProp == "udfps_optical") {
-        if (sensorTypeProp == "udfps") {
-            mSensorType = FingerprintSensorType::UNDER_DISPLAY_ULTRASONIC;
-        } else {
-            mSensorType = FingerprintSensorType::UNDER_DISPLAY_OPTICAL;
-        }
-    } else if (sensorTypeProp == "side") {
-        mSensorType = FingerprintSensorType::POWER_BUTTON;
-    } else if (sensorTypeProp == "home") {
-        mSensorType = FingerprintSensorType::HOME_BUTTON;
-    } else if (sensorTypeProp == "rear") {
-        mSensorType = FingerprintSensorType::REAR;
-    } else {
-        mSensorType = FingerprintSensorType::UNKNOWN;
-        UNIMPLEMENTED(FATAL) << "unrecognized or unimplemented fingerprint behavior: "
-                             << sensorTypeProp;
-    }
-    ALOGI("sensorTypeProp: %s", sensorTypeProp.c_str());
+    mSensorType = FingerprintSensorType::POWER_BUTTON;
+    return 0;
 }
 
 Fingerprint::~Fingerprint() {
@@ -132,27 +114,12 @@ fingerprint_device_t* Fingerprint::openFingerprintHal(const char* class_name) {
 SensorLocation Fingerprint::getSensorLocation() {
     SensorLocation location;
 
-    auto loc = mConfig->get<std::string>("sensor_location");
-    auto isValidStr = false;
-    auto dim = ::android::base::Split(loc, "|");
-
-    if (dim.size() != 3 and dim.size() != 4) {
-        if (!loc.empty()) {
-            ALOGE("Invalid sensor location input (x|y|radius) or (x|y|radius|display): %s",
-                  loc.c_str());
-        }
-    } else {
-        int32_t x, y, r;
-        std::string d;
-        isValidStr = ParseInt(dim[0], &x) && ParseInt(dim[1], &y) && ParseInt(dim[2], &r);
-        if (dim.size() == 4) {
-            d = dim[3];
-            isValidStr = isValidStr && !d.empty();
-        }
-        if (isValidStr)
-            location = {
-                    .sensorLocationX = x, .sensorLocationY = y, .sensorRadius = r, .display = d};
-    }
+    location = {
+        .sensorLocationX = 1080,
+        .sensorLocationY = 750,
+        .sensorRadius = 200,
+        .display = ""
+    };
 
     return location;
 }
@@ -171,12 +138,12 @@ ndk::ScopedAStatus Fingerprint::getSensorProps(std::vector<SensorProps>* out) {
             {HW_COMPONENT_ID, HW_VERSION, FW_VERSION, SERIAL_NUMBER, "" /* softwareVersion */},
             {SW_COMPONENT_ID, "" /* hardwareVersion */, "" /* firmwareVersion */,
              "" /* serialNumber */, SW_VERSION}};
-    auto sensorId = mConfig->get<std::int32_t>("sensor_id");
-    auto sensorStrength = mConfig->get<std::int32_t>("sensor_strength");
-    auto navigationGesture = mConfig->get<bool>("navigation_gesture");
-    auto detectInteraction = mConfig->get<bool>("detect_interaction");
-    auto displayTouch = mConfig->get<bool>("display_touch");
-    auto controlIllumination = mConfig->get<bool>("control_illumination");
+    int32_t sensorId = 0;
+    int32_t sensorStrength = 2;
+    bool navigationGesture = false;
+    bool detectInteraction = false;
+    bool displayTouch = false;
+    bool controlIllumination = false;
 
     common::CommonProps commonProps = {sensorId, (common::SensorStrength)sensorStrength,
                                        MAX_ENROLLMENTS_PER_USER, componentInfo};
