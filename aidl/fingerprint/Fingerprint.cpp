@@ -30,6 +30,7 @@ typedef struct fingerprint_hal {
 
 static const fingerprint_hal_t kModules[] = {
     {"goodix"},
+    {"fpsensor_fingerprint"},
 };
 
 }  // namespace
@@ -77,11 +78,21 @@ Fingerprint::~Fingerprint() {
 }
 
 fingerprint_device_t* Fingerprint::openFingerprintHal(const char* class_name) {
+    int err;
     const hw_module_t* hw_mdl = nullptr;
 
     ALOGD("Opening fingerprint hal library...");
-    if (hw_get_module_by_class(FINGERPRINT_HARDWARE_MODULE_ID, class_name, &hw_mdl) != 0) {
-        ALOGE("Can't open fingerprint HW Module");
+    if (!strcmp(class_name, "fpsensor_fingerprint")) {
+        err = hw_get_module(class_name, &hw_mdl);
+    } else {
+        err = hw_get_module_by_class(
+                FINGERPRINT_HARDWARE_MODULE_ID,
+                class_name,
+                &hw_mdl);
+    }
+    if (err) {
+        ALOGE("Can't open fingerprint HW Module %s, error: %d",
+            class_name, err);
         return nullptr;
     }
 
