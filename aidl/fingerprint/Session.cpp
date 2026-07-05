@@ -212,8 +212,13 @@ Error Session::VendorErrorFilter(int32_t error, int32_t* vendorCode) {
 
     switch (error) {
         case FINGERPRINT_ERROR_HW_UNAVAILABLE:
+        case FINGERPRINT_ERROR_VENDOR_BASE + 1:
+        case FINGERPRINT_ERROR_VENDOR_BASE + 2:
+        case FINGERPRINT_ERROR_VENDOR_BASE + 3:
             return Error::HW_UNAVAILABLE;
         case FINGERPRINT_ERROR_UNABLE_TO_PROCESS:
+        case FINGERPRINT_ERROR_VENDOR_BASE + 4:
+        case FINGERPRINT_ERROR_VENDOR_BASE + 5:
             return Error::UNABLE_TO_PROCESS;
         case FINGERPRINT_ERROR_TIMEOUT:
             return Error::TIMEOUT;
@@ -255,7 +260,13 @@ AcquiredInfo Session::VendorAcquiredFilter(int32_t info, int32_t* vendorCode) {
         case FINGERPRINT_ACQUIRED_TOO_SLOW:
             return AcquiredInfo::TOO_SLOW;
         case FINGERPRINT_ACQUIRED_TOO_FAST:
+        case FINGERPRINT_ACQUIRED_VENDOR_BASE + 8:
             return AcquiredInfo::TOO_FAST;
+        case FINGERPRINT_ACQUIRED_VENDOR_BASE + 5:
+        case FINGERPRINT_ACQUIRED_VENDOR_BASE + 6:
+        case FINGERPRINT_ACQUIRED_VENDOR_BASE + 7:
+            *vendorCode = info - FINGERPRINT_ACQUIRED_VENDOR_BASE;
+            return AcquiredInfo::VENDOR;
         default:
             if (info >= FINGERPRINT_ACQUIRED_VENDOR_BASE) {
                 // vendor specific code.
