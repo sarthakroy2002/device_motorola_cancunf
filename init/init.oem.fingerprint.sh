@@ -12,12 +12,12 @@ function start_hal() {
 	if [ "${fps_id}" == "chipone" ]; then
 		load_module fpsensor_mtk_spi.ko
 		sleep 1
-		start chipone_fp_hal
+		start vendor.fingerprint-default
 		sleep 1
 	elif [ "${fps_id}" == "goodix" ]; then
 		load_module goodix_fps_tee.ko
 		sleep 1
-		start goodix_hal
+		start vendor.fingerprint-default
 		sleep 1
 	elif [ "${fps_id}" == "none" ]; then
 		/system/bin/log -t fingerprint "No valid fingerprint detected, gracefully exiting"
