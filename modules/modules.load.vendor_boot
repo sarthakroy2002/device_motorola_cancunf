@@ -2,6 +2,7 @@ bootprof.ko
 sc8551_mmi.ko
 dbgtop-drm.ko
 mtk_disp_notify.ko
+log_store.ko
 nvmem_mtk-devinfo.ko
 mtk_wdt.ko
 sec-rng.ko
