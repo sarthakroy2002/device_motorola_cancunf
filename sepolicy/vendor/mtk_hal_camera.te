@@ -10,7 +10,7 @@ allow mtk_hal_camera vendor_imager_metadata_file:file rw_file_perms;
 allow mtk_hal_camera vendor_imager_metadata_file:file { create setattr };
 get_prop(mtk_hal_camera, system_mot_camera_prop)
 get_prop(mtk_hal_camera, vendor_mot_prop)
-get_prop(mtk_hal_camera, vendor_persist_camera_prop)
+get_prop(mtk_hal_camera, camera2_extensions_prop)
 r_dir_file(mtk_hal_camera, persist_data_file)
 r_dir_file(mtk_hal_camera, sysfs_therm)
 rw_dir_file(mtk_hal_camera, vendor_persist_camera_file)
