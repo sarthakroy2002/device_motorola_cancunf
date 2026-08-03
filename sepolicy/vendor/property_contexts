@@ -1,9 +1,6 @@
 # Camera
 vendor.mot_ota_tuning.valid      u:object_r:vendor_mot_camera_prop:s0
 
-# Dynamic sensor
-vendor.dynamic_sensor.                          u:object_r:vendor_dynamic_sensor_prop:s0
-
 # FPS
 persist.vendor.hardware.fingerprint   u:object_r:vendor_mot_prop:s0
 vendor.hw.fingerprint.status     u:object_r:vendor_mot_prop:s0
