@@ -2198,30 +2198,30 @@ vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 
-# IMS (VT - System) - from bogota_g-user 16 W1VO36M.85 16a77 release-keys
-system_ext/bin/vtservice|4a81408db935509263e78f4070b38f17960ac571
+# IMS (VT - System) - from nice_g_sys-user 17 A171VNH.25 e4c7ca release-keys
+system_ext/bin/vtservice|1383056a091c38235f6ad8a88b61cfd8ca6629ab
 system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc|d1bad63ed1e5dc8cbf02c5ec37022a7753330729
-system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|5771f1c77a1db2b00d52d921146111d3b528837d|1561467f2201a4f73ad158ef1680db96171daf94
-system_ext/lib64/libcomutils.so|6f4f2d7a03c1d4671d422821b5e61e9ca9972867
-system_ext/lib64/libimsma.so|f4290c6ed15b6712a8260842e116c2ba1e6b3d01|da22389195052416a2328333e844da0a631203db
-system_ext/lib64/libimsma_adapt.so|2d19ab68fa39b9f4eb24be744ae18ca98f70b767
-system_ext/lib64/libimsma_rtp.so|a2d04304878026ecff5422aa6110938581c10a27
-system_ext/lib64/libimsma_socketwrapper.so|53979786ca76321eac38b23d6af334d0d1ae817b
-system_ext/lib64/libmtk_vt_service.so|8e59fa0736ff1d7eeb30714e641329513bf322d3
-system_ext/lib64/libmtk_vt_wrapper.so|fda2c6aa9d5bc2db00941adf74bb1ef0dd7c8bb7
-system_ext/lib64/libsignal.so|e75d1f9e3e178111ade2c5bc935cd073d362a64c
-system_ext/lib64/libsource.so|c3c6406e74bad4238b65ac3ddf100da615a73230|12729b1d1c3dbecf11a8e1641379730d3600624c
-system_ext/lib64/libvcodec_cap.so|55c107d3155e73988ebc5e684c3e54f72086bf9c
-system_ext/lib64/libvcodec_capenc.so|013f0131a424f8c2fc3815b02e466bc03a197324
-system_ext/lib64/libvt_avsync.so|eb882010c551f5540aeccae0ec1fcfb1677d601e
-system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|d2c0e0d34176161df01565b4489b7748d50c7646
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|78739fb7a9bf1109693bdb16b6f1c54345f82353
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|aeaca72179c166ae7edef6728fad4387a2ce8743|99d1055459d8f0c69d6e9bbd740dad94667d3a58
+system_ext/lib64/libcomutils.so|c25564f9066140bff52bc29d981f49b412304d83
+system_ext/lib64/libimsma.so|d4e1119455faa448d6193e9c9d7ad71399194572|69c45da623281622080fbbcf4df83a32048b6f03
+system_ext/lib64/libimsma_adapt.so|64cb40cb35e083785387ce05d6777922df85a4b6
+system_ext/lib64/libimsma_rtp.so|3edf1210052d0bd99e084ba232305a0d0b3ad210
+system_ext/lib64/libimsma_socketwrapper.so|7de6253342d5357c2cd1ba91bb8b2df9f416b31d
+system_ext/lib64/libmtk_vt_service.so|d0a792c3b8c07b332de0121f893522eaef425a72
+system_ext/lib64/libmtk_vt_wrapper.so|3246d72464cf74d2057445c314abe31ab9494541
+system_ext/lib64/libsignal.so|2a550917052c3e115af299b0af96e100f32640fd
+system_ext/lib64/libsource.so|a01917acd66e47b86cdf5cee1c39031a85b244b9|c6e57b97619443b47b438c754ce833887ee5400b
+system_ext/lib64/libvcodec_cap.so|d294224d49a78635268a6930f9e68d147f7f9433
+system_ext/lib64/libvcodec_capenc.so|3f850b8fce73c8169ae3cdac2ff84a3a464452b4
+system_ext/lib64/libvt_avsync.so|64d5343a378fd62c9abf3fffdba55dc46e3e7752
+system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|406753e1e937fde0acc8a2f85e71c5bbad55e24c
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|c136e0ec8a6f3ccd654cbe2e855f6c4d4ff841da
 
-# IMS (VT - Vendor) - from bogota_g-user 16 W1VO36M.85 16a77 release-keys
-vendor/bin/hw/vtservice_aidl|f18effea88a444c5379837e850d6fe4fdc8794db
+# IMS (VT - Vendor) - from nice_g_sys-user 17 A171VNH.25 e4c7ca release-keys
+vendor/bin/hw/vtservice_aidl|9f03383e0b0bd05fde2c1cb4c02a1b43dc69efab
 vendor/etc/init/init.vtservice_aidl.rc|b213670f1233b2bb585adde523e37856c2750705
-vendor/lib64/hw/vendor.mediatek.hardware.videotelephony-impl.so|e8e31cf9d583edd466dc9622a0d2c2c6aa7638a8
-vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so;MODULE_SUFFIX=_vendor|5c257c032010f114b6b9239c35275ba0ac404104
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony-impl.so|4803b6af40a31bd485285cc44944e6538473f1c6
+vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so;MODULE_SUFFIX=_vendor|e26ff859a4d81f355c3d71dde52682f0c04e5f9f
 
 # Keystore
 vendor/bin/hw/android.hardware.security.keymint-service.trustonic
