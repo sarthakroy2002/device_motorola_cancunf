@@ -69,6 +69,10 @@
         <transport>hwbinder</transport>
         <fqname>@1.1::IOffloadControl/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.apmonitor</name>
+        <fqname>IApmService/default</fqname>
+    </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.atms</name>
         <transport>hwbinder</transport>

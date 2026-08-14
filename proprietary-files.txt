@@ -2041,10 +2041,6 @@ vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bi
 vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin
 
 # GPS
-vendor/bin/hw/android.hardware.gnss-service.mediatek
-vendor/bin/lbs_hidl_service
-vendor/bin/mnld
-vendor/bin/mtk_agpsd
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Bell_Mobility.xml
@@ -2080,27 +2076,39 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Virgin_Mobile.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_nTelos.xml
 vendor/etc/gnss/agps_profiles_conf2.xml
-vendor/etc/init/android.hardware.gnss-service.mediatek.rc
-vendor/etc/init/lbs_hidl_service.rc
-vendor/etc/init/mtk_agpsd_p.rc
-vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk-default.xml
-vendor/etc/vintf/manifest/gnss@2.1-service.xml:vendor/etc/vintf/manifest/gnss-mtk@2.1-service.xml
-vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/etc/MNL_Config.xml
 vendor/etc/slp_conf
-vendor/lib/libapmonitor_vendor.so
-vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
-vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
-vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
-vendor/lib64/hw/gps.default.so
-vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so
-vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;SYMLINK=vendor/lib64/libmnl-mtk.so;FIX_SONAME
-vendor/lib64/lbs_hidl_service-impl.so
-vendor/lib64/libapmonitor_vendor.so
-vendor/lib64/librpc.so
-vendor/lib64/libviagpsrpc.so
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
-vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
+
+# GPS - from ansuz 91-volla-16.0
+vendor/bin/hw/android.hardware.gnss-service.mediatek|725a565ca52962286712ffc872665a6160faa734
+vendor/bin/hw/vendor.mediatek.hardware.gnss-service|4f2f4af2f68b648f14c998555cf3a008628dc1c4
+vendor/bin/mnld|030161df02f7ef39139cb9b2be1d2b4b2b531f37|73d84a9155db4f37e09f57226546c7d611aa04c2
+vendor/bin/mtk_agpsd|23d84d41730ca2c995d608a39d21ed2a40a3f30a
+vendor/bin/mtk_lbs_service|f8f0aee839fd51fc5005f9679d4a9469b7e4a689
+vendor/etc/init/android.hardware.gnss-service.mediatek.rc|d9d7daeb61307a24adf968e9af98dc3bbdfe7ce9
+vendor/etc/init/mtk_agpsd_p.rc|305c5521d2e9a4d4be7abcc211611b984a0a44d9
+vendor/etc/init/mtk_gnss.rc|9f29e9747827c12dad4035f5143a139fabf66405
+vendor/etc/init/mtk_lbs_service.rc|3e89e3adf4b05d68a2e1e99835ead065501300a3
+vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk-default.xml|b1479129f0b9d3351a6d0aebbcd3047cc10f6834
+vendor/etc/vintf/manifest/gnss-mtk.xml|a42244352967066e4718e8a44d50ae2c2790b846
+vendor/etc/vintf/manifest/mtk_lbs_service.xml|8d46e0cf8a534c0ce4cf60e4747beea0bcb631d0
+vendor/etc/vintf/manifest/mtkgnss-batching.xml|aa0e7570efe3b6c859e2c33308276cd3d3cf40f9
+vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so|213c3ccb07a9c65250b2f6840f6076c5f46d9de9
+vendor/lib64/hw/gps.default.so|f03678735da4efaa52b85ce625c74724fee9f359
+vendor/lib64/hw/mtkflp.default.so|41b118675ce91ee8a00185d3c38e07e8274c42dd
+vendor/lib64/hw/mtkgeofence.default.so|fcd9e51b260c6e0b30190e5239ece6e45cc4f850
+vendor/lib64/hw/vendor.mediatek.hardware.gnss-impl.so|b1843c501a07f1bf3b3faaffe5ffdd7026afb975
+vendor/lib64/hw/vendor.mediatek.hardware.gnss.batching-impl.so|6d152920e0f1d38b7989629a6595c6f9b9854416
+vendor/lib64/mt6878/libDR.so:vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so|ecc04cd0a704938b6b31b12bb50d9452e24ab493
+vendor/lib64/mt6878/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;SYMLINK=vendor/lib64/libmnl-mtk.so;FIX_SONAME|b326b6bf99d812090d047b24cb078bb7d8ca44e4|4597cb17fd1034193929c07a92317c4dd14c6b7d
+vendor/lib64/libapmonitor_vendor.so|1a5ff2416bde9abd845dabc9c7b2e944cb9b0a8b
+vendor/lib64/mtk_lbs_service-impl.so|4a6a1a7dc2ec7799d20ce03e680f4df245d8cf34
+vendor/lib64/vendor.mediatek.hardware.apmonitor-V1-ndk.so|4dd3de14a68cdc7115cc0a7f99fd9892927c76bb
+vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so|813c0fa713cea17c39d3bb020bd2f24460244636
+vendor/lib64/vendor.mediatek.hardware.gnss-V1-ndk.so|41767a4aef2c3b3ca3fa683cebb1eb79c8bcd5bb
+vendor/lib64/vendor.mediatek.hardware.gnss.batching-V1-ndk.so|b0bd58ee5a815d3c780a71b6ab18541f67a38ed9
+vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so|2e933bde074da5891b0c8219ba8dab2efced6839
+vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so|b9a399777fe9b0e8781a505cf4a51ef796a835ae
 
 # Gatekeeper
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so

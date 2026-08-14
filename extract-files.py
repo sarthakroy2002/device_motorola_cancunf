@@ -54,11 +54,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('start', 'enable'),
     'system_ext/lib64/libsource.so': blob_fixup()
         .add_needed('libui_shim.so'),
-    (
-        'vendor/bin/hw/android.hardware.gnss-service.mediatek',
-        'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'
-    ): blob_fixup()
-        .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
@@ -73,7 +68,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/bin/mnld': blob_fixup()
-        .add_needed('android.hardware.sensors@1.0-convert-shared.so')
         .replace_needed('libmnl.so', 'libmnl-mtk.so'),
     'vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .add_needed('android.hardware.sensors@1.0-convert-shared.so')
