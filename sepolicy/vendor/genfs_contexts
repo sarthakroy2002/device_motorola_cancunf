@@ -29,8 +29,10 @@ genfscon sysfs /devices/virtual/touchscreen u:object_r:vendor_sysfs_touchpanel:s
 # Wakeup
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:adc/wakeup                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:auxadc/wakeup                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:chg/power_supply/primary_chg/wakeup19 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:chg/power_supply/primary_chg/wakeup20 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:mtk_gauge/power_supply/battery/wakeup36 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:mtk_gauge/power_supply/battery/wakeup32 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:tcpc/wakeup                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/wakeup                                                   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11db0000.i2c/i2c-3/3-0027/wakeup                                                   u:object_r:sysfs_wakeup:s0
@@ -41,8 +43,10 @@ genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup30  
 genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-div-chg/wakeup28                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-div-chg/wakeup31                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup155       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup167       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup169       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:odm/soc:odm:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup55        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/input/input8/wakeup169                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/mtk-gauge/wakeup34                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/power_supply/mtk-gauge/wakeup37                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11b20000.i2c/i2c-5/5-0034/11b20000.i2c:mt6375@34:tcpc/tcpc/type_c_port0/wakeup20   u:object_r:sysfs_wakeup:s0
