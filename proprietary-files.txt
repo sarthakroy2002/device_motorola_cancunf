@@ -2807,10 +2807,8 @@ vendor/lib64/libvcodecdrv_header_stub.so
 vendor/bin/stp_dump3
 vendor/bin/wifi_dump
 vendor/bin/wifitest
-vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
-vendor/etc/init/wlan_assistant.rc
 vendor/lib/meta_wifi_data.so
 vendor/lib64/libwifitest.so
 vendor/lib64/meta_wifi_data.so
