@@ -1,9 +1,7 @@
 # Device proprietary files - From cancunf_g_sys-user 15 V1TDS35H.83-20-5-12 64e7f1 release-keys, unless pinned
 
 # AEE
-vendor/lib/libladder.so
 vendor/lib/libudf.so
-vendor/lib64/libladder.so
 vendor/lib64/libudf.so
 
 # Audio
