@@ -20,6 +20,7 @@ vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6855.so
 vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
+vendor/lib64/android.hardware.audio@7.0-util.so:vendor/lib64/android.hardware.audio@7.0-util-v32.so;FIX_SONAME
 vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 vendor/lib64/mt6855/libstereoinfoaccessor_vsdof.so;SYMLINK=vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libMtkSpeechEnh.so
