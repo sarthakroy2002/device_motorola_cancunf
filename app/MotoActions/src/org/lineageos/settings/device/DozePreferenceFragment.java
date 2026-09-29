@@ -18,7 +18,6 @@
 package org.lineageos.settings.device;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -42,12 +41,6 @@ public class DozePreferenceFragment extends SettingsBasePreferenceFragment
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.doze_panel, rootKey);
-
-        SharedPreferences prefs =
-                getActivity().getSharedPreferences("doze_panel", Activity.MODE_PRIVATE);
-        if (savedInstanceState == null && !prefs.getBoolean("first_help_shown", false)) {
-            showHelp();
-        }
 
         boolean dozeEnabled = MotoActionsSettings.isDozeEnabled(getActivity());
 
@@ -103,20 +96,4 @@ public class DozePreferenceFragment extends SettingsBasePreferenceFragment
         return true;
     }
 
-    private void showHelp() {
-        AlertDialog helpDialog = new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.doze_settings_help_title)
-                .setMessage(R.string.doze_settings_help_text)
-                .setPositiveButton(R.string.dialog_ok,
-                        (dialog, which) -> {
-                            getActivity()
-                                    .getSharedPreferences("doze_panel", Activity.MODE_PRIVATE)
-                                    .edit()
-                                    .putBoolean("first_help_shown", true)
-                                    .commit();
-                            dialog.cancel();
-                        })
-                .create();
-        helpDialog.show();
-    }
 }
