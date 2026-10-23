@@ -1915,8 +1915,6 @@ vendor/lib/mt6855/libpqpconfig.so;SYMLINK=vendor/lib/libpqpconfig.so
 vendor/lib/libaal_key.so
 vendor/lib/libappgamepq.so
 vendor/lib/libdre.so
-vendor/lib/libion_mtk.so
-vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
 vendor/lib/libmmprofile.so
 vendor/lib/libnpagent.so;DISABLE_CHECKELF
@@ -1950,8 +1948,6 @@ vendor/lib64/libaal_key.so
 vendor/lib64/libappgamepq.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libdre.so
-vendor/lib64/libion_mtk.so
-vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
 vendor/lib64/libmmprofile.so
 vendor/lib64/libnpagent.so;DISABLE_CHECKELF

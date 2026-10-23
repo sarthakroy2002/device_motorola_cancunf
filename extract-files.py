@@ -21,6 +21,7 @@ namespace_imports = [
     'device/motorola/cancunf',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
+    'hardware/mediatek/libion_mtk',
 ]
 
 
