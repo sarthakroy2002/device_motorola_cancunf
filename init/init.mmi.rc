@@ -118,7 +118,7 @@ service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     user root
     oneshot
 
-service vendor.hal-fps-sh /vendor/bin/init.oem.fingerprint.sh
+service vendor.hal-fps-sh /vendor/bin/init.oem.fingerprint2.sh
     class late_start
     user root
     group system
