@@ -1,4 +1,4 @@
-# Device proprietary files - From cancunf_g_sys-user 15 V1TDS35H.83-20-5-12 64e7f1 release-keys, unless pinned
+# Device proprietary files - From cancunf_g_sys-user 15 V1TDS35H.83-20-5-14 330658 release-keys, unless pinned
 
 # AEE
 vendor/lib/libudf.so

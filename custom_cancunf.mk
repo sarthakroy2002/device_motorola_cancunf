@@ -26,5 +26,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=cancunf \
-    BuildDesc="cancunf_g_sysq-user 15 V1TDS35H.83-20-5-12 f7b47-64e7f1 release-keys" \
-    BuildFingerprint=motorola/cancunf_g_sysq/cancunf:15/V1TDS35H.83-20-5-12/f7b47-64e7f1:user/release-keys
+    BuildDesc="cancunf_g_sysq-user 15 V1TDS35H.83-20-5-14 24971a-330658 release-keys" \
+    BuildFingerprint=motorola/cancunf_g_sysq/cancunf:15/V1TDS35H.83-20-5-14/24971a-330658:user/release-keys
