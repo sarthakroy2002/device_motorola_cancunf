@@ -30,7 +30,7 @@ GKI_PATH=$(getprop $PROP_GKI_PATH)
 vendor_list=('goodix' 'chipone')
 kernel_so_list=("/vendor/lib/modules/$GKI_PATH/goodix_fps_tee.ko" "/vendor/lib/modules/$GKI_PATH/fpsensor_mtk_spi.ko")
 kernel_so_name_list=("goodix_fps_tee.ko" "fpsensor_mtk_spi.ko")
-hal_list=('goodix_hal' 'chipone_fp_hal')
+hal_list=('vendor.fingerprint-default' 'vendor.fingerprint-default')
 last_vendor_index=`expr ${#vendor_list[@]} - 1`
 vendor_list_size=${#vendor_list[@]}
 
